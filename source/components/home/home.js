@@ -8,7 +8,6 @@ class Home extends Component {
             <div className="Landing">
               <img className="Landing__logo" src="./assets/img/png/landing_page_logo.png" />
               <div className="Landing__background">
-                hello
               </div>
             </div>
         )
