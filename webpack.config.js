@@ -39,12 +39,12 @@ const config = {
             {
                 test: /\.scss$/,
                 // loader: ExtractTextPlugin.extract('css!sass')
-                loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
+                loaders: ['style-loader', 'css-loader?url=false', 'sass-loader', 'postcss-loader']
             },
 			
             {
                 test: /\.css$/,
-                loaders: ['style-loader', 'css-loader', 'postcss-loader']
+                loaders: ['style-loader', 'css-loader?url=false', 'postcss-loader']
             }
 			
         ]

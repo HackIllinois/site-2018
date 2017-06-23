@@ -4,7 +4,7 @@
   &__logo {
     position: absolute;
     width: 100%;
-    max-width: 700px;
+    max-width: 200px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -23,7 +23,7 @@
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    //background: url(placeholder.jpg) no-repeat;
+    background: url("../../assets/img/png/landing_page_bg.png");
     background-size: cover;
   }
 }
