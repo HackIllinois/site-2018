@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return(
             <div className="Landing">
-              <img className="Landing__logo" src="./assets/img/png/landing_page_logo.png" />
+              <img className="Landing__logo" src="./assets/img/png/landing_page_logo_date.png" />
               <div className="Landing__background">
               </div>
             </div>
