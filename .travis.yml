@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "6.10.3"
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+cache:
+  directories:
+    - node_modules
+before_script:
+  - pwd
+  - npm install
+script:
+  - npm run build
+deploy:
+  provider: s3
+  access_key_id: $HACKILLINOIS_ACCESS_KEY_ID
+  secret_access_key: $HACKILLINOIS_SECRET_ACCESS_KEY
+  bucket: $HACKILLINOIS_BUCKET_NAME
+  skip_cleanup: true
+  local_dir: public
