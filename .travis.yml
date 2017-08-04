@@ -24,5 +24,3 @@ deploy:
   bucket: $HACKILLINOIS_BUCKET_NAME
   skip_cleanup: true
   local_dir: public
-  on:
-    branch: master
