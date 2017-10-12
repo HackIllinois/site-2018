@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 
 import styles from './home.scss'
 
+import About from '../about/about.jsx'
+import FAQ from '../faq/faq.jsx'
+
 class Home extends Component {
     render() {
         return(
@@ -9,6 +12,9 @@ class Home extends Component {
               <img className="Landing__logo" src="./assets/img/png/landing_page_logo_date.png" />
               <div className="Landing__background">
               </div>
+
+                <About/>
+                <FAQ/>
             </div>
         )
     }
