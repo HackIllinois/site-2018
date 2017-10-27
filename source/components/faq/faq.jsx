@@ -30,7 +30,6 @@ class FAQItem extends Component {
 		
 		const stHead = {
 			padding: '16px 24px',
-			borderRadius: '6px',
 			background: '#11122F',
 			color: 'white',
 			border: 'none',
@@ -39,15 +38,14 @@ class FAQItem extends Component {
 		}
 		
 		const stDrop = {
-			padding: '1px 24px',
-			borderRadius: '6px',
+			padding: '16px 24px',
 			fontSize: '120%',
-			lineHeight: '120%',
+			lineHeight: '110%',
 			background: '#11122F66',
 			color: 'white'
 		};
 		
-		const stEx = {
+		const stEx = { // the plus/minus signs
 			float: 'right',
 			display: 'inline-block',
 			fontWeight: 'bold',
@@ -62,12 +60,20 @@ class FAQItem extends Component {
 		let expand = null;
 		let listener = null;
 		
+		let ru = '6px ';
+		let rn = '0px ';
+		
 		if (expanded) {
+			stHead.borderRadius = ru + ru + rn + rn;
+			stDrop.borderRadius = rn + rn + ru + ru;
+			
 			listener = this.handleHideClick;
 			button = <span>{this.props.header}</span>;
 			body = <div className="faq-body" style={stDrop}>{this.props.children}</div>;
 			expand = <span style={stEx}>–</span>;
 		} else {
+			stHead.borderRadius = ru + ru + ru + ru;
+			
 			listener = this.handleShowClick;
 			button = <span>{this.props.header}</span>;
 			expand = <span style={stEx}>+</span>;
@@ -96,39 +102,29 @@ class FAQ extends Component {
 		}
 		
 		let faqs = [
-			{question: "When should I arrive?", answer: "You should arive by 5 PM on Friday. A schedule will be released soon. You should plan to leave 5 PM on Sunday."},
-			{question: "What should I bring?", answer: " You should bring a student ID, a change of clothing or two, personal items (toiletries), a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power concerns, please do not bring extra monitors or desktop computers."},
+			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday. We will release a schedule soon."},
+			{question: "What should I bring?", answer: " You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without a team and find a group at the event. We will be providing mentor matching and a team formation workshop for you to meet other like-minded individuals."},
 			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. There will be a wide variety of food."},
 			{question: "Who do I contact for help?", answer: "Mentors from leading technology companies will be on-hand to provide support and troubleshoot problems in both the CREATE and CONTRIBUTE tracks. We also encourage all attendees to help each other!"},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses and pillows. We want you to be comfortable!"},
 			{question: "Will you have hardware?", answer: "We'll have high-level hardware provided by companies. We'll also have basic hardware components like resistors, transistors, and ICs, as well as wood, building materials, and power tools for you to tinker with."},
-			{question: "What are the prizes?", answer: "You can see all potential prizes and prize criteria at <a href='https://hackillinois.org/prizes'>https://hackillinois.org/prizes</a>."},
-			{question: "What will contributors work on?", answer: "If you RSVPed to the Contribute track, you will be working on one of the projects in the ecosystem you were accepted in: <a href='https://hackillinois.org/projects'>https://hackillinois.org/projects</a>."},
-			{question: "Other questions?", answer: "Please don't hesitate to reach out to us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>!"},
+			{question: "What are the prizes?", answer: ["You can see all potential prizes and prize criteria at ", <a href='https://hackillinois.org/prizes'>https://hackillinois.org/prizes</a>, "."]},
+			{question: "What will contributors work on?", answer: ["If you RSVPed to the Contribute track, you will be working on one of the projects in the ecosystem in which you were accepted. See: ", <a href='https://hackillinois.org/projects'>https://hackillinois.org/projects</a>, '.']},
+			{question: "Other questions?", answer: ["Please don't hesitate to reach out to us at ", <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>, "!"]},
         ];
 
 		let listItems = faqs.map( (item) => {
 			return (
 				<FAQItem header={item.question}>
-					<h5>{item.answer}</h5>
+					{item.answer}
 				</FAQItem>
-				/*
-				<div key={item.question} className={styles['faq-content-item']}>
-					<h5 className={styles['faq-content-item-title']}>
-						{item.question}
-					</h5>
-					<h6 className={styles['faq-content-item-subtitle']}>{item.answer}</h6>
-				</div>
-				*/
 			);
 		});
 		
-        return(
-            <div>
-			
-			{listItems}
-			
+		return(
+			<div>
+				{listItems}
 			</div>
         );
     }
