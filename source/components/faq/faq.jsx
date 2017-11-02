@@ -3,16 +3,16 @@ import React, { Component } from 'react'
 import styles from './faq.scss'
 
 class FAQItem extends Component {
-	
+
 	constructor(props) {
 		super(props);
-		
+
 		this.handleShowClick = this.handleShowClick.bind(this);
 		this.handleHideClick = this.handleHideClick.bind(this);
-		
+
 		this.state = {expanded: false};
 	}
-	
+
 	handleShowClick() {
 		this.setState({expanded: true});
 	}
@@ -20,14 +20,14 @@ class FAQItem extends Component {
 	handleHideClick() {
 		this.setState({expanded: false});
 	}
-	
+
 	render() {
 		const stGlobal = {
 			width: '96%',
 			margin: '0.3em 2%',
 			display: 'inline-block',
 		};
-		
+
 		const stHead = {
 			padding: '16px 24px',
 			background: '#11122F',
@@ -36,15 +36,15 @@ class FAQItem extends Component {
 			fontSize: '140%',
 			textAlign: 'left',
 		}
-		
+
 		const stDrop = {
 			padding: '16px 24px',
-			fontSize: '120%',
-			lineHeight: '110%',
-			background: '#11122F66',
-			color: 'white'
+			background: 'rgba(17, 18, 47, 0.42)',
+			color: 'white',
+			fontWeight: '200',
+			fontSize: '1.3em'
 		};
-		
+
 		const stEx = { // the plus/minus signs
 			float: 'right',
 			display: 'inline-block',
@@ -52,33 +52,33 @@ class FAQItem extends Component {
 			lineHeight: '65%', // this has to be eyeballed
 			fontSize: '150%',
 		};
-		
+
 		const expanded = this.state.expanded;
-		
+
 		let button = null;
 		let body = null;
 		let expand = null;
 		let listener = null;
-		
+
 		let ru = '6px ';
 		let rn = '0px ';
-		
+
 		if (expanded) {
 			stHead.borderRadius = ru + ru + rn + rn;
 			stDrop.borderRadius = rn + rn + ru + ru;
-			
+
 			listener = this.handleHideClick;
 			button = <span>{this.props.header}</span>;
 			body = <div className="faq-body" style={stDrop}>{this.props.children}</div>;
 			expand = <span style={stEx}>–</span>;
 		} else {
 			stHead.borderRadius = ru + ru + ru + ru;
-			
+
 			listener = this.handleShowClick;
 			button = <span>{this.props.header}</span>;
 			expand = <span style={stEx}>+</span>;
 		}
-		
+
 		return (
 			<div style={stGlobal}>
 				<div onClick={listener} style={stHead}>
@@ -86,24 +86,23 @@ class FAQItem extends Component {
 					{expand}
 				</div>
 				{body}
-				
 			</div>
 		);
 	}
 }
 
 class FAQ extends Component {
-	
+
 	render() {
-		
+
 		const column = {
 			width: '50%',
 			display: 'inline-block',
 		}
-		
+
 		let faqs = [
 			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday. We will release a schedule soon."},
-			{question: "What should I bring?", answer: " You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power draw concerns, please do not bring extra monitors or desktop computers."},
+			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without a team and find a group at the event. We will be providing mentor matching and a team formation workshop for you to meet other like-minded individuals."},
 			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. There will be a wide variety of food."},
 			{question: "Who do I contact for help?", answer: "Mentors from leading technology companies will be on-hand to provide support and troubleshoot problems in both the CREATE and CONTRIBUTE tracks. We also encourage all attendees to help each other!"},
@@ -121,9 +120,9 @@ class FAQ extends Component {
 				</FAQItem>
 			);
 		});
-		
+
 		return(
-			<div>
+			<div className="FAQ">
 				{listItems}
 			</div>
         );
