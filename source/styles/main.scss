@@ -14,4 +14,10 @@ body {
   h1, h2, h3, h4, h5, h6 {
     font-weight: medium;
   }
+
+  a, a:link, a:visited, a:hover, a:active {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+  }
 }
