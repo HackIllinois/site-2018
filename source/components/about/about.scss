@@ -1,0 +1,15 @@
+.About {
+	margin-top: 8em;
+
+
+	&__columnSection {
+		display: flex;
+
+		&__column {
+			flex: 1;
+			padding: 0 1em;
+
+			font-size: 0.9em;
+		}
+	}
+}
