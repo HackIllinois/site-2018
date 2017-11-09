@@ -10,7 +10,12 @@ class Home extends Component {
     render() {
         return(
             <div className="container">
+
                 <div className="Background">
+                    <div className="Background__foreground">
+
+                    </div>
+
                     <div className="Background__footer">
 
                     </div>
@@ -24,6 +29,7 @@ class Home extends Component {
 
                 <SectionHeader text="Frequently Asked Questions" />
                 <FAQ/>
+
             </div>
         )
     }
