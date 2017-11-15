@@ -9,7 +9,7 @@ class About extends Component {
 				<div className="About__section">
 	                <h2> WELCOME TO HACKILLINOIS! </h2>
 					<p>
-                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Now, it’s time to give back to the community. HackIllinois 2017 is the first open source-focused collegiate hackathon!
+                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Now, it’s time to give back to the community.
                     </p>
 					<br />
 					<h2> OUR EVENT </h2>
