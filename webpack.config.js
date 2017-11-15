@@ -70,7 +70,7 @@ const config = {
         new versioner(),
 
         new HtmlWebpackPlugin({
-          template: APP_DIR + 'html/index.html'
+          template: APP_DIR + '/html/index.html'
         })
     ]
 };
