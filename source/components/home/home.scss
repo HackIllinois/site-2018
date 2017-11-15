@@ -30,22 +30,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-}
 
-.Foreground {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  min-width: 100%;
-  height: 100%;
-  min-height: 3000px;
-  z-index: -100;
-  background: url("../../assets/img/svg/Foreground Image.svg") no-repeat top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    img {
+      max-width: 175px;
+    }
+  }
 }
 
 .Background {
@@ -54,36 +43,10 @@
   left: 0%;
   min-width: 100%;
   height: 100%;
-  min-height: 3000px;
   z-index: -100;
-  background: url("../../assets/img/svg/Background Image.svg") no-repeat top center;
+  background: url("../../assets/img/png/top_image.png") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  &__foreground {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    min-width: 100%;
-    height: 100%;
-    min-height: 3000px;
-    z-index: -100;
-    background: url("../../assets/img/svg/Foreground Image.svg") no-repeat top center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-  }
-
-  &__footer {
-    background: url("../../assets/img/svg/bottom image.svg") no-repeat bottom center;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    min-width: 100%;
-    z-index: -99;
-    min-height: 300px;
-  }
 }

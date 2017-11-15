@@ -1,0 +1,15 @@
+.Countdown {
+    min-width: 100%;
+    min-height: 200px;
+    background: url("../../assets/img/png/middle_image.png") no-repeat top center;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        opacity: 0.7;
+    }
+}
