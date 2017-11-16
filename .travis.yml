@@ -9,6 +9,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - python3-pip
 cache:
   directories:
     - node_modules
@@ -17,10 +18,14 @@ before_script:
   - npm install
 script:
   - npm run build
+before_deploy:
+  - pip install --upgrade --user awscli
 deploy:
   provider: s3
-  access_key_id: $HACKILLINOIS_ACCESS_KEY_ID
-  secret_access_key: $HACKILLINOIS_SECRET_ACCESS_KEY
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $HACKILLINOIS_BUCKET_NAME
   skip_cleanup: true
   local_dir: public
+after_deploy:
+  - ./scripts/invalidate.sh
