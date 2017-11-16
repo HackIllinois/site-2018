@@ -27,7 +27,7 @@ class Home extends Component {
 
                 <About/>
 
-                <SectionHeader text="Frequently Asked Questions" />
+                <SectionHeader text="We thought you might have some questions." />
                 <FAQ/>
 
             </div>
