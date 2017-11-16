@@ -18,14 +18,12 @@
     "babel-preset-react": "^6.23.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.3",
-    "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.2",
     "postcss-loader": "^1.3.3",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.4.2",
-    "webpack-git-hash": "^1.0.2"
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "normalize.css": "^6.0.0",
