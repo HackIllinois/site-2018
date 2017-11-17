@@ -110,9 +110,9 @@ class FAQ extends Component {
 			{question: "Will you have hardware?", answer: "We'll have high-level hardware provided by companies. We'll also have basic hardware components like resistors, transistors, and ICs, as well as wood, building materials, and power tools for you to tinker with."},
         ];
 
-		let listItems = faqs.map( (item) => {
+		let listItems = faqs.map( (item, index) => {
 			return (
-				<FAQItem header={item.question}>
+				<FAQItem key={index} header={item.question}>
 					{item.answer}
 				</FAQItem>
 			);
