@@ -59,6 +59,10 @@ const config = {
             {
               from: APP_DIR + '/assets/',
               to: BUILD_DIR + '/assets/'
+            },
+            {
+              from: APP_DIR + '/apple-app-site-association',
+              to: BUILD_DIR + '/apple-app-site-association'
             }
         ], {
             copyUnmodified: false,
