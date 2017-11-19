@@ -29,3 +29,5 @@ deploy:
   local_dir: public
 after_deploy:
   - ./scripts/invalidate.sh
+  - aws s3api copy-object --bucket $HACKILLINOIS_BUCKET_NAME --content-type "application/json" --copy-source $HACKILLINOIS_BUCKET_NAME/apple-app-site-association --key apple-app-site-association --metadata-directive "REPLACE"
+  
