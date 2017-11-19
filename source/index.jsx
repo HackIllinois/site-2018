@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
-import Auth from './components/auth/auth'
+import Auth from './components/auth/auth';
 
 require('normalize.css');
 require('./styles/main.scss');
