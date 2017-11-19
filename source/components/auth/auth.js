@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import { fromPromise } from 'mobx-utils'
-import querystring from 'query-string'
+import React, { Component } from 'react';
+import { fromPromise } from 'mobx-utils';
+import querystring from 'query-string';
 
-import axios from 'axios'
+import axios from 'axios';
 
 class Auth extends Component {
     constructor(props) {
-      super(props)
+      super(props);
     }
 
     componentDidMount() {
-      const code = querystring.parse(this.props.location.search)['code']
+      const code = querystring.parse(this.props.location.search)['code'];
       const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
       .then(
         (token) => {
