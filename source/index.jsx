@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
+import Auth from './components/auth/auth';
 
 require('normalize.css');
 require('./styles/main.scss');
@@ -21,6 +22,7 @@ render(
     <Router>
         <div>
             <Route exact path="/" component={Home}/>
+            <Route exact path="/auth" component={Auth}/>
         </div>
     </Router>,
     document.getElementById('app')
