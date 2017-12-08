@@ -102,7 +102,7 @@ class FAQ extends Component {
 
 		let faqs = [
 			{question: "Are there travel reimbursements?", answer: "Unfortunately, we will not be able to provide travel reimbursements to student attendees. However, we will have busses going to 11 schools."},
-			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please make you mentioned it on the application. There will be a wide variety of food."},
+			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please make sure you mention it on the application. There will be a wide variety of food."},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses and pillows. We want you to be comfortable!"},
 			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday. A schedule will be released soon. Departure will be at 5 PM Sunday."},
 			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, personal items (toiletries), a laptop & charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power concerns, please do not bring extra monitors or desktop computers."},
