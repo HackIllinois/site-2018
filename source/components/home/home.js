@@ -23,6 +23,9 @@ class Home extends Component {
 
                 <div className="Landing">
                   <img className="Landing__logo" src="./assets/img/png/landing_page_logo_date.png" />
+                  <a href="http://fulcrum-gt.com">
+                    <img className="Landing__logo2" src="./assets/img/png/fulcrum.png" />
+                  </a>
                 </div>
 
                 <About/>
