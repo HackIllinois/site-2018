@@ -31,6 +31,38 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  &__logo2 {
+    position: absolute;
+    width: 100%;
+    max-width: 160px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media (min-height: 400px) {
+    &__logo2 {
+      top: 85%;
+    }
+  }
+  @media (min-height: 450px) {
+    &__logo2 {
+      top: 80%;
+    }
+  }
+  @media (min-height: 600px) {
+    &__logo2 {
+      top: 75%;
+    }
+  }
+  @media (min-height: 700px) {
+    &__logo2 {
+      top: 70%;
+    }
+  }
+  @media (min-height: 850px) {
+    &__logo2 {
+      top: 65%;
+    }
+  }
 }
 
 .Foreground {
