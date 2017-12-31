@@ -63,6 +63,16 @@
       top: 65%;
     }
   }
+  @media (min-height: 1200px) {
+    &__logo2 {
+      top: 60%;
+    }
+  }
+  @media (min-height: 1750px) {
+    &__logo2 {
+      top: 58%;
+    }
+  }
 }
 
 .Foreground {
