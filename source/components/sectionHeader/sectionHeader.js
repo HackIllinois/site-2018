@@ -9,9 +9,9 @@ class SectionHeader extends Component {
 
     render() {
         return(
-        	<div className="SectionHeader">
+            <div className="SectionHeader">
                 <h2>{ this.props.text }</h2>
-			</div>
+            </div>
         )
     }
 }
