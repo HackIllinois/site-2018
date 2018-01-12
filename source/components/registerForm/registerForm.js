@@ -8,33 +8,21 @@ export default class RegisterForm extends Component {
 
   render() {
     // Variables setup
+    const prop = this.props.prop
     const forms = this.props.forms
     const handleChange = this.props.handleChange
     const advanceForm = this.props.advanceForm
     const retreatForm = this.props.retreatForm
 
-    let previousButton = null;
-    let nextButton = null;
-
     // Previous and Next Button setup
-    if (retreatForm) {
-      previousButton = (
-        <button type="button" onClick={retreatForm}>Previous</button>
-      )
-    }
-    if (advanceForm) {
-      nextButton = (
-        <button type="button" onClick={advanceForm}>Next</button>
-      )
-    }
+    let previousButton = retreatForm ? <button type="button" onClick={retreatForm}>Previous</button> : null;
+    let  nextButton = advanceForm ? <button type="button" onClick={advanceForm}>Next</button> : null;
 
     return(
       <div>
         <div>
   				{forms.map((config, index) =>
-            (
-              <InputField key={index} config={config} handleChange={handleChange}/>
-            )
+            <InputField key={index} config={config} handleChange={handleChange} prop={prop}/>
           )}
   			</div>
 

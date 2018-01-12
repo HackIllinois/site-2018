@@ -5,7 +5,7 @@ import RegisterNav from '../registerNav/registerNav';
 import RegisterForm from '../registerForm/registerForm';
 import RegisterTeam from '../registerTeam/registerTeam';
 import RegisterReview from '../registerReview/registerReview'
-import {personal_forms, profressional_forms} from './registerFieldsConfig'
+import {personal_fields, profressional_fields} from './registerFieldsConfig'
 
 import styles from './register.scss'
 import axios from 'axios';
@@ -17,7 +17,10 @@ export default class Register extends Component {
 
     this.state = {
       step: 0,
-      attendee: {}
+      attendee: {},
+      ecosystemInterests: [],
+      extras: [],
+      collaborators: []
     };
   };
 
@@ -29,8 +32,7 @@ export default class Register extends Component {
   };
 
   advanceForm = (type) => {
-    //TODO: validation - type: personal or profressional
-    console.log(this.state);
+    //TODO: validation - type: personal or profressional OR use semantic (Need Simon's input)
     this.setState({step: this.state.step + 1});
   };
 
@@ -39,18 +41,20 @@ export default class Register extends Component {
   };
 
   submitForm = () => {
-    axios.post('https://api.hackillinois.org//v1/registration/attendee', {
-      attendee: {},
-      ecosystemInterests: [],
-      extras: [],
-      collaborators: []
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(error => {
-        console.log(error);
-    });
+    console.log(this.state.attendee);
+    console.log(this.state.collaborators);
+    // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
+    //   attendee: this.state.attendee,
+    //   ecosystemInterests: this.state.ecosystemInterests,
+    //   extras: this.state.extras,
+    //   collaborators: this.state.collaborators,
+    // })
+    // .then(response => {
+    //     console.log(response);
+    // })
+    // .catch(error => {
+    //     console.log(error);
+    // });
   };
 
   render() {
@@ -69,10 +73,9 @@ export default class Register extends Component {
         <div className="form-container">
           {
             [
-              <RegisterForm retreatForm={null} advanceForm={advanceForm} forms={personal_forms} handleChange={handleChange}/>,
-              <RegisterForm retreatForm={retreatForm} advanceForm={advanceForm} forms={profressional_forms} handleChange={handleChange}/>,
-              <RegisterTeam retreatForm={retreatForm} advanceForm={advanceForm} handleChange={handleChange}/>,
-              <RegisterReview retreatForm={retreatForm} submitForm={submitForm}/>
+              <RegisterForm prop={'attendee'} retreatForm={null} advanceForm={advanceForm} forms={personal_fields} handleChange={handleChange}/>,
+              <RegisterForm prop={'attendee'} retreatForm={retreatForm} advanceForm={advanceForm} forms={profressional_fields} handleChange={handleChange}/>,
+              <RegisterTeam prop={'collaborators'} retreatForm={retreatForm} submitForm={submitForm} handleChange={handleChange}/>,
             ][step]
           }
         </div>

@@ -13,25 +13,22 @@ export default class InputField extends Component {
     const title = this.props.config.title
     const required = this.props.config.required || true
     const handleChange = this.props.handleChange
+    const prop = this.props.prop
 
     let field = null
 
     // input or select Setup
     if (fieldType == 'input') {
-      field = (
-        <input type={inputType} id={id} name={id} onChange={handleChange('attendee', id)} placeholder={placeholder} required={required}/>
-      )
+      field = 
+        <input type={inputType} id={id} name={id} onChange={handleChange(prop, id)} placeholder={placeholder} required={required}/>;
     }
     if (fieldType == 'select') {
-      field = (
-        <select id={id} name={id} onChange={handleChange('attendee', id)} required={required}>
+      field = 
+        <select id={id} name={id} onChange={handleChange(prop, id)} required={required}>
           {options.map((option, index) => 
-            (
-              <option key={index} value={option}> {option} </option>
-            )
+            <option key={index} value={option}> {option} </option>
           )}
-        </select>
-      )
+        </select>;
     }
 
     return(
