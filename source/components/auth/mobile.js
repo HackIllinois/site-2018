@@ -18,7 +18,7 @@ class Auth extends Component {
       const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
       .then(
         (token) => {
-          this.state.token = token;
+          this.state.token = token.data.data.auth;
         },
         (reject) => {
           this.state.token = "";
