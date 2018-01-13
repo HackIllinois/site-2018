@@ -7,7 +7,6 @@ import axios from 'axios';
 const MOBILE_REDIRECT_BASEURL = "hackillinois://auth?token="
 
 class Auth extends Component {
-    let token;
 
     constructor(props) {
       super(props);
@@ -29,9 +28,11 @@ class Auth extends Component {
 
     render() {
       let redirectURI = MOBILE_REDIRECT_BASEURL + this.state.token;
+      let divContent = "1; url=" + redirectURI;
+
       return (
         <div className="container">
-          <meta httpEquiv="refresh" content="1; url=" + redirectURI/>
+          <meta httpEquiv="refresh" content={divContent}/>
         </div>
       )
     }

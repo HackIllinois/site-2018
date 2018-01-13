@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 // Components
 import Home from './components/home/home';
 import Auth from './components/auth/auth';
-import MobileAuth from './components/auth/mobile'
+import MobileAuth from './components/auth/mobile';
 
 require('normalize.css');
 require('./styles/main.scss');
