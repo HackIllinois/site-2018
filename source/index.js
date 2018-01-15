@@ -7,6 +7,7 @@ import Home from './components/home/home';
 import Auth from './components/auth/auth';
 import Register from './components/register/register';
 
+require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
 require('./styles/main.scss');
 

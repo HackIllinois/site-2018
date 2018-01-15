@@ -9,32 +9,25 @@ class RegisterNav extends Component {
 
 
     return(
-      <div className="Line">
-        <div className="Step-Container">
-          <div className={step == 0 ? 'Oval-Active' : 'Oval-Inactive'}></div>
-          <div className="Header-Text">
-            PERSONAL INFORMATION
+      <ul className="navBar">
+        <li className={ step == 0 ? 'active' : null}>
+          <div className="title">
+            PERSONAL <br/>
+            INFORMATION
           </div>
-        </div>
-        <div className="Step-Container">
-          <div className={step == 1 ? 'Oval-Active' : 'Oval-Inactive'}></div>
-          <div className="Header-Text">
-            PROFRESSIONAL INFORMATION
+        </li>
+        <li className={ step == 1 ? 'active' : null}>
+          <div className="title">
+            PROFESSIONAL <br/>
+            INFORMATION
           </div>
-        </div>
-        <div className="Step-Container">
-          <div className={step == 2 ? 'Oval-Active' : 'Oval-Inactive'}></div>
-          <div className="Header-Text">
+        </li>
+        <li className={ step == 2 ? 'active' : null}>
+          <div className="title">
             TEAM
           </div>
-        </div>
-        <div className="Step-Container">
-          <div className={step == 3 ? 'Oval-Active' : 'Oval-Inactive'}></div>
-          <div className="Header-Text">
-            REVIEW
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     )
   }
 }

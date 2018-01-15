@@ -1,0 +1,91 @@
+$title-color:             #1c055e;
+$value-color:             rgba(28, 5, 94, 1);
+$placeholder-color:       rgba(28, 5, 94, 0.5);
+$input-underline-color:   #ed008c;
+$select-underline-color:  #fccfc9;
+
+.fieldContainer {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.fieldBigContainer {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 2em;
+}
+
+.selectField {
+  border-bottom: solid 1px $select-underline-color;
+}
+
+.inputField {
+  border-bottom: solid 1px $input-underline-color;
+}
+
+.field {
+  input, .dropdown {
+    outline: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    padding-left: 0em !important;
+    padding-right: 0 !important;
+    box-shadow: none;
+  }
+
+  .default.text, ::placeholder {
+    background: transparent !important;
+    color: $placeholder-color !important;
+  }
+
+  .dropdown {
+    .icon{
+      font-size: 25px;
+      font-weight: 500;
+      color: $title-color;
+    }
+    .menu{
+      border-color: transparent !important;
+    }
+
+    .menu>.item{
+      border-top: solid 1px $select-underline-color;
+    }
+
+    .item {
+      background: white !important;
+    }
+
+    .selected, .selected.item {
+      background: $select-underline-color !important;
+      .text {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .visible {
+    background: white !important;
+  }
+
+  .text{
+    background: transparent !important;
+    color: $value-color !important;
+  }
+
+  input[type=text] {
+    background: transparent !important;
+    color: $value-color !important;
+  }
+}
+
+.fieldTitle {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1c055e;
+}

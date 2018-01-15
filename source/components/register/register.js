@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 // Components
-import RegisterNav from '../registerNav/registerNav';
 import RegisterForm from '../registerForm/registerForm';
 import RegisterTeam from '../registerTeam/registerTeam';
-import RegisterReview from '../registerReview/registerReview'
-import {personal_fields, profressional_fields} from './registerFieldsConfig'
+import RegisterWarning from '../registerWarning/registerWarning';
+import RegisterEssay from '../registerEssay/registerEssay';
+import RegisterSuccess from '../registerSuccess/registerSuccess';
+
+import { Grid } from 'semantic-ui-react'
+import { personal_fields, profressional_fields } from './registerFieldsConfig'
 
 import styles from './register.scss'
 import axios from 'axios';
@@ -17,32 +19,38 @@ export default class Register extends Component {
 
     this.state = {
       step: 0,
-      attendee: {},
+      personal: {},
+      profressional: {},
       ecosystemInterests: [],
       extras: [],
       collaborators: []
     };
   };
 
-  // ---
-  // Handlers
-  // ---
-  handleChange = (prop, name) => event => {
-    this.setState({ [prop]: {...this.state[prop], [name]: event.target.value }});
+  componentWillMount() {
+    let personal_data = {};
+    personal_fields.map((config, index)=> {
+      personal_data[config.id] = null;
+    });
+
+    let profressional_data = {};
+    profressional_fields.map((config, index)=> {
+      profressional_data[config.id] = null;
+    });
+
+    this.setState({ personal: personal_data, profressional: profressional_data});
+  }
+
+
+  nextStep = (prop, data) => {
+    this.setState({ step: this.state.step + 1, [prop]: data });
   };
 
-  advanceForm = (type) => {
-    //TODO: validation - type: personal or profressional OR use semantic (Need Simon's input)
-    this.setState({step: this.state.step + 1});
-  };
-
-  retreatForm = () => {
-    this.setState({step: this.state.step - 1});
+  previousStep = () => {
+    this.setState({ step: this.state.step - 1 });
   };
 
   submitForm = () => {
-    console.log(this.state.attendee);
-    console.log(this.state.collaborators);
     // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
     //   attendee: this.state.attendee,
     //   ecosystemInterests: this.state.ecosystemInterests,
@@ -59,27 +67,26 @@ export default class Register extends Component {
 
   render() {
     // Variables setup
-    const advanceForm  = this.advanceForm
-    const retreatForm  = this.retreatForm
-    const submitForm   = this.submitForm
-    const step         = this.state.step
-    const handleChange = this.handleChange
+    const nextStep      = this.nextStep;
+    const previousStep  = this.previousStep;
+    const submitForm    = this.submitForm;
+    const state         = this.state;
 
     return(
-      <div className="flex-container">
-        <div className="nav-container">
-          <RegisterNav step={this.state.step}/>
-        </div>
-        <div className="form-container">
-          {
-            [
-              <RegisterForm prop={'attendee'} retreatForm={null} advanceForm={advanceForm} forms={personal_fields} handleChange={handleChange}/>,
-              <RegisterForm prop={'attendee'} retreatForm={retreatForm} advanceForm={advanceForm} forms={profressional_fields} handleChange={handleChange}/>,
-              <RegisterTeam prop={'collaborators'} retreatForm={retreatForm} submitForm={submitForm} handleChange={handleChange}/>,
-            ][step]
-          }
-        </div>
-      </div>
+      <Grid className='registerContainer'>
+        <Grid.Row>
+            {
+              [
+                <RegisterForm key='0' step={state.step} id='personal' data={state.personal} previousStep={null} nextStep={nextStep} forms={personal_fields}/>,
+                <RegisterForm key='1' step={state.step} id='profressional' data={state.profressional} previousStep={previousStep} nextStep={nextStep} forms={profressional_fields}/>,
+                <RegisterTeam step={state.step} id='collaborators' data={state.collaborators} previousStep={previousStep} nextStep={nextStep}/>,
+                <RegisterWarning previousStep={previousStep} nextStep={nextStep}/>,
+                <RegisterEssay previousStep={previousStep} nextStep={submitForm}/>,
+                <RegisterSuccess status={state.status}/>,
+              ][state.step]
+            }
+        </Grid.Row>
+      </Grid>
     )
   }
 }
