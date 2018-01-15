@@ -5,14 +5,29 @@ $input-underline-color:   #ed008c;
 $select-underline-color:  #fccfc9;
 
 .fieldContainer {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 3em;
+  padding-right: 3em;
+
+  @media only screen and (max-width: 1200px){
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  @media only screen and (max-width: 640px){
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
-.fieldBigContainer {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 2em;
+.fieldTitle {
+  font-size: 13px;
+  font-weight: 550;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $title-color;
 }
 
 .selectField {
@@ -41,7 +56,7 @@ $select-underline-color:  #fccfc9;
   .dropdown {
     .icon{
       font-size: 25px;
-      font-weight: 500;
+      font-weight: 550;
       color: $title-color;
     }
     .menu{
@@ -59,7 +74,7 @@ $select-underline-color:  #fccfc9;
     .selected, .selected.item {
       background: $select-underline-color !important;
       .text {
-        font-weight: 500;
+        font-weight: 500 !important;
       }
     }
   }
@@ -77,15 +92,4 @@ $select-underline-color:  #fccfc9;
     background: transparent !important;
     color: $value-color !important;
   }
-}
-
-.fieldTitle {
-  font-size: 13px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #1c055e;
 }

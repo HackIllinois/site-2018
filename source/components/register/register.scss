@@ -1,5 +1,15 @@
 .registerContainer {
+  width:100%;
+	height:100%;
+
   background-color: rgba(204, 217, 252, 0.24);
-  padding-top: 5em !important;
-  padding-bottom: 5em !important;
+  padding: 10em !important;
+
+  @media only screen and (max-width: 1200px){
+    padding: 4em !important;
+  }
+
+  @media only screen and (max-width: 640px){
+    padding: 1em !important;
+  }
 }

@@ -24,7 +24,7 @@ export default class RegisterTeam extends Component {
 
   removeCollaborator = (e, data) => {
     console.log(data);
-    this.setState({ data: this.state.data.slice(index, 1) });
+    this.setState({ data: this.state.data.slice(data.name, 1) });
   };
 
   handleChange = (e, { name, value }) => {
@@ -58,13 +58,13 @@ export default class RegisterTeam extends Component {
     const removeCollaborator = this.removeCollaborator;
 
     return(
-      <Grid stackable centered>
-        <Grid.Row className='container'>
-          <Grid.Column tablet={4} computer={2} floated='left'>
+      <Grid stackable>
+        <Grid.Row columns={2}>
+          <Grid.Column tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
-          <Grid.Column tablet={12} computer={14}>
-            <Form className='teamContainer' onKeyUp={this.handleKeyup}>
+          <Grid.Column tablet={12} computer={13}>
+            <Form className='teamContainer'>
               <div className='teamHeader'>
                 Interested in working with a team? Let us know who you prefer to work with via their GitHub username. We don't have team size limits; however, we may not be able to accommodate your whole team.
               </div>
@@ -85,10 +85,8 @@ export default class RegisterTeam extends Component {
             </Form>
           </Grid.Column>
         </Grid.Row>
-
-        <RegisterButtons previousStep={previousStep} nextStep={validateForm}/>
+        <RegisterButtons previousStep={previousStep} nextStep={validateForm} />
       </Grid>
-
     )
   }
 }

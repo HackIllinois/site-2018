@@ -1,4 +1,9 @@
-.container {
-  padding-left: 7em !important;
-  padding-right: 7em !important;
+.formContainer {
+  padding-left: 3em !important;
+  padding-right: 3em !important;
+
+  @media only screen and (max-width: 1200px){
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
 }

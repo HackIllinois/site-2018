@@ -43,6 +43,7 @@ export default class Register extends Component {
 
 
   nextStep = (prop, data) => {
+    console.log(prop, data);
     this.setState({ step: this.state.step + 1, [prop]: data });
   };
 
@@ -51,6 +52,7 @@ export default class Register extends Component {
   };
 
   submitForm = () => {
+    console.log(this.state);
     // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
     //   attendee: this.state.attendee,
     //   ecosystemInterests: this.state.ecosystemInterests,
@@ -73,20 +75,18 @@ export default class Register extends Component {
     const state         = this.state;
 
     return(
-      <Grid className='registerContainer'>
-        <Grid.Row>
-            {
-              [
-                <RegisterForm key='0' step={state.step} id='personal' data={state.personal} previousStep={null} nextStep={nextStep} forms={personal_fields}/>,
-                <RegisterForm key='1' step={state.step} id='profressional' data={state.profressional} previousStep={previousStep} nextStep={nextStep} forms={profressional_fields}/>,
-                <RegisterTeam step={state.step} id='collaborators' data={state.collaborators} previousStep={previousStep} nextStep={nextStep}/>,
-                <RegisterWarning previousStep={previousStep} nextStep={nextStep}/>,
-                <RegisterEssay previousStep={previousStep} nextStep={submitForm}/>,
-                <RegisterSuccess status={state.status}/>,
-              ][state.step]
-            }
-        </Grid.Row>
-      </Grid>
+      <div className="registerContainer">
+        {
+          [
+            <RegisterForm key='0' step={state.step} id='personal' data={state.personal} previousStep={null} nextStep={nextStep} forms={personal_fields}/>,
+            <RegisterForm key='1' step={state.step} id='profressional' data={state.profressional} previousStep={previousStep} nextStep={nextStep} forms={profressional_fields}/>,
+            <RegisterTeam step={state.step} id='collaborators' data={state.collaborators} previousStep={previousStep} nextStep={nextStep}/>,
+            <RegisterWarning previousStep={previousStep} nextStep={nextStep}/>,
+            <RegisterEssay previousStep={previousStep} nextStep={submitForm}/>,
+            <RegisterSuccess status={state.status}/>,
+          ][state.step]
+        }
+      </div>
     )
   }
 }

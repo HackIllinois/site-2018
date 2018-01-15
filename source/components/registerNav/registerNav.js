@@ -24,7 +24,8 @@ class RegisterNav extends Component {
         </li>
         <li className={ step == 2 ? 'active' : null}>
           <div className="title">
-            TEAM
+            ADD <br/>
+            TEAMMATE
           </div>
         </li>
       </ul>

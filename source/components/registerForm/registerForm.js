@@ -55,16 +55,16 @@ export default class RegisterForm extends Component {
     const data          = this.state.data;
 
     return(
-      <Grid stackable centered>
-        <Grid.Row className='container'>
-          <Grid.Column tablet={4} computer={2} floated='left'>
+      <Grid stackable>
+        <Grid.Row columns={2}>
+          <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
-          <Grid.Column tablet={12} computer={14}>
+          <Grid.Column mobile={16} tablet={12} computer={13}>
             <Form size='small'>
-              <Grid columns={2} centered stackable>
+              <Grid className='formContainer' doubling columns={2}>
                 {forms.map((config, index) =>
-                  <Grid.Column computer={config.width.computer} tablet={config.width.tablet} key={index}>
+                  <Grid.Column width={config.width} key={index}>
                     <InputField value={data[config.id]} config={config} handleChange={handleChange}/>
                   </Grid.Column>
                 )}
@@ -72,7 +72,6 @@ export default class RegisterForm extends Component {
             </Form>
           </Grid.Column>
         </Grid.Row>
-
         <RegisterButtons previousStep={previousStep} nextStep={validateForm} />
       </Grid>
     )

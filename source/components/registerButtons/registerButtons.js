@@ -22,12 +22,13 @@ export default class RegisterButtons extends Component {
       </Button> : null;
 
     return(
-      <Grid.Row className='container'>
+      <Grid.Row>
         <Grid.Column>
           {previousButton}
           {nextButton}
         </Grid.Column>
       </Grid.Row>
+
     )
   }
 }

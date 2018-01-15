@@ -13,11 +13,9 @@ export default class InputField extends Component {
     const id            = this.props.config.id
     const title         = this.props.config.title
     const width         = this.props.config.width.computer;
-    const required      = this.props.config.required || true
     const placeholder   = this.props.config.placeholder
     const handleChange  = this.props.handleChange
     const value         = this.props.value || ''
-    const error         = this.props.value ? false : true;
 
     let field = null
 
@@ -50,7 +48,7 @@ export default class InputField extends Component {
     }
 
     return(
-      <div className={ width > 10 ? 'fieldBigContainer' : 'fieldContainer'}>
+      <div className='fieldContainer'>
         <div className='fieldTitle'>
           {title}
         </div>
