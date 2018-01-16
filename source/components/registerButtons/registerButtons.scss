@@ -8,11 +8,10 @@ $title-color:             #1c055e;
   bottom: 4em;
   padding: 4em !important;
 
-  @media only screen and (max-width: 1200px){
+  @media only screen and (max-width: 1000px){
     bottom: 0em !important;
     padding: 0em !important;
     position: relative !important;
-
   }
 
   .button {

@@ -19,7 +19,7 @@ export default class RegisterForm extends Component {
 
   componentWillMount() {
     this.setState({ data: this.props.data });
-  }
+  };
 
   handleChange = (e, { name, value }) => {
     this.setState({ data: {...this.state.data, [name]: value }});
@@ -34,14 +34,13 @@ export default class RegisterForm extends Component {
     return true;
   };
 
-  validateForm = () => {
-    const id        = this.props.id;
+  validateStep = () => {
     const data      = this.state.data;
     const nextStep  = this.props.nextStep;
 
-    // if(this.checkProperties(data)) {
-      nextStep(id, data);
-    // }
+    if(this.checkProperties(data)) {
+      nextStep(data);
+    }
   };
 
   render() {
@@ -49,7 +48,7 @@ export default class RegisterForm extends Component {
     const step          = this.props.step;
     const forms         = this.props.forms;
     const previousStep  = this.props.previousStep;
-    const validateForm  = this.validateForm;
+    const validateStep  = this.validateStep;
     const handleChange  = this.handleChange;
     const data          = this.state.data;
 
@@ -71,7 +70,7 @@ export default class RegisterForm extends Component {
             </Form>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={previousStep} nextStep={validateForm} />
+        <RegisterButtons previousStep={() => previousStep(data)} nextStep={validateStep} />
       </Grid>
     )
   }

@@ -13,59 +13,58 @@ export default class RegisterTeam extends Component {
     super(props);
 
     this.state = {
-      data: ['']
+      collaborators: ['']
     };
   };
 
   componentWillMount() {
-    this.setState({ data: this.props.data });
+    this.setState({ collaborators: this.props.data });
   }
 
-  addNewCollaborator = () => {
-    let newCollaborator = '';
-    this.setState({ data: this.state.data.concat(newCollaborator) });
+  handleChange = (e, { id, value }) => {
+    let updatedCollaborators = this.state.collaborators;
+    updatedCollaborators[id] = value;
+    this.setState({ collaborators: updatedCollaborators});
   };
 
-  removeCollaborator = (e, {name}) => {
-    const data = this.state.data;
-
-    if (name > 0 || data.length > 1) {
-      data.splice(name, 1);
-      this.setState({ data: data });
-    }
-  };
-
-  handleChange = (e, { name, value }) => {
-    let updatedData = this.state.data;
-    updatedData[name] = value;
-    this.setState({ data: updatedData});
-    console.log(this.state);
-  };
-
-  handleKeyup = (e) => {
+  handleAddCollaborator = (e) => {
+    // Check if key is enter(13)
     if(e.keyCode == 13) {
-      this.addNewCollaborator();
+      let newCollaborators = this.state.collaborators.concat('');
+      this.setState({ collaborators: newCollaborators });
     }
   }
 
-  validateForm = () => {
-    const id        = this.props.id;
-    const data      = this.state.data;
-    const nextStep  = this.props.nextStep;
+  handleRemoveCollaborator = (e, {id}) => {
+    const removeCollaborators = this.state.collaborators;
 
-    let filteredData = data.filter(el => el !== '')
-    nextStep(id, filteredData);
+    // Only remove if there are more than one collaborators
+    if (id > 0 || removeCollaborators.length > 1) {
+      removeCollaborators.splice(id, 1);
+      this.setState({ collaborators: removeCollaborators });
+    }
+  };
+
+  validateStep = () => {
+    const nextStep  = this.props.nextStep;
+    let filteredData = this.state.collaborators.filter(el => el !== '');
+
+    if (filteredData.length == 0) {
+      filteredData = [''];
+    }
+
+    nextStep(filteredData);
   };
 
   render() {
     // Variables setup
     const step          = this.props.step;
     const previousStep  = this.props.previousStep;
-    const data          = this.state.data;
-    const validateForm  = this.validateForm;
+    const collaborators = this.state.collaborators;
+    const validateStep  = this.validateStep;
     const handleChange  = this.handleChange;
-    const removeCollaborator = this.removeCollaborator;
-    const handleKeyup        = this.handleKeyup;
+    const handleAddCollaborator = this.handleAddCollaborator;
+    const handleRemoveCollaborator = this.handleRemoveCollaborator;
 
     return(
       <Grid stackable>
@@ -78,24 +77,26 @@ export default class RegisterTeam extends Component {
               Interested in working with a team? Let us know who you prefer to work with via their GitHub username. We don't have team size limits; however, we may not be able to accommodate your whole team.
             </Grid.Row>
             <Grid.Row className='inputContainer'>
-              <Form onKeyUp={handleKeyup}>
-                {data.map((collaborator, index) =>
+              <Form onKeyUp={handleAddCollaborator}>
+                {collaborators.map((collaborator, index) =>
                   <Form.Field
                     className="inputField"
                     control={Input}
+                    id={index}
                     key={index}
-                    name={index}
                     onChange={handleChange}
                     value={collaborator}
                     placeholder='Add team member, press enter to add another'
-                    action={<Button attached='right' name={index} icon='remove' onClick={removeCollaborator} />}
+                    action={
+                      <Button attached='right' id={index} icon='remove' onClick={handleRemoveCollaborator} />
+                    }
                   />
                 )}
               </Form>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={previousStep} nextStep={validateForm} />
+        <RegisterButtons previousStep={() => previousStep(collaborators)} nextStep={validateStep} />
       </Grid>
     )
   }

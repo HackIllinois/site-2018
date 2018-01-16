@@ -131,7 +131,7 @@ const profressional_fields = [
     title: 'INTERESTS(OPTIONAL)'
   },
   {
-    width: 8,
+    width: 16,
     fieldType: 'select',
     inputType: 'text',
     id: 'hasLightningInterest',
@@ -140,7 +140,7 @@ const profressional_fields = [
     title: 'Are you interested in giving a short (<5 min) lightning talk on a topic of your choice ?'
   },
   {
-    width: 8,
+    width: 16,
     fieldType: 'select',
     inputType: 'text',
     id: 'isPrivate',

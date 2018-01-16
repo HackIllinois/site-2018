@@ -1,11 +1,7 @@
 $backgorund-color:        rgba(204, 217, 252, 0.24);
 
-html, body, #app {
-  height: 100% !important;
-}
-
-[data-reactroot] {
-  height: 100% !important;
+html, body, #app, [data-reactroot] {
+  height: 100% ;
 }
 
 

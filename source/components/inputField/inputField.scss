@@ -68,10 +68,11 @@ $select-underline-color:  #fccfc9;
     }
     .menu{
       border-color: transparent !important;
+      border: 0 !important;
     }
 
     .menu>.item{
-      border-top: solid 1px $select-underline-color;
+      border-top: solid 1px $select-underline-color !important;
     }
 
     .item {
@@ -86,6 +87,11 @@ $select-underline-color:  #fccfc9;
     }
   }
 
+
+  .active.selection.dropdown {
+    padding-left: 1em !important;
+  }
+
   .visible {
     background: white !important;
   }
@@ -95,8 +101,8 @@ $select-underline-color:  #fccfc9;
     color: $value-color !important;
   }
 
-  input[type=text] {
-    background: transparent !important;
+  input {
+    line-height: 1.5em !important;
     color: $value-color !important;
   }
 }

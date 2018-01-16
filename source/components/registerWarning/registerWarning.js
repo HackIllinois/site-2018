@@ -10,20 +10,27 @@ export default class RegisterWarning extends Component {
     super(props);
 
     this.state = {
-      checked: false,
+      warning: false,
     };
   };
 
+  componentWillMount() {
+    this.setState({ warning: this.props.data });
+  }
+
   handleChange = (e, {checked}) => {
-    this.setState({checked: checked});
+    this.setState({warning: checked});
   };
 
   validateStep = () => {
-    const checked   = this.state.checked;
+    const checked   = this.state.warning;
     const nextStep  = this.props.nextStep;
 
     if(checked) {
-      nextStep();
+      nextStep(checked);
+    }
+    else {
+      //TODO: error feedback
     }
   };
 
@@ -32,6 +39,7 @@ export default class RegisterWarning extends Component {
     const previousStep  = this.props.previousStep;
     const validateStep  = this.validateStep;
     const handleChange  = this.handleChange;
+    const warning       = this.state.warning;
 
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
@@ -41,7 +49,7 @@ export default class RegisterWarning extends Component {
               If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your applications, there will be space on the next page for additions.
             </div>
             <div className='checkBox'>
-              <Checkbox onChange={handleChange} label={
+              <Checkbox checked={warning} onChange={handleChange} label={
                 <label>
                   I agree to <a> the code of conduct </a>
                 </label>
@@ -49,7 +57,7 @@ export default class RegisterWarning extends Component {
             </div>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={previousStep} nextStep={validateStep} />
+        <RegisterButtons previousStep={() => previousStep(warning)} nextStep={validateStep} />
       </Grid>
     )
   }
