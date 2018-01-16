@@ -17,20 +17,29 @@ export default class RegisterTeam extends Component {
     };
   };
 
+  componentWillMount() {
+    this.setState({ data: this.props.data });
+  }
+
   addNewCollaborator = () => {
     let newCollaborator = '';
     this.setState({ data: this.state.data.concat(newCollaborator) });
   };
 
-  removeCollaborator = (e, data) => {
-    console.log(data);
-    this.setState({ data: this.state.data.slice(data.name, 1) });
+  removeCollaborator = (e, {name}) => {
+    const data = this.state.data;
+
+    if (name > 0 || data.length > 1) {
+      data.splice(name, 1);
+      this.setState({ data: data });
+    }
   };
 
   handleChange = (e, { name, value }) => {
     let updatedData = this.state.data;
     updatedData[name] = value;
     this.setState({ data: updatedData});
+    console.log(this.state);
   };
 
   handleKeyup = (e) => {
@@ -56,6 +65,7 @@ export default class RegisterTeam extends Component {
     const validateForm  = this.validateForm;
     const handleChange  = this.handleChange;
     const removeCollaborator = this.removeCollaborator;
+    const handleKeyup        = this.handleKeyup;
 
     return(
       <Grid stackable>
@@ -63,12 +73,12 @@ export default class RegisterTeam extends Component {
           <Grid.Column tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
-          <Grid.Column tablet={12} computer={13}>
-            <Form className='teamContainer'>
-              <div className='teamHeader'>
-                Interested in working with a team? Let us know who you prefer to work with via their GitHub username. We don't have team size limits; however, we may not be able to accommodate your whole team.
-              </div>
-              <div className='teamInput'>
+          <Grid.Column className='teamContainer' tablet={12} computer={13}>
+            <Grid.Row>
+              Interested in working with a team? Let us know who you prefer to work with via their GitHub username. We don't have team size limits; however, we may not be able to accommodate your whole team.
+            </Grid.Row>
+            <Grid.Row className='inputContainer'>
+              <Form onKeyUp={handleKeyup}>
                 {data.map((collaborator, index) =>
                   <Form.Field
                     className="inputField"
@@ -78,11 +88,11 @@ export default class RegisterTeam extends Component {
                     onChange={handleChange}
                     value={collaborator}
                     placeholder='Add team member, press enter to add another'
-                    action={<Button name={index} icon='remove' onClick={removeCollaborator} />}
+                    action={<Button attached='right' name={index} icon='remove' onClick={removeCollaborator} />}
                   />
                 )}
-              </div>
-            </Form>
+              </Form>
+            </Grid.Row>
           </Grid.Column>
         </Grid.Row>
         <RegisterButtons previousStep={previousStep} nextStep={validateForm} />

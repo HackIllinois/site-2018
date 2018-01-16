@@ -1,9 +1,25 @@
 $title-color:             #1c055e;
 
-.button {
-  color: $title-color;
-  background: transparent !important;
-  .icon {
+.buttonContainer {
+  position: absolute !important;
+  width: 100%;
+  left: 0px;
+
+  bottom: 4em;
+  padding: 4em !important;
+
+  @media only screen and (max-width: 1200px){
+    bottom: 0em !important;
+    padding: 0em !important;
+    position: relative !important;
+
+  }
+
+  .button {
+    color: $title-color;
     background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
   }
 }

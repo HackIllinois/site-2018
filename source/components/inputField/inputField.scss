@@ -48,9 +48,16 @@ $select-underline-color:  #fccfc9;
     box-shadow: none;
   }
 
-  .default.text, ::placeholder {
+  input::placeholder, .default.text {
+    font-family: Montserrat;
     background: transparent !important;
     color: $placeholder-color !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 15px;
   }
 
   .dropdown {

@@ -23,7 +23,7 @@ export default class Register extends Component {
       profressional: {},
       ecosystemInterests: [],
       extras: [],
-      collaborators: []
+      collaborators: ['']
     };
   };
 
@@ -52,7 +52,7 @@ export default class Register extends Component {
   };
 
   submitForm = () => {
-    console.log(this.state);
+    this.nextStep();
     // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
     //   attendee: this.state.attendee,
     //   ecosystemInterests: this.state.ecosystemInterests,

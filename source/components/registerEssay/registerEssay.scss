@@ -1,18 +1,18 @@
-.essayMessage {
-  font-size: 15px;
-  font-weight: 500;
-  color: #1c055e;
+$title-color:             #1c055e;
 
+.centerContainer {
   margin-left: auto;
   margin-right: auto;
 }
 
+.essayMessage {
+  font-size: 15px;
+  font-weight: 500;
+  color: $title-color;
+}
 
 .essayTextArea {
   margin-top: 3em;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 13px;
-  font-weight: 300;
-  color: #1c055e;
+  color: $title-color;
 }

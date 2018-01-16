@@ -34,7 +34,7 @@ export default class RegisterEssay extends Component {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
         <Grid.Row>
-          <Grid.Column mobile={14} computer={10} textAlign='left'>
+          <Grid.Column class="centerContainer" mobile={14} computer={10} textAlign='left' verticalAlign='middle'>
             <Grid.Row className='essayMessage'>
               Here’s some space to add some optional content to your application. Feel free to use one or more of the prompts below or write anything else you believe can be valuable to your application.
               <br/>
@@ -52,7 +52,7 @@ export default class RegisterEssay extends Component {
 
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={previousStep} nextStep={validateStep} />
+        <RegisterButtons nextTitle='SUBMIT' previousStep={previousStep} nextStep={validateStep} />
       </Grid>
     )
   }
