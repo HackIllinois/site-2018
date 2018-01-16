@@ -39,9 +39,9 @@ export default class RegisterForm extends Component {
     const data      = this.state.data;
     const nextStep  = this.props.nextStep;
 
-    if(this.checkProperties(data)) {
+    // if(this.checkProperties(data)) {
       nextStep(id, data);
-    }
+    // }
   };
 
   render() {

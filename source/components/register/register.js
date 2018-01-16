@@ -43,7 +43,6 @@ export default class Register extends Component {
 
 
   nextStep = (prop, data) => {
-    console.log(prop, data);
     this.setState({ step: this.state.step + 1, [prop]: data });
   };
 
@@ -52,6 +51,7 @@ export default class Register extends Component {
   };
 
   submitForm = () => {
+    console.log('Submit');
     this.nextStep();
     // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
     //   attendee: this.state.attendee,
