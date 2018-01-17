@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Home from './components/home/home';
 import Auth from './components/auth/auth';
 import Register from './components/register/register';
+import MobileAuth from './components/auth/mobile';
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
@@ -26,6 +27,7 @@ render(
             <Route exact path="/" component={Home}/>
             <Route exact path="/auth" component={Auth}/>
             <Route exact path="/register" component={Register}/>
+            <Route exact path="/auth/mobile" component={MobileAuth}/>
         </div>
     </Router>,
     document.getElementById('app')
