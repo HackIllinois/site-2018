@@ -12,7 +12,7 @@ export default class InputField extends Component {
     const options       = this.props.config.options
     const id            = this.props.config.id
     const title         = this.props.config.title
-    const width         = this.props.config.width.computer;
+    const width         = this.props.config.width;
     const placeholder   = this.props.config.placeholder
     const handleChange  = this.props.handleChange
     const value         = this.props.value || ''

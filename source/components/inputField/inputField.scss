@@ -7,15 +7,18 @@ $select-underline-color:  #fccfc9;
 .fieldContainer {
   padding-left: 3em;
   padding-right: 3em;
+  padding-top: 2.5em;
 
-  @media only screen and (max-width: 1200px){
+  @media only screen and (max-width: 1000px){
     padding-left: 2em;
     padding-right: 2em;
+    padding-top: 0em;
   }
 
   @media only screen and (max-width: 640px){
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 0em;
   }
 }
 

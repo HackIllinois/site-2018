@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Checkbox } from 'semantic-ui-react';
+import { Grid, Checkbox, Transition } from 'semantic-ui-react';
 import styles from './registerWarning.scss'
 
 import RegisterButtons from '../registerButtons/registerButtons';
@@ -11,6 +11,7 @@ export default class RegisterWarning extends Component {
 
     this.state = {
       warning: false,
+      visible: true
     };
   };
 
@@ -23,23 +24,23 @@ export default class RegisterWarning extends Component {
   };
 
   validateStep = () => {
-    const checked   = this.state.warning;
-    const nextStep  = this.props.nextStep;
+    const nextStep              = this.props.nextStep;
+    const { warning, visible }  = this.state;
 
-    if(checked) {
-      nextStep(checked);
+    if(warning) {
+      nextStep(warning);
     }
     else {
-      //TODO: error feedback
+      this.setState({ visible: !visible });
     }
   };
 
 
   render() {
-    const previousStep  = this.props.previousStep;
-    const validateStep  = this.validateStep;
-    const handleChange  = this.handleChange;
-    const warning       = this.state.warning;
+    const previousStep          = this.props.previousStep;
+    const validateStep          = this.validateStep;
+    const handleChange          = this.handleChange;
+    const { warning, visible }  = this.state;
 
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
@@ -49,11 +50,13 @@ export default class RegisterWarning extends Component {
               If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your applications, there will be space on the next page for additions.
             </div>
             <div className='checkBox'>
-              <Checkbox checked={warning} onChange={handleChange} label={
-                <label>
-                  I agree to <a> the code of conduct </a>
-                </label>
-              }/>
+              <Transition animation='shake' duration='300' visible={visible}>
+                <Checkbox checked={warning} onChange={handleChange} label={
+                  <label>
+                    I agree to <a> the code of conduct </a>
+                  </label>
+                }/>
+              </Transition>
             </div>
           </Grid.Column>
         </Grid.Row>

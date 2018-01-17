@@ -47,6 +47,7 @@ export default class Register extends Component {
 
     // Check if we need to make api call to make submission
     if (submit) {
+      console.log(this.state);
       // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
       //   attendee: this.state.attendee,
       //   ecosystemInterests: this.state.ecosystemInterests,

@@ -7,3 +7,7 @@
     padding-right: 1em !important;
   }
 }
+
+.activeError {
+  animation: shake 200ms 2 linear;
+}

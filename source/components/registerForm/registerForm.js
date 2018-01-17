@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import RegisterNav from '../registerNav/registerNav';
 import InputField from '../inputField/inputField';
 import RegisterButtons from '../registerButtons/registerButtons';
-import { Grid, Form} from 'semantic-ui-react';
+import { Grid, Form, Transition } from 'semantic-ui-react';
 
 import styles from './registerForm.scss'
 
@@ -14,6 +14,7 @@ export default class RegisterForm extends Component {
 
     this.state = {
       data: {},
+      visible: true
     };
   };
 
@@ -25,9 +26,13 @@ export default class RegisterForm extends Component {
     this.setState({ data: {...this.state.data, [name]: value }});
   };
 
-  checkProperties = (object) => {
-    for (var key in object) {
-      if (object[key] === null || object[key] == "") {
+  checkProperties = () => {
+    const forms = this.props.forms;
+    const data  = this.state.data;
+
+    for (let index in forms) {
+      const config = forms[index];
+      if ((data[config.id] === null || data[config.id] == "") && config.required) {
         return false;
       }
     }
@@ -35,39 +40,44 @@ export default class RegisterForm extends Component {
   };
 
   validateStep = () => {
-    const data      = this.state.data;
-    const nextStep  = this.props.nextStep;
+    const { data, visible } = this.state;
+    const nextStep          = this.props.nextStep;
 
-    if(this.checkProperties(data)) {
+    if(this.checkProperties()) {
       nextStep(data);
+    }
+    else {
+      this.setState({ visible: !visible });
     }
   };
 
   render() {
     // Variables setup
-    const step          = this.props.step;
-    const forms         = this.props.forms;
-    const previousStep  = this.props.previousStep;
-    const validateStep  = this.validateStep;
-    const handleChange  = this.handleChange;
-    const data          = this.state.data;
+    const step            = this.props.step;
+    const forms           = this.props.forms;
+    const previousStep    = this.props.previousStep;
+    const validateStep    = this.validateStep;
+    const handleChange    = this.handleChange;
+    const {data, visible} = this.state;
 
     return(
-      <Grid stackable>
+      <Grid stackable className={ this.state.error? 'activeError': null }>
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
           <Grid.Column mobile={16} tablet={12} computer={13}>
-            <Form size='small'>
-              <Grid className='formContainer' doubling columns={2}>
-                {forms.map((config, index) =>
-                  <Grid.Column width={config.width} key={index}>
-                    <InputField value={data[config.id]} config={config} handleChange={handleChange}/>
-                  </Grid.Column>
-                )}
-              </Grid>
-            </Form>
+            <Transition animation='shake' duration='300' visible={visible}>
+              <Form size='small'>
+                <Grid className='formContainer' doubling columns={2}>
+                  {forms.map((config, index) =>
+                    <Grid.Column width={config.width} key={index}>
+                      <InputField value={data[config.id]} config={config} handleChange={handleChange}/>
+                    </Grid.Column>
+                  )}
+                </Grid>
+              </Form>
+            </Transition>
           </Grid.Column>
         </Grid.Row>
         <RegisterButtons previousStep={() => previousStep(data)} nextStep={validateStep} />
