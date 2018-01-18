@@ -4,7 +4,6 @@ import styles from './home.scss'
 
 import About from '../about/about.jsx'
 import FAQ from '../faq/faq.jsx'
-import SectionHeader from '../sectionHeader/sectionHeader.jsx'
 import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
@@ -30,16 +29,11 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="container">
-                    <About/>
-                </div>
+                <About />
 
                 <Countdown />
 
-                <div className="container">
-                    <SectionHeader text="Frequently Asked Questions" />
-                    <FAQ/>
-                </div>
+                <FAQ/>
 
                 <Sponsors />
 

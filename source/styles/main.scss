@@ -5,13 +5,70 @@
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  color: #12112F;
+
+  * {
+    border-radius: 0% !important;
+  }
+
+  .spacer {
+    padding: 4em;
+  }
 
   p {
-    font-weight: 400;
-    font-size: 1.3em;
+    font-weight: 500;
+    font-size: 200%;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: medium;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 400%;
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 250%;
+  }
+
+  h4 {
+    font-size: 200%;
+  }
+
+  h5 {
+    font-size: 150%;
+  }
+
+  h6 {
+    font-size: 100%;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
   }
 }

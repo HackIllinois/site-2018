@@ -10,10 +10,10 @@ class Sponsors extends Component {
     render() {
         return(
         	<div className="Sponsors">
-                <div className="Sponsors__content">
-
-                </div>
-			</div>
+            <div className="Sponsors__content">
+              <h1>Sponsored by</h1>
+            </div>
+			    </div>
         )
     }
 }
