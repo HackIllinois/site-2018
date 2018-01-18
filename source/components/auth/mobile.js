@@ -32,7 +32,7 @@ class Auth extends Component {
 
     render() {
       let redirectURI = MOBILE_REDIRECT_BASEURL + this.state.token;
-      let divContent = "1; url=" + redirectURI;
+      let divContent = "0; url=" + redirectURI;
 
       return (
         <div className="container">
