@@ -34,15 +34,17 @@
       max-width: 175px;
     }
     div{
+      width: 100%;
       position: relative;
       top: 4vh;
       a{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        // align-items: left;
       }
       button{
         width: 100%;
+        min-width: 175px;
         font-family: inherit;
         font-weight: bold;//doesnt seem to be installed
         color: white;
@@ -51,6 +53,7 @@
         border-radius: 3px!important;//necessary bc there is a 0px!important rule
         border:0px;
         height: 45px;
+        cursor: pointer;
 
       }
     }

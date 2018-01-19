@@ -28,8 +28,8 @@ class Home extends Component {
                         <div className="Landing__logo">
                             <img src="./assets/img/png/logo_with_date.png" />
                             <div class="RegButton">
-                                <a href = "/">
-                                    <button class="ui button">REGISTER</button>
+                                <a href = "/start">
+                                    <button class="ui button" tabindex="0">REGISTER</button>
                                 </a>
                             </div>
                         </div>
