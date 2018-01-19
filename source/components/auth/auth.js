@@ -12,10 +12,11 @@ class Auth extends Component {
 
     componentDidMount() {
         const code = querystring.parse(this.props.location.search)['code'];
-        const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
+        axios.get('http://api.test.hackillinois.org/v1/auth/github?code=' + code)
         .then(
             (token) => {
               sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
+              this.props.history.push("/register");
             },
             (reject) => {
               console.error('your authentication request failed, please try again');
@@ -24,15 +25,6 @@ class Auth extends Component {
                 redirect: ""
               });
             }
-        )
-    }
-
-    render() {
-        let divContent = "1; url=/" + this.state.redirect;
-        return (
-            <div className="container">
-                <meta httpEquiv="refresh" content={divContent}/>
-            </div>
         )
     }
 }

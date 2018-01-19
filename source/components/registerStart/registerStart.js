@@ -3,9 +3,6 @@ import { Grid, Form, Button, Image, Icon} from 'semantic-ui-react';
 import styles from './registerStart.scss'
 export default class RegisterStart extends Component {
   render() {
-
-    const nextStep  = this.props.nextStep;
-
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
         <Grid.Row className='startContainer'>
@@ -21,7 +18,7 @@ export default class RegisterStart extends Component {
               <Button>How to Contribute to OS?</Button>
             </Grid.Row>
             <Grid.Row className='continueButton'>
-              <Button icon size='small' labelPosition='right' onClick={nextStep}>
+              <Button icon size='small' labelPosition='right' onClick={() => window.location = "http://api.test.hackillinois.org/v1/auth"}>
                 TO CONTINUE, CLICK TO LOG IN WITH GITHUB
                 <Icon name='caret right' />
               </Button>

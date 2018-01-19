@@ -43,7 +43,7 @@ export default class RegisterEssay extends Component {
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
-          <Grid.Column mobile={16} tablet={12} computer={13} textAlign='left' verticalAlign='middle'>
+          <Grid.Column className='essayContainer' mobile={16} tablet={12} computer={13} textAlign='left' verticalAlign='middle'>
             <Grid.Row className='essayPrompt'>
               Here’s some space to add some optional content to your application. Feel free to use one or more of the prompts below or write anything else you believe can be valuable to your application.
               <br/>

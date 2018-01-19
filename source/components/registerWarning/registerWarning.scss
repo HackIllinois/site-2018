@@ -22,9 +22,22 @@
 
   .label {
     background: transparent !important;
+    color: #1c055e !important;
+    font-size: 13px !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+    font-weight: 300 !important;
 
     a {
-      color: red !important;
+      text-decoration: underline;
     }
   }
+}
+
+
+.warningContainer {
+  padding-left: 7em !important;
+  padding-right: 7em !important;
 }

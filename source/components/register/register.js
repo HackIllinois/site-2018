@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // Components
-import RegisterStart from '../registerStart/registerStart';
 import RegisterForm from '../registerForm/registerForm';
 import RegisterTeam from '../registerTeam/registerTeam';
 import RegisterWarning from '../registerWarning/registerWarning';
@@ -89,7 +88,6 @@ export default class Register extends Component {
       <div className="registerContainer">
         {
           [
-            <RegisterStart nextStep={nextStep(false, null)}/>,
             <RegisterForm
               key={state.step}
               step={state.step}
