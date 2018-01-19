@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { fromPromise } from 'mobx-utils';
 import querystring from 'query-string';
 
 import axios from 'axios';
@@ -21,10 +20,15 @@ class Auth extends Component {
             (reject) => {
               console.error('your authentication request failed, please try again');
               sessionStorage.removeItem('Authorization');
-              this.setState({
-                redirect: ""
-              });
+              this.props.history.push("/");
             }
+        )
+    }
+
+    render() {
+        return (
+          <div>
+          </div>
         )
     }
 }
