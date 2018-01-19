@@ -5,7 +5,7 @@
   margin-right: auto;
 }
 
-.successContainer {
+.startContainer {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
@@ -15,11 +15,10 @@
     font-size: 13px;
     font-weight: 300;
     color: #1c055e !important;
-    width: 10em;
+    width: 15em;
     border-radius: 3px;
     background-color: #ccd9fc !important;
     margin: 2em !important;
-
 
     @media only screen and (max-width: 1200px){
       margin: 1em !important;
@@ -27,8 +26,7 @@
   }
 }
 
-
-.successPrompt {
+.startPrompt {
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
@@ -37,4 +35,15 @@
   letter-spacing: normal;
   text-align: center;
   color: #1c055e;
+}
+
+.continueButton {
+  .button {
+    width: auto;
+    color: #1c055e;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
 }

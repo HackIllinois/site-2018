@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Grid, TextArea, Form} from 'semantic-ui-react';
 import styles from './registerEssay.scss'
 
+import RegisterNav from '../registerNav/registerNav';
 import RegisterButtons from '../registerButtons/registerButtons';
 
 export default class RegisterEssay extends Component {
@@ -29,16 +30,21 @@ export default class RegisterEssay extends Component {
   };
 
   render() {
+    const step          = this.props.step;
     const previousStep  = this.props.previousStep;
     const validateStep  = this.validateStep;
     const handleChange  = this.handleChange;
     const essay         = this.state.essay;
+    console.log(essay);
 
     return(
-      <Grid centered textAlign='center' verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column className="centerContainer" mobile={14} computer={10} textAlign='left' verticalAlign='middle'>
-            <Grid.Row className='essayMessage'>
+      <Grid stackable textAlign='center' verticalAlign='middle'>
+        <Grid.Row columns={2}>
+          <Grid.Column mobile={16} tablet={4} computer={3}>
+            <RegisterNav step={step}/>
+          </Grid.Column>
+          <Grid.Column mobile={16} tablet={12} computer={13} textAlign='left' verticalAlign='middle'>
+            <Grid.Row className='essayPrompt'>
               Here’s some space to add some optional content to your application. Feel free to use one or more of the prompts below or write anything else you believe can be valuable to your application.
               <br/>
               <ul>
@@ -52,10 +58,9 @@ export default class RegisterEssay extends Component {
                 <TextArea onChange={handleChange} value={essay} name='essay' autoHeight placeholder='Write to your heart’s content.' style={{ minHeight: '15em' }} />
               </Form>
             </Grid.Row>
-
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons nextTitle='SUBMIT' previousStep={() => previousStep(essay)} nextStep={validateStep} />
+        <RegisterButtons nextTitle="SUBMIT" previousStep={() => previousStep(essay)} nextStep={validateStep} />
       </Grid>
     )
   }

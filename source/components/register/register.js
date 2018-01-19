@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // Components
+import RegisterStart from '../registerStart/registerStart';
 import RegisterForm from '../registerForm/registerForm';
 import RegisterTeam from '../registerTeam/registerTeam';
 import RegisterWarning from '../registerWarning/registerWarning';
@@ -23,7 +24,8 @@ export default class Register extends Component {
       profressional: {},
       collaborators: [''],
       warning: false,
-      essay: ''
+      essay: '',
+      submissionStatus: 'loading',
     };
   };
 
@@ -43,27 +45,33 @@ export default class Register extends Component {
 
 
   nextStep = (submit, prop) => data => {
+    // Variables steup
+    const { personal, profressional, collaborators, essay, step } = this.state;
+    // Update data
     this.setState({ [prop]: data });
 
     // Check if we need to make api call to make submission
     if (submit) {
-      console.log(this.state);
+      this.setState({ submissionStatus: 'loading' });
+      const attendee = personal + profressional;
+
+      this.setState({ step: step + 1});
+
       // axios.post('https://api.hackillinois.org//v1/registration/attendee', {
-      //   attendee: this.state.attendee,
-      //   ecosystemInterests: this.state.ecosystemInterests,
-      //   extras: this.state.extras,
-      //   collaborators: this.state.collaborators,
+      //   attendee: attendee,
+      //   ecosystemInterests: [],
+      //   extras: [essay],
+      //   collaborators: collaborators,
       // })
       // .then(response => {
-      //     this.setState({ step: this.state.step + 1});
-      //     console.log(response);
+      //   this.setState({ submissionStatus: 'success', step: step + 1});
       // })
       // .catch(error => {
-      //     console.log(error);
+      //   this.setState({ submissionStatus: 'fail'});
       // });
     }
     else {
-      this.setState({ step: this.state.step + 1});
+      this.setState({ step: step + 1});
     }
   };
 
@@ -81,6 +89,7 @@ export default class Register extends Component {
       <div className="registerContainer">
         {
           [
+            <RegisterStart nextStep={nextStep(false, null)}/>,
             <RegisterForm
               key={state.step}
               step={state.step}
@@ -104,11 +113,13 @@ export default class Register extends Component {
               nextStep={nextStep(false, 'collaborators')}
             />,
             <RegisterWarning
+              step={state.step}
               data={state.warning}
               previousStep={previousStep('warning')}
               nextStep={nextStep(false, 'warning')}
             />,
             <RegisterEssay
+              step={state.step}
               data={state.essay}
               previousStep={previousStep('essay')}
               nextStep={nextStep(true, 'essay')}

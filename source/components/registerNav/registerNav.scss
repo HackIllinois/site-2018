@@ -1,8 +1,7 @@
 $active-color   :#1c055e;
 $inactive-color :#ccd9fc;
-$vertical-section-length :7em;
-$hortizontal-section-length: 10em;
-$mobile-section-length: 7.5em;
+$vertical-section-length :5em;
+$mobile-section-length: 3.5em;
 
 .navBar {
   li {
@@ -49,7 +48,7 @@ $mobile-section-length: 7.5em;
     padding-left: 1.5em;
   }
 
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 760px){
     padding-left: 0;
     text-align: center;
     height: 3em;
@@ -87,41 +86,6 @@ $mobile-section-length: 7.5em;
     }
   }
 
-
-  @media only screen and (min-width: 450px) and (max-width: 760px){
-    .title {
-      padding-top: 2em;
-      padding-left: 0em;
-    }
-
-    li {
-      list-style-type: none;
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      line-height: 1em;
-      border-radius: 0.5em;
-      display: inline-block;
-      background: $active-color;
-      position: relative;
-      margin-left: $hortizontal-section-length;
-    }
-
-    li::before{
-      content: '';
-      position: absolute;
-      top: 0.4em;
-      left: -$hortizontal-section-length;
-      width: $hortizontal-section-length;
-      height: 0.2em;
-      background: $active-color;
-      z-index: -1;
-    }
-
-    li:first-child {
-      margin-left: 0;
-    }
-  }
 
   @media only screen and (min-width: 760px) and (max-width: 1200px){
     padding-left: 0em !important;

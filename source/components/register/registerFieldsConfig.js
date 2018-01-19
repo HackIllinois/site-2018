@@ -56,7 +56,7 @@ const personal_fields = [
   {
     width: 8,
     fieldType: 'input',
-    inputType: 'number',
+    inputType: 'text',
     id: 'graduationYear',
     required: true,
     placeholder: 'When are you outta here ?',
@@ -83,7 +83,7 @@ const personal_fields = [
   {
     width: 8,
     fieldType: 'input',
-    inputType: 'number',
+    inputType: 'text',
     id: 'age',
     required: true,
     placeholder: 'How old are you ?',

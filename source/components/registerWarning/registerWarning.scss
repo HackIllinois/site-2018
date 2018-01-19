@@ -8,11 +8,23 @@
 }
 
 
-.checkBox {
+.warningCheckbox {
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
   font-size: 13px;
   font-weight: 300;
   color: #1c055e;
+
+  .checkbox {
+    vertical-align: middle !important;
+  }
+
+  .label {
+    background: transparent !important;
+
+    a {
+      color: red !important;
+    }
+  }
 }

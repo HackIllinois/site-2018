@@ -53,15 +53,15 @@ export default class RegisterForm extends Component {
 
   render() {
     // Variables setup
+    const {data, visible} = this.state;
     const step            = this.props.step;
     const forms           = this.props.forms;
-    const previousStep    = this.props.previousStep;
+    const previousStep    = this.props.previousStep ? () => this.props.previousStep(data) : null;
     const validateStep    = this.validateStep;
     const handleChange    = this.handleChange;
-    const {data, visible} = this.state;
 
     return(
-      <Grid stackable className={ this.state.error? 'activeError': null }>
+      <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
@@ -80,7 +80,7 @@ export default class RegisterForm extends Component {
             </Transition>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(data)} nextStep={validateStep} />
+        <RegisterButtons previousStep={previousStep} nextStep={validateStep} />
       </Grid>
     )
   }
