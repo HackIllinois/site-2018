@@ -7,6 +7,7 @@ import axios from 'axios';
 class Auth extends Component {
     constructor(props) {
         super(props);
+        this.state = {redirect: "register"};
     }
 
     componentDidMount() {
@@ -19,14 +20,18 @@ class Auth extends Component {
             (reject) => {
               console.error('your authentication request failed, please try again');
               sessionStorage.removeItem('Authorization');
+              this.setState({
+                redirect: ""
+              });
             }
         )
     }
 
     render() {
+        let divContent = "1; url=/" + this.state.redirect;
         return (
             <div className="container">
-                <meta httpEquiv="refresh" content="1; url=/"/>
+                <meta httpEquiv="refresh" content={divContent}/>
             </div>
         )
     }
