@@ -45,7 +45,7 @@ export default class RegisterForm extends Component {
 
     for (let index in forms) {
       const config = forms[index];
-      if ((data[config.id] === null || data[config.id] == "") && config.required) {
+      if (((data[config.id] === null || data[config.id] == "") && config.required) || !config.validate(data[config.id])) {
         return false;
       }
     }
