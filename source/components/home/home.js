@@ -5,8 +5,10 @@ import styles from './home.scss'
 import About from '../about/about.jsx'
 import FAQ from '../faq/faq.jsx'
 import Countdown from '../countdown/countdown.jsx'
-import Sponsors from '../sponsors/sponsors.jsx'
+// import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
+import { Button } from 'semantic-ui-react'
+
 
 class Home extends Component {
     render() {
@@ -25,6 +27,11 @@ class Home extends Component {
                     <div className="Landing">
                         <div className="Landing__logo">
                             <img src="./assets/img/png/logo_with_date.png" />
+                            <div class="RegButton">
+                                <a href = "/">
+                                    <button class="ui button">REGISTER</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,7 +42,7 @@ class Home extends Component {
 
                 <FAQ/>
 
-                <Sponsors />
+                {/* <Sponsors /> */}
 
                 <Footer />
             </div>
