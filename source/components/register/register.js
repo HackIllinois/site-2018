@@ -29,6 +29,21 @@ export default class Register extends Component {
   };
 
   componentWillMount() {
+    const token = sessionStorage.getItem("Authorization");
+    if (token == null) {
+      this.props.history.push("/start");
+    }
+    console.log(token);
+    axios.get("http://api.test.hackillinois.org/v1/user/", { 'headers': { 'Authorization': token } })
+    .then(response => {
+      console.log("success");
+      console.log(response);
+    })
+    .catch(error => {
+      console.log("error");
+      console.log(error);
+    });
+
     let personal_data = {};
     personal_fields.map((config, index)=> {
       personal_data[config.id] = null;
