@@ -158,7 +158,7 @@ const professional_fields = [
     title: 'We\'d love to connect you to awesome opportuniities with our sponsors. Is it okay if we share your information with them?'
   },
   {
-    width: 8,
+    width: 16,
     fieldType: 'input',
     id: 'interests',
     required: false,
