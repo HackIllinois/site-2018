@@ -23,8 +23,7 @@ export default class RegisterForm extends Component {
   };
 
   handleChange = (e, {name, value}) => {
-
-    if (name=='resume') {
+    if (name == 'resume') {
       const files = e.target.files;
 
       var reader = new FileReader();
