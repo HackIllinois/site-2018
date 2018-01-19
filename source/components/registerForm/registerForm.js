@@ -22,8 +22,21 @@ export default class RegisterForm extends Component {
     this.setState({ data: this.props.data });
   };
 
-  handleChange = (e, { name, value }) => {
-    this.setState({ data: {...this.state.data, [name]: value }});
+  handleChange = (e, {name, value}) => {
+
+    if (name=='resume') {
+      const files = e.target.files;
+
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var arrayBuffer = reader.result;
+        this.setState({ data: {...this.state.data, [name]: arrayBuffer }});
+      }
+      reader.readAsArrayBuffer(files[0]);
+    }
+    else {
+      this.setState({ data: {...this.state.data, [name]: value }});
+    }
   };
 
   checkProperties = () => {
