@@ -137,7 +137,11 @@ const personal_fields = [
     placeholder: 'What is your phone number?',
     title: 'PHONE NUMBER (OPTIONAL)',
     validate: (input) => {
-      return input.length > 0 && input.length <= 15;
+      if (input != null) {
+        return input.length <= 15;
+      } else {
+        return true;
+      }
     }
   },
 ]
@@ -225,7 +229,11 @@ const professional_fields = [
     placeholder: 'What are some areas you are interested in?',
     title: 'INTERESTS (OPTIONAL)',
     validate: (input) => {
-      return input.length <= 255;
+      if (input != null) {
+        return input.length <= 255;
+      } else {
+        return true;
+      }
     }
   },
   {
