@@ -38,8 +38,29 @@ export default class Register extends Component {
     professional_fields.map((config, index)=> {
       professional_data[config.id] = null;
     });
-
     this.setState({ personal: personal_data, professional: professional_data});
+
+    const token = sessionStorage.getItem("Authorization");
+    if (token == null) {
+      this.props.history.push("/start");
+      this.setState({ personal: personal_data, professional: professional_data});
+    } else {
+      axios.get("http://api.test.hackillinois.org/v1/user/", { 'headers': { 'Authorization': token } })
+      .then(response => {
+        for (let predata in response.data.data) {
+          if (predata == "email") {
+            personal_data["email"] = response.data.data[predata];
+          } else if (predata == "githubHandle") {
+            personal_data["github"] = response.data.data[predata];
+          }
+        }
+        this.setState({ personal: personal_data, professional: professional_data});
+      })
+      .catch(error => {
+        console.error(error);
+        this.setState({ personal: personal_data, professional: professional_data});
+      });
+    }
   };
 
 
