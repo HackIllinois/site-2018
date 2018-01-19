@@ -11,9 +11,10 @@ class FAQItem extends Component {
 	render() {
 		return (
 			<div className="FAQItem">
-				<h3 className="FAQ__itemHeader">{this.props.header}</h3>
-				<p>{this.props.children}</p>
+				<h3 className={"FAQ__itemHeader" + (this.props.centered ? ' centered' : '')}>{this.props.header}</h3>
+				<p className={(this.props.centered ? ' centered' : '')}>{this.props.children}</p>
 			</div>
+
 		);
 	}
 }
@@ -42,7 +43,6 @@ class FAQ extends Component {
 		let faqs_unused = [
 			{question: "What are the prizes?", answer: ["You can see all potential prizes and prize criteria at ", <a href='https://hackillinois.org/prizes'>https://hackillinois.org/prizes</a>, "."]},
 			{question: "What will contributors work on?", answer: ["If you RSVPed to the Contribute track, you will be working on one of the projects in the ecosystem in which you were accepted. See: ", <a href='https://hackillinois.org/projects'>https://hackillinois.org/projects</a>, '.']},
-			{question: "Other questions?", answer: ["Please don't hesitate to reach out to us at ", <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>, "!"]},
     ];
 
 		let columns = faqs.map( (col) => {
@@ -60,7 +60,7 @@ class FAQ extends Component {
 				</div>
 			);
 		});
-
+		let centeredContactQ = {question: "Other questions?", answer: ["Please don't hesitate to reach out to us at ", <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>, "!"]};
 		return(
 			<div className="FAQ">
 				<div className="container">
@@ -69,6 +69,9 @@ class FAQ extends Component {
 					<div className="FAQ_list">
 						{columns}
 					</div>
+					<FAQItem header={centeredContactQ.question} centered={true}>
+						{centeredContactQ.answer}
+					</FAQItem>
 				</div>
 			</div>
         );
