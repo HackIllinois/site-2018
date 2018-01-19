@@ -7,7 +7,7 @@ import RegisterEssay from '../registerEssay/registerEssay';
 import RegisterSuccess from '../registerSuccess/registerSuccess';
 
 import { Grid } from 'semantic-ui-react'
-import { personal_fields, profressional_fields } from './registerFieldsConfig'
+import { personal_fields, professional_fields } from './registerFieldsConfig'
 
 import styles from './register.scss'
 import axios from 'axios';
@@ -20,7 +20,7 @@ export default class Register extends Component {
     this.state = {
       step: 0,
       personal: {},
-      profressional: {},
+      professional: {},
       collaborators: [''],
       warning: false,
       essay: '',
@@ -34,25 +34,25 @@ export default class Register extends Component {
       personal_data[config.id] = null;
     });
 
-    let profressional_data = {};
-    profressional_fields.map((config, index)=> {
-      profressional_data[config.id] = null;
+    let professional_data = {};
+    professional_fields.map((config, index)=> {
+      professional_data[config.id] = null;
     });
 
-    this.setState({ personal: personal_data, profressional: profressional_data});
+    this.setState({ personal: personal_data, professional: professional_data});
   };
 
 
   nextStep = (submit, prop) => data => {
     // Variables steup
-    const { personal, profressional, collaborators, essay, step } = this.state;
+    const { personal, professional, collaborators, essay, step } = this.state;
     // Update data
     this.setState({ [prop]: data });
 
     // Check if we need to make api call to make submission
     if (submit) {
       this.setState({ submissionStatus: 'loading' });
-      const attendee = personal + profressional;
+      const attendee = personal + professional;
 
       this.setState({ step: step + 1});
 
@@ -99,10 +99,10 @@ export default class Register extends Component {
             <RegisterForm
               key={state.step}
               step={state.step}
-              data={state.profressional}
-              previousStep={previousStep('profressional')}
-              nextStep={nextStep(false, 'profressional')}
-              forms={profressional_fields}
+              data={state.professional}
+              previousStep={previousStep('professional')}
+              nextStep={nextStep(false, 'professional')}
+              forms={professional_fields}
             />,
             <RegisterTeam
               step={state.step}

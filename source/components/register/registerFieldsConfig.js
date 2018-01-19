@@ -91,7 +91,7 @@ const personal_fields = [
   }
 ]
 
-const profressional_fields = [
+const professional_fields = [
   {
     width: 8,
     fieldType: 'select',
@@ -126,7 +126,7 @@ const profressional_fields = [
     required: true,
     options: [{key: 'NONE', text: 'None', value: 'NONE'}, {key: 'INTERNSHIP', text: 'Internship', value: 'INTERNSHIP'}, {key: 'FULLTIME', text: 'Full-Time', value: 'FULLTIME'}, {key: 'BOTH', text: 'Both', value: 'BOTH'}],
     placeholder: 'Got any?',
-    title: 'PROFRESSIONAL INTERESTS'
+    title: 'professional INTERESTS'
   },
   {
     width: 8,
@@ -176,4 +176,4 @@ const profressional_fields = [
   },
 ]
 
-export {personal_fields, profressional_fields}
+export {personal_fields, professional_fields}
