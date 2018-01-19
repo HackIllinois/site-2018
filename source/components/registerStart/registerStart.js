@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { Grid, Form, Button, Image, Icon} from 'semantic-ui-react';
+import { Grid, Form, Button, Image} from 'semantic-ui-react';
 import styles from './registerStart.scss'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+
+import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
+
 export default class RegisterStart extends Component {
   render() {
     return(
@@ -19,8 +23,8 @@ export default class RegisterStart extends Component {
             </Grid.Row>
             <Grid.Row className='continueButton'>
               <Button icon size='small' labelPosition='right' onClick={() => window.location = "http://api.test.hackillinois.org/v1/auth"}>
-                TO CONTINUE, CLICK TO LOG IN WITH GITHUB
-                <Icon name='caret right' />
+                <span className="FAIconText">TO CONTINUE, CLICK TO LOG IN WITH GITHUB</span>
+                <FontAwesomeIcon icon={faCaretRight} size="2x"/>
               </Button>
             </Grid.Row>
           </Grid.Column>
