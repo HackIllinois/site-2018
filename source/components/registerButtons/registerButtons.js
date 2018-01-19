@@ -28,7 +28,7 @@ export default class RegisterButtons extends Component {
       </Button> : null;
 
     return(
-      <Grid.Row verticalAlign='bottom' className='buttonContainer'>
+      <Grid.Row className='buttonContainer'>
         <Grid.Column>
           {previousButton}
           {nextButton}

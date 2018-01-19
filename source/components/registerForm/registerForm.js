@@ -22,8 +22,21 @@ export default class RegisterForm extends Component {
     this.setState({ data: this.props.data });
   };
 
-  handleChange = (e, { name, value }) => {
-    this.setState({ data: {...this.state.data, [name]: value }});
+  handleChange = (e, {name, value}) => {
+
+    if (name=='resume') {
+      const files = e.target.files;
+
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var arrayBuffer = reader.result;
+        this.setState({ data: {...this.state.data, [name]: arrayBuffer }});
+      }
+      reader.readAsArrayBuffer(files[0]);
+    }
+    else {
+      this.setState({ data: {...this.state.data, [name]: value }});
+    }
   };
 
   checkProperties = () => {
@@ -32,7 +45,7 @@ export default class RegisterForm extends Component {
 
     for (let index in forms) {
       const config = forms[index];
-      if ((data[config.id] === null || data[config.id] == "") && config.required) {
+      if (((data[config.id] === null || data[config.id] == "") && config.required) || !config.validate(data[config.id])) {
         return false;
       }
     }
@@ -53,15 +66,15 @@ export default class RegisterForm extends Component {
 
   render() {
     // Variables setup
+    const {data, visible} = this.state;
     const step            = this.props.step;
     const forms           = this.props.forms;
-    const previousStep    = this.props.previousStep;
+    const previousStep    = this.props.previousStep ? () => this.props.previousStep(data) : null;
     const validateStep    = this.validateStep;
     const handleChange    = this.handleChange;
-    const {data, visible} = this.state;
 
     return(
-      <Grid stackable className={ this.state.error? 'activeError': null }>
+      <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
@@ -80,7 +93,7 @@ export default class RegisterForm extends Component {
             </Transition>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(data)} nextStep={validateStep} />
+        <RegisterButtons previousStep={previousStep} nextStep={validateStep} />
       </Grid>
     )
   }

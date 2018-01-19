@@ -1,17 +1,13 @@
 $title-color:             #1c055e;
 
 .buttonContainer {
-  position: absolute !important;
+  position: relative !important;
   width: 100%;
   left: 0px;
 
-  bottom: 4em;
-  padding: 4em !important;
-
-  @media only screen and (max-width: 1000px){
-    bottom: 0em !important;
-    padding: 0em !important;
-    position: relative !important;
+  @media only screen and (max-width: 425px){
+    bottom: 1em !important;
+    padding: 1em !important;
   }
 
   .button {

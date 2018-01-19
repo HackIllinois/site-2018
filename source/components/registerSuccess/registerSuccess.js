@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Form, Button} from 'semantic-ui-react';
+import { Grid, Form, Button, Image} from 'semantic-ui-react';
 import styles from './registerSuccess.scss'
 
 export default class RegisterSuccess extends Component {
@@ -7,15 +7,14 @@ export default class RegisterSuccess extends Component {
 
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <Grid.Row className='verticalCenter'>
+        <Grid.Row className='successContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
-          <Grid.Row className='verticalPadding'>
-            LOGO
-          </Grid.Row>
-            <div className='warningMessage verticalPadding'>
-              If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your applications, there will be space on the next page for additions.
-            </div>
-
+            <Grid.Row className='verticalPadding'>
+              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
+            </Grid.Row>
+            <Grid.Row className='successPrompt verticalPadding'>
+              Groovy! You have succesfully registed for Hackillinois. We’ll be in touch. For now, here’s more information on our event.
+            </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <Button>Mentors</Button>
               <Button>Projects</Button>
