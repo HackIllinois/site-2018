@@ -4,53 +4,30 @@ import styles from './about.scss'
 
 class About extends Component {
     render() {
-
-        const contributeDescription = 'Allows for each group to be mentored by core developers while working on existing open source projects, providing a welcoming environment while they make their first additions to the community.'
-        const createDescription = 'Encourages students to create a brand new open source project with the intention of building a foundation that others can build upon after the event.'
-
         return(
             <div className="About">
               <div className="container">
                 <h1>Dream it. Build it.</h1>
 
                 <p className="About__copy">
-                  Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Now, it's time to give back to the community. Last year, HackIllinois broke ground with the first open source-focused collegiate hackathon - go beyond and explore your dreamscape in 2018.
+                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Now, it's time to give back to the community. Last year, HackIllinois broke ground with the first open source-focused collegiate hackathon - go beyond and explore your dreamscape in 2018.
+
                 </p>
 
-                <h1 className="space_above">The Tracks.</h1>
+                <h1 className="space_above">The Event.</h1>
 
                 <p className="About__copy">
-                  HackIllinois is unlike any other hackathon you've been to. This year, we are focusing on collaboration and sustainability rather than competition. For the 36 hours, our attendees will innovate, design, and improve the open source community. Attendees can choose from two tracks.
+                    This year, we are continuing our commitment to the open source community. Take the time to explore our full list of Projects and discover our Excellent Mentors, and on February 23rd through 25th, get ready to develop, create, and support exciting Open Source projects!
                 </p>
 
-                <div className="About__trackCards">
-                  <div className="About__trackCard">
-                    <div className="About__trackCardHeader">
-                      <h3>Contribute</h3>
-                    </div>
-                    <div className="About__trackCardBody">
-                      <p>{contributeDescription}</p>
-                    </div>
-                  </div>
 
-                  <div className="About__trackCard">
-                    <div className="About__trackCardHeader">
-                      <h3>Create</h3>
-                    </div>
-                    <div className="About__trackCardBody">
-                      <p>{createDescription}</p>
-                    </div>
-                  </div>
-                </div>
+                <h1 className="space_above">About Us.</h1>
+
+                <p className="About__copy">
+                    We are the Hackillinois team, dedicated to create an environment for hackers to pursue creativity and innovation at its finest.  We aim to assist hackers push creativity towards limitless bounds. Our team has worked hard to cultivate an environment worthy of bringing inventive ideas to life.
+                </p>
 
                 <p></p>
-
-                <h1 className="space_above">We are HackIllinois.</h1>
-
-                <p className="About__copy">
-                A team of driven individuals working towards the goal of inspiring and
-                empowering creative minds to build anything they can imagine.
-                </p>
               </div>
             </div>
         )
