@@ -13,13 +13,13 @@ class About extends Component {
               <div className="container">
                 <h1>Dream it. Build it.</h1>
 
-                <p>
+                <p className="About__copy">
                   Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Now, it's time to give back to the community. Last year, HackIllinois broke ground with the first open source-focused collegiate hackathon - go beyond and explore your dreamscape in 2018.
                 </p>
 
-                <h1>The Tracks.</h1>
+                <h1 className="space_above">The Tracks.</h1>
 
-                <p>
+                <p className="About__copy">
                   HackIllinois is unlike any other hackathon you've been to. This year, we are focusing on collaboration and sustainability rather than competition. For the 36 hours, our attendees will innovate, design, and improve the open source community. Attendees can choose from two tracks.
                 </p>
 
@@ -45,9 +45,9 @@ class About extends Component {
 
                 <p></p>
 
-                <h1>We are HackIllinois.</h1>
+                <h1 className="space_above">We are HackIllinois.</h1>
 
-                <p>
+                <p className="About__copy">
                 A team of driven individuals working towards the goal of inspiring and
                 empowering creative minds to build anything they can imagine.
                 </p>

@@ -40,7 +40,7 @@ class Countdown extends Component {
         	<div className="Countdown">
                 <div className="Countdown__content">
                     <h4 className="Countdown__timerHeader">Hacking begins in</h4>
-
+                    <br/>
                     <div className="Countdown__timer">
                         <div className="Countdown__timerFlexItem">
                           <h2 className="Countdown__number">{this.state.d + 1}</h2>

@@ -2,9 +2,15 @@
 	padding: 8em 0;
 	background-color: #F2F5FE;
 
+	&__copy {
+		margin-top: 0.5em;
+	}
+
 	&__trackCards {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 3em;
+		margin-bottom: 6em;
 	}
 
 	&__trackCard {
@@ -23,5 +29,9 @@
 	&__trackCardBody {
 		background-color: #FFFFFF;
 		padding: 2em 4em;
+	}
+
+	.space_above {
+		margin-top: 1em;
 	}
 }
