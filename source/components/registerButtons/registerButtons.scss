@@ -17,4 +17,15 @@ $title-color:             #1c055e;
       background: transparent !important;
     }
   }
+
+  .labelText{
+    font-size: 1.1em;
+    position: relative;
+    bottom: 4px;
+    left: 20px;
+  }
+
+  .opposite{
+    left: -20px;
+  }
 }

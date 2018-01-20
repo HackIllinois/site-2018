@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { Grid, Button, Icon} from 'semantic-ui-react';
 import styles from './registerButtons.scss'
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faCaretLeft from '@fortawesome/fontawesome-free-solid/faCaretLeft'
+import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
+
 export default class RegisterButtons extends Component {
   render() {
     // Variables setup
@@ -13,14 +17,14 @@ export default class RegisterButtons extends Component {
     // Previous and Next Button setup
     let previousButton  = previousStep ?
       <Button icon size='small' labelPosition='left' floated='left' onClick={previousStep}>
-        {previousTitle}
-        <Icon name='caret left' />
+        <FontAwesomeIcon icon={faCaretLeft} size="2x"/>
+        <span className="labelText">{previousTitle}</span>
       </Button> : null;
 
     let nextButton      = nextStep ?
       <Button icon size='small' labelPosition='right' floated='right' onClick={nextStep}>
-        {nextTitle}
-        <Icon name='caret right' />
+        <span className="labelText opposite">{nextTitle}</span>
+        <FontAwesomeIcon icon={faCaretRight} size="2x"/>
       </Button> : null;
 
     return(

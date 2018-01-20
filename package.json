@@ -33,6 +33,9 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.2",
+    "@fortawesome/fontawesome-free-solid": "^5.0.4",
+    "@fortawesome/react-fontawesome": "0.0.17",
     "normalize.css": "^6.0.0",
     "query-string": "^5.0.1",
     "react": "^15.4.2",
