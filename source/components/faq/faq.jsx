@@ -37,7 +37,7 @@ class FAQ extends Component {
 		], [
 			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without a team and find a group at the event. We will be providing mentor matching and a team formation workshop for you to meet other like-minded individuals."},
-			{question: "Will you have hardware?", answer: "We'll have high-level hardware provided by companies. We'll also have basic hardware components like resistors, transistors, and ICs, as well as wood, building materials, and power tools for you to tinker with."}
+			{question: "Will you have hardware?", answer: "We'll have high-level hardware provided by companies. We'll also have basic hardware components like resistors, transistors, and ICs for you to tinker with."}
 		]];
 
 		let faqs_unused = [
@@ -64,7 +64,7 @@ class FAQ extends Component {
 		return(
 			<div className="FAQ">
 				<div className="container">
-					<h1>We thought you might have some questions.</h1>
+					<h1>Frequently Asked Questions</h1>
 					<div className="spacer" />
 					<div className="FAQ_list">
 						{columns}

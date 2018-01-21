@@ -13,10 +13,10 @@
 		width: 100%;
 	}
 
-	// more or less blatantly copied out of about.scc
 	&_list {
 		display: flex;
 		justify-content: space-between;
+
 		&_column {
 			flex: 1;
 			max-width: 48%;

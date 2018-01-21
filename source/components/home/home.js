@@ -5,7 +5,7 @@ import styles from './home.scss'
 import About from '../about/about.jsx'
 import FAQ from '../faq/faq.jsx'
 import Countdown from '../countdown/countdown.jsx'
-// import Sponsors from '../sponsors/sponsors.jsx'
+import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
 import { Button } from 'semantic-ui-react'
 
@@ -42,7 +42,7 @@ class Home extends Component {
 
                 <FAQ/>
 
-                {/* <Sponsors /> */}
+                <Sponsors />
 
                 <Footer />
             </div>
