@@ -4,8 +4,6 @@ const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const copy = require('copy-webpack-plugin');
-const versioner = require('webpack-git-hash');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
@@ -20,7 +18,7 @@ const config = {
 
     output: {
         path: BUILD_DIR,
-        filename: 'bundle.[githash].js'
+        filename: 'bundle.js'
     },
 
     context: path.join(__dirname, 'source'),
@@ -54,8 +52,18 @@ const config = {
 
     plugins: [
         new copy([
-            {from: APP_DIR + '/html/', to: BUILD_DIR},
-            {from: APP_DIR + '/assets/', to: BUILD_DIR + '/assets/'}
+            {
+              from: APP_DIR + '/html/',
+              to: BUILD_DIR
+            },
+            {
+              from: APP_DIR + '/assets/',
+              to: BUILD_DIR + '/assets/'
+            },
+            {
+              from: APP_DIR + '/apple-app-site-association',
+              to: BUILD_DIR
+            }
         ], {
             copyUnmodified: false,
             debug: 'debug'
@@ -66,12 +74,6 @@ const config = {
             minChunks: Infinity,
             filename: 'vendor.bundle.js'
         }),
-
-        new versioner(),
-
-        new HtmlWebpackPlugin({
-          template: APP_DIR + '/html/index.html'
-        })
     ]
 };
 
