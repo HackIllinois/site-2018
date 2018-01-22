@@ -1,0 +1,44 @@
+.Countdown {
+    background: url("../../assets/img/svg/middle_image.svg");
+    background-size: auto 100%;
+    background-color: #3F4797;
+    width: 100%;
+    text-align: center;
+
+    &__content {
+        color: white;
+        padding: 10em 0;
+        display: inline-block;
+    }
+
+    &__timerHeader {
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__timer {
+        color: #ED61A4;
+        display: flex;
+        align-items: center;
+    }
+
+    &__number {
+      color: white;
+      margin: 0 0.25em;
+    }
+
+    &__number:nth-child(1) {
+      opacity: 0.4;
+      font-weight: 300;
+    }
+
+    &__number:nth-child(3) {
+      opacity: 0.4;
+      font-weight: 300;
+    }
+
+    &__letter {
+      font-weight: 300;
+    }
+}
