@@ -7,30 +7,38 @@ import InputField from '../inputField/inputField';
 
 import styles from './registerTeam.scss'
 
-export default class RegisterTeam extends Component {
+export default class RegisterCollaborators extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      collaborators: ['']
+      collaborators: [{collaborator: ''}],
     };
   };
 
   componentWillMount() {
-    this.setState({ collaborators: this.props.data });
+    const collaborators = this.props.data;
+    if (collaborators == null || collaborators.length == 0 ){
+      this.setState({collaborators: [{collaborator: ''}]});
+    }
+    else {
+      this.setState({collaborators: collaborators});
+    }
   }
 
   handleChange = (e, { id, value }) => {
     let updatedCollaborators = this.state.collaborators;
-    updatedCollaborators[id] = value;
+    updatedCollaborators[id].collaborator = value;
     this.setState({ collaborators: updatedCollaborators});
   };
 
   handleAddCollaborator = (e) => {
+    const collaborators = this.state.collaborators;
+
     // Check if key is enter(13)
-    if(e.keyCode == 13) {
-      let newCollaborators = this.state.collaborators.concat('');
+    if(e.keyCode == 13 && collaborators.length < 8) {
+      let newCollaborators = collaborators.concat({collaborator: ''});
       this.setState({ collaborators: newCollaborators });
     }
   }
@@ -47,12 +55,11 @@ export default class RegisterTeam extends Component {
 
   validateStep = () => {
     const nextStep  = this.props.nextStep;
-    let filteredData = this.state.collaborators.filter(el => el !== '');
+    let filteredData = this.state.collaborators.filter(el => el.collaborator != '');
 
-    if (filteredData.length == 0) {
-      filteredData = [''];
+    if (filteredData.length == 0 ){
+      filteredData = null;
     }
-
     nextStep(filteredData);
   };
 
@@ -78,14 +85,14 @@ export default class RegisterTeam extends Component {
             </Grid.Row>
             <Grid.Row className='inputContainer'>
               <Form onKeyUp={handleAddCollaborator}>
-                {collaborators.map((collaborator, index) =>
+                {collaborators.map((data, index) =>
                   <Form.Field
                     className="inputField"
                     control={Input}
                     id={index}
                     key={index}
                     onChange={handleChange}
-                    value={collaborator}
+                    value={data.collaborator}
                     placeholder='Add team member, press enter to add another'
                     action={
                       <Button attached='right' id={index} icon='remove' onClick={handleRemoveCollaborator} />

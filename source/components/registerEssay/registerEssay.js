@@ -10,23 +10,34 @@ export default class RegisterEssay extends Component {
     super(props);
 
     this.state = {
-      essay: '',
+      longForm: [{info:''}],
     };
   };
 
   componentWillMount() {
-    this.setState({ essay: this.props.data });
+    const longForm = this.props.data;
+    if (longForm == null || longForm.length == 0) {
+      this.setState({ longForm: [{info:''}] });
+    }
+    else {
+      this.setState({ longForm: longForm });
+    }
   }
 
-  handleChange = (e, {name, value}) => {
-    this.setState({[name]: value});
+  handleChange = (e, {value}) => {
+    let longForm = this.state.longForm;
+    longForm[0].info = value;
+    this.setState({longForm: longForm});
   };
 
   validateStep = () => {
-    const essay     = this.state.essay;
     const nextStep  = this.props.nextStep;
+    let longForm  = this.state.longForm;
 
-    nextStep(essay);
+    if(longForm[0].info == ''){
+      longForm = null;
+    }
+    nextStep(longForm);
   };
 
   render() {
@@ -34,8 +45,8 @@ export default class RegisterEssay extends Component {
     const previousStep  = this.props.previousStep;
     const validateStep  = this.validateStep;
     const handleChange  = this.handleChange;
-    const essay         = this.state.essay;
-    console.log(essay);
+    const longForm      = this.state.longForm;
+    const essay         = longForm[0].info;
 
     return(
       <Grid stackable textAlign='center' verticalAlign='middle'>
@@ -60,7 +71,7 @@ export default class RegisterEssay extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons nextTitle="SUBMIT" previousStep={() => previousStep(essay)} nextStep={validateStep} />
+        <RegisterButtons nextTitle="SUBMIT" previousStep={() => previousStep(longForm)} nextStep={validateStep} />
       </Grid>
     )
   }

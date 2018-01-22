@@ -42,6 +42,8 @@ $select-underline-color:  #fccfc9;
 }
 
 .field {
+  font-size: 15px;
+
   input, .dropdown {
     outline: 0 !important;
     border: 0 !important;
@@ -86,10 +88,17 @@ $select-underline-color:  #fccfc9;
       background: $select-underline-color !important;
       .text {
         font-weight: 500 !important;
+        font-size: 15px;
       }
     }
   }
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
 
   .active.selection.dropdown {
     padding-left: 1em !important;

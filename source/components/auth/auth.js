@@ -4,33 +4,33 @@ import querystring from 'query-string';
 import axios from 'axios';
 
 class Auth extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {redirect: "register"};
-    }
+  constructor(props) {
+      super(props);
+      this.state = {redirect: "register"};
+  }
 
-    componentDidMount() {
-        const code = querystring.parse(this.props.location.search)['code'];
-        axios.get('http://api.test.hackillinois.org/v1/auth/github?code=' + code)
-        .then(
-            (token) => {
-              sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
-              this.props.history.push("/register");
-            },
-            (reject) => {
-              console.error('your authentication request failed, please try again');
-              sessionStorage.removeItem('Authorization');
-              this.props.history.push("/");
-            }
-        )
-    }
+  componentDidMount() {
+    const code = querystring.parse(this.props.location.search)['code'];
+    axios.get('http://api.test.hackillinois.org/v1/auth/github?code=' + code)
+    .then(
+      (token) => {
+        sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
+        this.props.history.push("/register");
+      },
+      (reject) => {
+        console.error('your authentication request failed, please try again');
+        sessionStorage.removeItem('Authorization');
+        this.props.history.push("/");
+      }
+    )
+  }
 
-    render() {
-        return (
-          <div>
-          </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
 }
 
 export default Auth

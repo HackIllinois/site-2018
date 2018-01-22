@@ -22,16 +22,21 @@ export default class RegisterForm extends Component {
     this.setState({ data: this.props.data });
   };
 
-  handleChange = (e, {name, value}) => {
-    if (name == 'resume') {
+  handleChange = (e, {name, type, value}) => {
+    if (type=='file') {
       const files = e.target.files;
-
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        var arrayBuffer = reader.result;
-        this.setState({ data: {...this.state.data, [name]: arrayBuffer }});
+      const file = files[0];
+      // Check for file and size
+      if (file.type == "application/pdf" && file.size < 2000000) {
+        this.setState({ data: {...this.state.data, [name]: file}});
       }
-      reader.readAsArrayBuffer(files[0]);
+    }
+    else if (type=='number') {
+      this.setState({ data: {...this.state.data, [name]: Number(value) }});
+    }
+    else if (type=='bool') {
+      console.log(value=='true');
+      this.setState({ data: {...this.state.data, [name]: value=='true' }});
     }
     else {
       this.setState({ data: {...this.state.data, [name]: value }});
@@ -44,7 +49,7 @@ export default class RegisterForm extends Component {
 
     for (let index in forms) {
       const config = forms[index];
-      if (((data[config.id] === null || data[config.id] == "") && config.required) || !config.validate(data[config.id])) {
+      if (((data[config.id] == null || (typeof data[config.id] == 'string' && data[config.id] == "")) && config.required) || !config.validate(data[config.id])) {
         return false;
       }
     }

@@ -14,13 +14,25 @@ export default class InputField extends Component {
     const title         = this.props.config.title
     const width         = this.props.config.width;
     const placeholder   = this.props.config.placeholder
-    const handleChange  = this.props.handleChange
-    const value         = this.props.value || ''
+    const handleChange  = this.props.handleChange;
+    const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
 
-    let field = null
+    let field = null;
 
-    // input or select Setup
-    if (fieldType == 'input') {
+    if (fieldType == 'input' && inputType =='file') {
+      field =
+        <Form.Field
+          className="inputField"
+          control={Input}
+          type={inputType}
+          accept=".pdf"
+          name={id}
+          onChange={handleChange}
+          placeholder={placeholder}
+          icon={value != null ? true : false}
+        />;
+    }
+    else if (fieldType == 'input') {
       field =
         <Form.Field
           className="inputField"
@@ -40,6 +52,7 @@ export default class InputField extends Component {
         <Form.Field
           className="selectField"
           control={Select}
+          type={inputType}
           options={options}
           value={value}
           name={id}
