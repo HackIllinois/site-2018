@@ -1,0 +1,54 @@
+.Sponsors {
+    min-width: 100%;
+    padding: 8em 0;
+    background: url("../../assets/img/svg/bottom_image.svg") no-repeat top center;
+    background-size: auto 100%;
+    background-color: #26215A;
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__flexBox {
+        margin-top: 4em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__flexItemLarge {
+        flex-basis: 100%;
+        border-radius: 100%;
+        margin-bottom: 2em;
+        width: 100%;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+
+    &__flexItemMedium {
+        flex-basis: 48%;
+        background-color: white;
+        border-radius: 100%;
+        margin-bottom: 2em;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    &__flexItemSmall {
+        flex-basis: 32%;
+        background-color: white;
+        border-radius: 100%;
+        margin-bottom: 2em;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

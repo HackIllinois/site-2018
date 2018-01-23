@@ -1,0 +1,61 @@
+$backgorund-color:        rgba(204, 217, 252, 0.24);
+
+#app {
+  background-color: $backgorund-color;
+}
+
+.verticalPadding {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.startContainer {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%,-50%) !important;
+
+  .button {
+    font-size: 13px;
+    font-weight: 300;
+    color: #1c055e !important;
+    width: 15em;
+    border-radius: 3px;
+    background-color: #ccd9fc !important;
+    margin: 2em !important;
+
+    @media only screen and (max-width: 1200px){
+      margin: 1em !important;
+    }
+  }
+
+  .FAIconText{
+    position: relative;
+    left: -20px;
+    bottom:4px;
+  }
+}
+
+.startPrompt {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1c055e;
+}
+
+.continueButton {
+  .button {
+    width: auto;
+    color: #1c055e;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
+}

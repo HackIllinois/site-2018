@@ -1,0 +1,19 @@
+$title-color:             #1c055e;
+
+.essayPrompt {
+  font-size: 15px;
+  font-weight: 500;
+  color: $title-color;
+}
+
+.essayTextArea {
+  margin-top: 3em;
+  font-size: 13px;
+  color: $title-color;
+}
+
+.essayContainer {
+  padding-left: 7em !important;
+  padding-right: 7em !important;
+
+}

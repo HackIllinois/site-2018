@@ -1,35 +1,36 @@
 import React, { Component } from 'react';
-import { fromPromise } from 'mobx-utils';
 import querystring from 'query-string';
 
 import axios from 'axios';
 
 class Auth extends Component {
-    constructor(props) {
+  constructor(props) {
       super(props);
-    }
+      this.state = {redirect: "register"};
+  }
 
-    componentDidMount() {
-      const code = querystring.parse(this.props.location.search)['code'];
-      const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
-      .then(
-        (token) => {
-          sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
-        },
-        (reject) => {
-          console.error('your authentication request failed, please try again');
-          sessionStorage.removeItem('Authorization');
-        }
-      )
-    }
+  componentDidMount() {
+    const code = querystring.parse(this.props.location.search)['code'];
+    axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code)
+    .then(
+      (token) => {
+        sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
+        this.props.history.push("/register");
+      },
+      (reject) => {
+        console.error('your authentication request failed, please try again');
+        sessionStorage.removeItem('Authorization');
+        this.props.history.push("/");
+      }
+    )
+  }
 
-    render() {
-      return (
-        <div className="container">
-          <meta httpEquiv="refresh" content="0; url=/"/>
-        </div>
-      )
-    }
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
 }
 
 export default Auth

@@ -6,8 +6,8 @@ Work in progress site for HackIllinois 2018!
 ## Contributing
 - Clone the repo
 - `cd site-2018` (or wherever you cloned it)
-- `npm install`
-- `npm run dev`
+- `npm install` or `yarn`
+- `npm run dev` or `yarn dev`
 - open "localhost:8080" in your favorite browser
 
 ## TBD
