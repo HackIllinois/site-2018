@@ -22,7 +22,7 @@ export default class RegisterStart extends Component {
               <a href="https://opensource.guide/how-to-contribute/" target="_blank"><Button>How to Contribute to OS</Button></a>
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
-              A GitHub account will be critical for Open Source contributions so please make one if you do not have one!
+              A GitHub account is critical for Open Source contributions so please make one if you do not have one already!
             </Grid.Row>
             <Grid.Row className='continueButton'>
               <Button icon size='small' labelPosition='left' onClick={() => window.location = "https://api.hackillinois.org/v1/auth"}>
