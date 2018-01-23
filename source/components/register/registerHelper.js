@@ -1,22 +1,5 @@
 import axios from 'axios';
 
-// const checkUserExists = (id) => new Promise((resolve, reject) => {
-//   const token = sessionStorage.getItem("Authorization");
-//   axios.get("http://api.test.hackillinois.org/v1/user/"+id,
-//     {
-//       headers: { 'Authorization': token },
-//     }
-//   )
-//   .then(response => {
-//     console.log(response.data.data);
-//     return resolve(response.data.data);
-//   })
-//   .catch(error => {
-//     console.log(error);
-//     return reject("checkUserExists Error"); // rejected
-//   });
-// });
-
 const getGithubData = () => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
   if (token == null) {
@@ -29,12 +12,12 @@ const getGithubData = () => new Promise((resolve, reject) => {
       }
     )
     .then(response => {
-      console.log(response.data.data);
+      // console.log(response.data.data);
       return resolve(response.data.data);
     })
     .catch(error => {
-      console.log(error);
-      return reject("GithubData Error"); // rejected
+      // console.log(error);
+      return reject("Getting github data Error"); // rejected
     });
   }
 });
@@ -47,12 +30,12 @@ const getAttendeeData = () => new Promise((resolve, reject) => {
     }
   )
   .then(response => {
-    console.log(response.data.data);
+    // console.log(response.data.data);
     return resolve(response.data.data);
   })
   .catch(error => {
-    console.log(error);
-    return reject("AttendeeData Error"); // rejected
+    // console.log(error);
+    return reject("Getting attendee data Error"); // rejected
   });
 });
 
@@ -68,12 +51,12 @@ const uploadResumeFile = (method, data, id, fileType) => new Promise((resolve, r
     },
   })
   .then(response => {
-    console.log(response.data.data);
+    // console.log(response.data.data);
     return resolve(response.data.data);
   })
   .catch(error => {
-    console.log(error);
-    return reject("uploadResumeFile Error"); // rejected
+    // console.log(error);
+    return reject("Uploading resume file Error"); // rejected
   });
 })
 
@@ -86,12 +69,12 @@ const uploadAttendeeData = (method, data) => new Promise((resolve, reject) => {
     headers: { 'Authorization': token }
   })
   .then(response => {
-    console.log(response.data.data);
+    // console.log(response.data.data);
     return resolve(response.data.data);
   })
   .catch(error => {
-    console.log(error);
-    return reject("uploadAttendeeData Error"); // rejected
+    // console.log(error);
+    return reject("Uploading attendee data Error"); // rejected
   });
 });
 

@@ -78,7 +78,7 @@ export default class Register extends Component {
           this.setState({loading: false, newRegistration: false, personal: personal, professional: professional, collaborators: collaborators, longForm: longForm});
         })
         .catch(error => {
-          this.setState({loading: false});
+          this.props.history.push("/error");
         });
       }
       else {
@@ -86,7 +86,6 @@ export default class Register extends Component {
       }
     })
     .catch(error => {
-      this.setState({loading: false});
       this.props.history.push("/start");
     });
   };
@@ -146,7 +145,7 @@ export default class Register extends Component {
               this.setState({ loading: false, step: 5});
             })
             .catch(error => {
-              this.setState({ loading: false });
+              this.props.history.push("/error");
             });
           };
           reader.readAsArrayBuffer(resumeFile);
@@ -156,7 +155,7 @@ export default class Register extends Component {
         }
       })
       .catch(error => {
-        this.setState({ loading: false });
+        this.props.history.push("/error");
       });
     });
   };
