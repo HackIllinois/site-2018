@@ -64,7 +64,7 @@ class FAQ extends Component {
 		return(
 			<div className="FAQ">
 				<div className="container">
-					<h1>FAQ's:</h1>
+					<h1>FAQs</h1>
 					<div className="spacer" />
 					<div className="FAQ_list">
 						{columns}
