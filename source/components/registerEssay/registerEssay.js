@@ -50,6 +50,8 @@ export default class RegisterEssay extends Component {
 
     return(
       <Grid stackable textAlign='center' verticalAlign='middle'>
+        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
+        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
