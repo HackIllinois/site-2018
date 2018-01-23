@@ -21,6 +21,7 @@
         color: #ED61A4;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     &__number {
@@ -40,5 +41,17 @@
 
     &__letter {
       font-weight: 300;
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 266%;
+      }
+      h2 {
+        font-size: 200%;
+      }
+      h3 {
+        font-size: 166.5%;
+      }
     }
 }
