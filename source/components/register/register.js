@@ -113,7 +113,9 @@ export default class Register extends Component {
       osContributors: osContributors
     };
     if (longForm != null){
-      data.longForm = longForm
+      if (longForm[0].info != '') {
+        data.longForm = longForm
+      }
     }
     if (collaborators !=null) {
       data.collaborators = collaborators
