@@ -34,6 +34,7 @@ class Home extends Component {
                 <div className="container">
                     <video id="splash_anim" className={(this.state.playingAnimation) ? "Splash" : "EndSplash"}
                       autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                      poster="../../assets/animation/poster.png"
                       onEnded={() => this.endAnimation()}>
                     </video>
                     <div className="Background">
