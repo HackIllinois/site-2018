@@ -4,7 +4,6 @@ import styles from './registerSuccess.scss'
 
 export default class RegisterSuccess extends Component {
   render() {
-
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
         <Grid.Row className='successContainer'>
@@ -19,6 +18,12 @@ export default class RegisterSuccess extends Component {
               <Button>Mentors</Button>
               <Button>Projects</Button>
             </Grid.Row> */}
+            <Grid.Row className='continueButton'>
+              <Button icon size='small' labelPosition='left' onClick={() => window.location = "https://hackillinois.org"}>
+                <span className="FAIconText">HOME</span>
+                <FontAwesomeIcon icon={faCaretRight} size="2x"/>
+              </Button>
+            </Grid.Row>
           </Grid.Column>
         </Grid.Row>
       </Grid>
