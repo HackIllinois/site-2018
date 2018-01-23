@@ -9,6 +9,8 @@ export default class RegisterStart extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
+        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
+        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row className='startContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>

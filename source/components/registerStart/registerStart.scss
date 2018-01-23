@@ -75,3 +75,22 @@ html, body, #app {
     }
   }
 }
+
+.backgroundImage{
+  position: absolute;
+  max-width: 20%;
+  width: 250px;
+}
+.leftButton{
+  left: -15px;
+  bottom: 60px;
+}
+.rightButton{
+  top: 0px;
+  right: -15px;
+}
+@media only screen and (max-width: 768px) {
+  .backgroundImage{
+    display: none;
+  }
+}
