@@ -12,7 +12,7 @@ export default class RegisterStart extends Component {
         <Grid.Row className='startContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='medium' />
+              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               HackIllinois is an open source hackathon where experts and beginners in open source can work together to contribute to the world of open source. Whether you are creating a new open source project or working with <a href="https://github.com/brson">Brian Anderson</a> on the Rust programming language, HackIllinois gives you the opportunity to contribute to the open source community.
