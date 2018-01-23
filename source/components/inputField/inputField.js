@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { Grid, Form, Select, Icon, Input } from 'semantic-ui-react'
 
 import styles from './inputField.scss'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
+import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare'
+import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
 export default class InputField extends Component {
 
   render() {
@@ -16,7 +19,8 @@ export default class InputField extends Component {
     const placeholder   = this.props.config.placeholder
     const handleChange  = this.props.handleChange;
     const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
-
+    const iconCheck = <FontAwesomeIcon class="right" icon={faCheck} size="1x"/>;
+    const iconMinus = <FontAwesomeIcon class="right" icon={faMinusSquare} size="1x"/>;
     let field = null;
 
     if (fieldType == 'input' && inputType =='file') {
@@ -29,7 +33,9 @@ export default class InputField extends Component {
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
-          icon={value ? 'check' : 'close'}
+          action={
+            value ? iconCheck : iconMinus
+          }
         />;
     }
     else if (fieldType == 'input') {
