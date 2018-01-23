@@ -55,7 +55,7 @@ export default class Register extends Component {
       if (githubData.roles != null && githubData.roles.length > 0) {
         getAttendeeData().then(attendeeData => {
           const {collaborators, longForm, resume, id} = attendeeData;
-          console.log(attendeeData;)
+          console.log(attendeeData);
           for (let key of Object.keys(attendeeData)) {
             // exception
             console.log(key);
