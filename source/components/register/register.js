@@ -51,8 +51,8 @@ export default class Register extends Component {
       personal['github'] = githubData['githubHandle'];
       personal['email'] = githubData['email'];
       this.setState({ personal: personal});
-      
-      if (githubData.roles != null) {
+
+      if (githubData.roles != null && githubData.roles.length > 0) {
         getAttendeeData().then(attemdeeData => {
           const {collaborators, longForm, resume, id} = attemdeeData;
           for (let key of Object.keys(attemdeeData)) {
