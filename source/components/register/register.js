@@ -133,7 +133,6 @@ export default class Register extends Component {
       const attendeeMethod = newRegistration ? 'post' : 'put';
       // POST attendee
       uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
-
         if (resumeInfo == null || resumeFile != resumeInfo.key) {
           let reader = new FileReader();
           reader.onload = (event) => {
