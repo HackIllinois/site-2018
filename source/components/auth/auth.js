@@ -11,7 +11,7 @@ class Auth extends Component {
 
   componentDidMount() {
     const code = querystring.parse(this.props.location.search)['code'];
-    axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code)
+    axios.get('http://api.test.hackillinois.org/v1/auth/github?code=' + code)
     .then(
       (token) => {
         sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);

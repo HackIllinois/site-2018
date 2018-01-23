@@ -4,7 +4,6 @@ import styles from './registerSuccess.scss'
 
 export default class RegisterSuccess extends Component {
   render() {
-
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
         <Grid.Row className='successContainer'>

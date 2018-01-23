@@ -19,7 +19,7 @@ import axios from 'axios';
   ga('create', 'UA-46010489-2', {
       'cookieDomain': 'hackillinois.org'
   });
-  
+
 
 // ES6 React Component:
 export default class Register extends Component {
@@ -161,8 +161,9 @@ export default class Register extends Component {
                   'exDescription': '/attendee resume upload: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
                   'exFatal': true
                 })
-              this.props.history.push("/error");
+
               }
+              this.props.history.push("/error");
             });
           };
           reader.readAsArrayBuffer(resumeFile);

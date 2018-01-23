@@ -14,7 +14,7 @@ export default class Error extends Component {
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               404 Not Found <br/><br/>
-              Please contact us at contact@hackillinois.org
+              Please contact us at <a href="mailto:contact@hackillinois.org">contact@hackillinois.org</a>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
