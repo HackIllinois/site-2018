@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 // Components
 import Home from './components/home/home';
@@ -26,11 +26,14 @@ class App extends React.Component {
 render(
   <Router>
     <div>
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/auth" component={Auth}/>
-      <Route exact path="/start" component={RegisterStart}/>
-      <Route exact path="/register" component={Register}/>
-      <Route exact path="/auth/mobile" component={MobileAuth}/>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/auth" component={Auth}/>
+        <Route exact path="/start" component={RegisterStart}/>
+        <Route exact path="/register" component={Register}/>
+        <Route exact path="/auth/mobile" component={MobileAuth}/>
+        <Route component={Error}/>
+      </Switch>
     </div>
   </Router>,
   document.getElementById('app')
