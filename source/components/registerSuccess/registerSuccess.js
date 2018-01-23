@@ -13,12 +13,12 @@ export default class RegisterSuccess extends Component {
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
-              Groovy! You have succesfully registed for Hackillinois. We’ll be in touch. For now, here’s more information on our event.
+              You have succesfully registed for Hackillinois. We’ll be in touch. For now, here’s more information on our event. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
             </Grid.Row>
-            <Grid.Row className='verticalPadding'>
+            {/* <Grid.Row className='verticalPadding'>
               <Button>Mentors</Button>
               <Button>Projects</Button>
-            </Grid.Row>
+            </Grid.Row> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
