@@ -19,7 +19,7 @@ import axios from 'axios';
   ga('create', 'UA-46010489-2', {
       'cookieDomain': 'hackillinois.org'
   });
-  
+
 
 // ES6 React Component:
 export default class Register extends Component {
@@ -161,21 +161,15 @@ export default class Register extends Component {
                   'exDescription': '/attendee resume upload: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
                   'exFatal': true
                 })
-              this.props.history.push("/error");
               }
+              this.props.history.push("/error");
             });
           };
           reader.readAsArrayBuffer(resumeFile);
         }
         else {
+          // Dont need to upload resume because there is already a resume uploaded or user havent changed it.
           this.setState({ loading: false, step: 5});
-          if (ga) {
-            ga('send', 'exception', {
-                'exDescription': '/attendee resume error: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
-                'exFatal': true
-            })
-          }
-
         }
       })
       .catch(error => {
