@@ -29,7 +29,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'firstName',
     required: true,
-    placeholder: 'Kevin',
+    placeholder: 'First',
     title: 'FIRST NAME',
     validate: (input) => {
       return input.length > 0 && input.length <= 255;
@@ -41,7 +41,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'lastName',
     required: true,
-    placeholder: 'Hong',
+    placeholder: 'Last',
     title: 'LAST NAME',
     validate: (input) => {
       return input.length > 0 && input.length <= 255;
@@ -133,7 +133,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'gender',
     required: true,
-    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'None Binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Other', value: 'OTHER'}],
+    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'Non-binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Other', value: 'OTHER'}],
     placeholder: 'What gender do you identify as?',
     title: 'GENDER',
     validate: (input) => {
