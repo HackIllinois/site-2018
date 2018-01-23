@@ -15,7 +15,7 @@ class Auth extends Component {
 
     componentDidMount() {
       const code = querystring.parse(this.props.location.search)['code'];
-      const token = fromPromise(axios.get('http://api.test.hackillinois.org/v1/auth/github?code=' + code))
+      const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
       .then(
         (token) => {
           this.setState({
