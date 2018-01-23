@@ -14,15 +14,10 @@ export default class RegisterSuccess extends Component {
             <Grid.Row className='successPrompt verticalPadding'>
               You have succesfully registed for Hackillinois. We’ll be in touch. For now, here’s more information on our event. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
             </Grid.Row>
-            {/* <Grid.Row className='verticalPadding'>
-              <Button>Mentors</Button>
-              <Button>Projects</Button>
-            </Grid.Row> */}
-            <Grid.Row className='continueButton'>
-              <Button icon size='small' labelPosition='left' onClick={() => window.location = "https://hackillinois.org"}>
-                <span className="FAIconText">HOME</span>
-                <FontAwesomeIcon icon={faCaretRight} size="2x"/>
-              </Button>
+            <Grid.Row className='verticalPadding'>
+              {/* <Button>Mentors</Button> */}
+              {/* <Button>Projects</Button> */}
+              <a href="/"><Button>Home</Button></a>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
