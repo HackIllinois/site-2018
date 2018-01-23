@@ -131,7 +131,9 @@ export default class Register extends Component {
       const attendeeMethod = newRegistration ? 'post' : 'put';
       // POST attendee
       uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
-        if (resumeFile != resumeInfo.key) {
+        
+        if (resumeInfo == null || resumeFile != resumeInfo.key) {
+          console.log('uploadFile');
           let reader = new FileReader();
           reader.onload = (event) => {
             const resumeData    = event.target.result;

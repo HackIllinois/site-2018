@@ -25,7 +25,6 @@ export default class RegisterWarning extends Component {
   };
 
   validateStep = (func) => {
-    const nextStep              = this.props.nextStep;
     const { warning, visible }  = this.state;
 
     if(warning) {
@@ -39,8 +38,8 @@ export default class RegisterWarning extends Component {
 
   render() {
     const step                  = this.props.step;
-    const submitForm            = this.props.submitForm;
     const nextStep              = this.props.nextStep;
+    const submitForm            = this.props.submitForm;
     const previousStep          = this.props.previousStep;
     const validateStep          = this.validateStep;
     const handleChange          = this.handleChange;
@@ -68,7 +67,7 @@ export default class RegisterWarning extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={validateStep(submitForm)} nextStep={validateStep(nextStep)} />
+        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={() => validateStep(submitForm)} nextStep={() => validateStep(nextStep)} />
       </Grid>
     )
   }
