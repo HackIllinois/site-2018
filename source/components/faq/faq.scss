@@ -2,6 +2,7 @@
 
 	padding: 8em 0;
 	background-color: #F2F5FE;
+	padding-left: 2.5%;
 
 	&__itemHeader {
 		margin-bottom: 1em;
@@ -17,7 +18,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-left: 2.5%;
 
 		&_column {
 			flex: 1;
