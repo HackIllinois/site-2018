@@ -31,7 +31,6 @@ render(
       <Route exact path="/start" component={RegisterStart}/>
       <Route exact path="/register" component={Register}/>
       <Route exact path="/auth/mobile" component={MobileAuth}/>
-      <Route component={Error}/>
     </div>
   </Router>,
   document.getElementById('app')
