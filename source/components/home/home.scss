@@ -31,6 +31,13 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
+    &__fulcrum {
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-bottom: 5%;
+    }
+
     img {
       max-width: 100%;
     }

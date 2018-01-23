@@ -28,6 +28,7 @@ class Home extends Component {
                     <div className="Landing">
                         <div className="Landing__logo">
                             <img src="./assets/img/png/logo_with_date.png" />
+                            <img src="./assets/img/png/fulcrum.png" className="Landing__logo__fulcrum" />
                             <div class="RegButton">
                                 <a href = "/start">
                                     <button class="ui button" tabindex="0">REGISTER</button>
