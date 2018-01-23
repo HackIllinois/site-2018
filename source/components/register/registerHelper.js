@@ -6,7 +6,7 @@ const getGithubData = () => new Promise((resolve, reject) => {
     this.props.history.push("/start");
   }
   else {
-    axios.get("http://api.test.hackillinois.org/v1/user",
+    axios.get("https://api.hackillinois.org/v1/user",
       {
         'headers': { 'Authorization': token }
       }
@@ -24,7 +24,7 @@ const getGithubData = () => new Promise((resolve, reject) => {
 
 const getAttendeeData = () => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
-  axios.get("http://api.test.hackillinois.org/v1/registration/attendee",
+  axios.get("https://api.hackillinois.org/v1/registration/attendee",
     {
       'headers': { 'Authorization': token }
     }
@@ -46,7 +46,7 @@ const uploadResumeFile = (method, data, id, fileType) => new Promise((resolve, r
     end = id;
   }
   axios({
-    url: 'http://api.test.hackillinois.org/v1/upload/resume/' + end,
+    url: 'https://api.hackillinois.org/v1/upload/resume/' + end,
     method: method,
     data: data,
     headers: {
@@ -67,7 +67,7 @@ const uploadResumeFile = (method, data, id, fileType) => new Promise((resolve, r
 const uploadAttendeeData = (method, data) => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
   axios({
-    url: 'http://api.test.hackillinois.org/v1/registration/attendee',
+    url: 'https://api.hackillinois.org/v1/registration/attendee',
     method: method,
     data: data,
     headers: { 'Authorization': token }
