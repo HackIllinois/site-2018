@@ -68,7 +68,7 @@ export default class RegisterWarning extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={validateStep(submitForm)} nextStep={validateStep(nextStep)} />
+        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={() => validateStep(submitForm)} nextStep={() => validateStep(nextStep)} />
       </Grid>
     )
   }
