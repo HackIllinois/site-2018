@@ -35,7 +35,6 @@ export default class RegisterForm extends Component {
       this.setState({ data: {...this.state.data, [name]: Number(value) }});
     }
     else if (type=='bool') {
-      console.log(value=='true');
       this.setState({ data: {...this.state.data, [name]: value=='true' }});
     }
     else {

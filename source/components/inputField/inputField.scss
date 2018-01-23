@@ -44,6 +44,10 @@ $select-underline-color:  #fccfc9;
 .field {
   font-size: 15px;
 
+  input[type='file'] {
+    color: transparent !important;
+  }
+
   input, .dropdown {
     outline: 0 !important;
     border: 0 !important;

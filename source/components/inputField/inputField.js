@@ -29,7 +29,7 @@ export default class InputField extends Component {
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
-          icon={value != null ? true : false}
+          icon={value ? 'check' : 'close'}
         />;
     }
     else if (fieldType == 'input') {
@@ -44,7 +44,7 @@ export default class InputField extends Component {
           name={id}
           onChange={handleChange}
           placeholder={placeholder}
-          disabled={(id == 'email' || id == 'github')}
+          disabled={id == 'email' || id == 'github'}
         />;
     }
     if (fieldType == 'select') {
