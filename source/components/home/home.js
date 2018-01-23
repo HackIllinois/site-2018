@@ -12,42 +12,54 @@ import { Button } from 'semantic-ui-react'
 
 
 class Home extends Component {
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        playingAnimation: false
+      };
+    }
+
+    endAnimation() {
+      this.setState({
+        playingAnimation: true
+      });
+    }
+
     render() {
         return(
-            <div>
-                <div className="container">
-                    <div className="Background">
-                        <div className="Background__foreground">
-
-                        </div>
-
-                        <div className="Background__footer">
-
-                        </div>
-                    </div>
-                    <div className="Landing">
-                        <div className="Landing__logo">
-                            <img src="./assets/img/png/logo_with_date.png" />
-                            <img src="./assets/img/png/fulcrum.png" className="Landing__logo__fulcrum" />
-                            <div class="RegButton">
-                                <a href = "/start">
-                                    <button class="ui button" tabindex="0">REGISTER</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <div>
+            <div className="container">
+              <div className="Background video-container">
+                <video id="splash_anim"
+                  autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                  poster="../../assets/animation/poster.png"
+                  onEnded={() => this.endAnimation()}>
+                </video>
+              </div>
+              <div className="Landing">
+                <div className="Landing__logo">
+                  <img className="logo" src="./assets/img/png/logo_with_date.png" />
+                  <div className="RegButton">
+                    <a href = "/start">
+                    { (this.state.playingAnimation || window.innerWidth < 768 ) ? <button>REGISTER</button> : null}
+                    </a>
+                  </div>
                 </div>
-
-                <About />
-
-                <Countdown />
-
-                <FAQ/>
-
-                <Sponsors />
-
-                <Footer />
+              </div>
             </div>
+
+            <About />
+
+            <Countdown />
+
+            <FAQ/>
+
+            <Sponsors />
+
+            <Footer />
+          </div>
         )
     }
 }

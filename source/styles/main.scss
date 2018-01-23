@@ -12,12 +12,12 @@ body {
   }
 
   .spacer {
-    padding: 4em;
+    padding: 1.5em;
   }
 
   p {
-    font-weight: 500;
-    font-size: 170%;
+    font-weight: 400;
+    font-size: 110%;
     line-height: 170%;
   }
 
@@ -28,23 +28,23 @@ body {
   }
 
   h1 {
-    font-size: 400%;
-  }
-
-  h2 {
-    font-size: 300%;
-  }
-
-  h3 {
-    font-size: 250%;
-  }
-
-  h4 {
     font-size: 200%;
   }
 
+  h2 {
+    font-size: 180%;
+  }
+
+  h3 {
+    font-size: 160%;
+  }
+
+  h4 {
+    font-size: 140%;
+  }
+
   h5 {
-    font-size: 150%;
+    font-size: 120%;
   }
 
   h6 {
@@ -60,17 +60,17 @@ body {
 
   @media (min-width: 768px) {
     .container {
-      width: 750px;
+      width: 75%;
     }
   }
   @media (min-width: 992px) {
     .container {
-      width: 970px;
+      width: 75%;
     }
   }
   @media (min-width: 1200px) {
     .container {
-      width: 1170px;
+      width: 75%;
     }
   }
 }
