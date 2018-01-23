@@ -13,7 +13,7 @@ class Sponsors extends Component {
         const sponsorsLarge = [
             {
                 "company": "fulcrumgt",
-                "url": ""
+                "url": "http://fulcrum-gt.com/"
             }
         ];
 
@@ -21,84 +21,84 @@ class Sponsors extends Component {
             // meditate
             {
                 "company": "microsoft",
-                "url": ""
+                "url": "https://www.microsoft.com/en-us/"
             },
             {
                 "company": "imo_2",
-                "url": ""
+                "url": "https://www.e-imo.com"
             },
             //placeholder for nussbaumer???
 
             // recurring
             {
                 "company": "amadeus",
-                "url": ""
+                "url": "http://www.amadeus.com/"
             },
             // goldman
             {
                 "company": "rubrik",
-                "url": ""
+                "url": "https://www.rubrik.com/"
             },
             {
                 "company": "schlumberger",
-                "url": ""
+                "url": "http://www.slb.com/"
             },
             {
                 "company": "synchrony",
-                "url": ""
+                "url": "https://www.mysynchrony.com/"
             }
         ]
         const sponsorsSmall = [
             {
                 "company": "googlecloudplatform",
-                "url": ""
+                "url": "https://cloud.google.com/"
             },
             {
                 "company": "oath",
-                "url": ""
+                "url": "https://www.oath.com/"
             },
             {
                 "company": "caterpillar",
-                "url": ""
+                "url": "https://www.caterpillar.com/"
             },
             {
                 "company": "facebook",
-                "url": ""
+                "url": "https://www.facebook.com/careers/"
             },
             {
                 "company": "forcepoint",
-                "url": ""
+                "url": "https://www.forcepoint.com/"
             },
             {
                 "company": "jackson",
-                "url": ""
+                "url": "https://www.jackson.com/index.xhtml"
             },
 
             // optum and rockwell?
 
             {
                 "company": "axis_2",
-                "url": ""
+                "url": "http://www.axiscapital.com/en-us"
             },
 
             {
                 "company": "citadel",
-                "url": ""
+                "url": "https://www.citadel.com/"
             },
 
             {
                 "company": "nvidia",
-                "url": ""
+                "url": "http://www.nvidia.com/page/home.html"
             },
 
             {
                 "company": "productiveedge",
-                "url": ""
+                "url": "https://www.productiveedge.com/"
             },
 
             {
                 "company": "1517_2",
-                "url": ""
+                "url": "http://www.1517fund.com/"
             }
         ]
 
@@ -108,7 +108,7 @@ class Sponsors extends Component {
         const large = sponsorsLarge.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemLarge">
-                    <img src={ path + sponsor.company + filetype} />
+                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
                 </div>
             );
         })
@@ -116,7 +116,7 @@ class Sponsors extends Component {
         const medium = sponsorsMedium.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemMedium">
-                    <img src={ path + sponsor.company + filetype} />
+                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
                 </div>
             );
         })
@@ -124,7 +124,7 @@ class Sponsors extends Component {
         const small = sponsorsSmall.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemSmall">
-                    <img src={ path + sponsor.company + filetype} />
+                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
                 </div>
             );
         })
@@ -132,16 +132,16 @@ class Sponsors extends Component {
         return(
         	<div className="Sponsors">
                 <div className="container">
-                  <h1>Our Sponsors</h1>
-                  <div className="Sponsors__flexBox">
-                      {large}
-                  </div>
-                  <div className="Sponsors__flexBox">
-                      {medium}
-                  </div>
-                  <div className="Sponsors__flexBox">
-                      {small}
-                  </div>
+                    <h1>Our Sponsors</h1>
+                    <div className="Sponsors__flexBox">
+                        {large}
+                    </div>
+                    <div className="Sponsors__flexBox">
+                        {medium}
+                    </div>
+                    <div className="Sponsors__flexBox">
+                        {small}
+                    </div>
                 </div>
 			</div>
         )

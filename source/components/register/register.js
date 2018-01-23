@@ -72,7 +72,7 @@ export default class Register extends Component {
               professional['osContributors'] = attendeeData.osContributors[0].osContributor;
             }
             else if (key == 'resume') {
-              this.setState({ resumeInfo: attendeeData.resume});
+              this.setState({ resumeInfo: attendeeData.resume || null});
               professional['resume'] = attendeeData.resume.key || '';
             }
             else if (key == 'hasLightningInterest') {
@@ -147,8 +147,8 @@ export default class Register extends Component {
           let reader = new FileReader();
           reader.onload = (event) => {
             const resumeData    = event.target.result;
-            const resumeId      = resumeInfo ? resumeInfo.id : '';
-            const resumeMethod  = resumeInfo ? 'put' : 'post';
+            const resumeId      = resumeInfo == null ? '' : resumeInfo.id ;
+            const resumeMethod  = resumeInfo == null ? 'post' : 'put';
             const resumeType    = resumeFile.type;
             // POST resume
             uploadResumeFile(resumeMethod, resumeData, resumeId, resumeType).then(response => {
@@ -161,7 +161,6 @@ export default class Register extends Component {
                   'exDescription': '/attendee resume upload: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
                   'exFatal': true
                 })
-
               }
               this.props.history.push("/error");
             });
@@ -169,14 +168,8 @@ export default class Register extends Component {
           reader.readAsArrayBuffer(resumeFile);
         }
         else {
+          // Dont need to upload resume because there is already a resume uploaded or user havent changed it.
           this.setState({ loading: false, step: 5});
-          if (ga) {
-            ga('send', 'exception', {
-                'exDescription': '/attendee resume error: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
-                'exFatal': true
-            })
-          }
-
         }
       })
       .catch(error => {

@@ -29,7 +29,7 @@ export default class RegisterCollaborators extends Component {
     }
   }
 
-  handleChange = (e, { id, value }) => {    
+  handleChange = (e, { id, value }) => {
     let updatedCollaborators = this.state.collaborators;
     updatedCollaborators[id].collaborator = value;
     this.setState({ collaborators: updatedCollaborators});
@@ -74,7 +74,7 @@ export default class RegisterCollaborators extends Component {
     const handleChange  = this.handleChange;
     const handleAddCollaborator = this.handleAddCollaborator;
     const handleRemoveCollaborator = this.handleRemoveCollaborator;
-    let removeIcon = <FontAwesomeIcon icon={faTimesCircle}/>; 
+    let removeIcon = <FontAwesomeIcon icon={faTimesCircle}/>;
     return(
       <Grid stackable>
         <Grid.Row columns={2}>
