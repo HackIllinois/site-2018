@@ -10,7 +10,7 @@ export default class RegisterSuccess extends Component {
         <Grid.Row className='successContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='medium' />
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
               You have succesfully registed for Hackillinois. We’ll be in touch. For now, here’s more information on our event. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
