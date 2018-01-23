@@ -1,33 +1,37 @@
 .About {
+	padding: 8em 0;
+	background-color: #F2F5FE;
 
-	h2{
-		font-size: 1.3em;
-  	font-weight: bold;
+	&__copy {
+		margin-top: 0.5em;
 	}
 
-	p{
-		font-size: 1.1em;
-		font-weight: 300;
-  	line-height: 1.41;
-	}
-
-	margin-top: 8em;
-	padding: 0 5em;
-
-	&__columnSection {
+	&__trackCards {
 		display: flex;
+		justify-content: space-between;
+		margin-top: 3em;
+		margin-bottom: 6em;
+	}
 
-		h2{
-			font-size: 1.1em;
-			font-weight: bold;
-			margin-bottom: -0.5em;
-		}
+	&__trackCard {
+		width: 49%;
+		border: 1px solid lightgray;
+		box-shadow: 5px 5px 15px lightgray !important;
+		background-color: white;
+	}
 
-		&__column {
-			flex: 1;
-			padding: 0 2em;
+	&__trackCardHeader {
+		background-color: #CCD9FC;
+		text-align: center;
+		padding: 1em;
+	}
 
-			font-size: 0.9em;
-		}
+	&__trackCardBody {
+		background-color: #FFFFFF;
+		padding: 2em 4em;
+	}
+
+	.space_above {
+		margin-top: 1em;
 	}
 }

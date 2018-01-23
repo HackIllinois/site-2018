@@ -1,0 +1,19 @@
+.Footer {
+    min-width: 100%;
+    min-height: 100px;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #11112F;
+    }
+
+    a, a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+        color: #12112F;
+    }
+
+}

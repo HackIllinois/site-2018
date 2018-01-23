@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import styles from './sectionHeader.scss'
+// import styles from './sectionHeader.scss'
 
 class SectionHeader extends Component {
     constructor() {
