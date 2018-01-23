@@ -49,6 +49,11 @@ const config = {
             {
                 test: /\.css$/,
                 loaders: ['style-loader', 'css-loader?url=false', 'postcss-loader']
+            },
+
+            {
+              test: /\.json$/,
+              loader: 'json-loader'
             }
 
         ]
@@ -64,6 +69,10 @@ const config = {
               from: APP_DIR + '/assets/',
               to: BUILD_DIR + '/assets/'
             },
+            // {
+            //   from: APP_DIR + '/images/',
+            //   to: BUILD_DIR + '/images/'
+            // },
             {
               from: APP_DIR + '/apple-app-site-association',
               to: BUILD_DIR

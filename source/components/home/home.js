@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Lottie from 'react-lottie'
 
 import styles from './home.scss'
 
@@ -9,22 +10,22 @@ import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
 import { Button } from 'semantic-ui-react'
+const animationData = require('../../assets/json/data.json')
 
 
 class Home extends Component {
+
     render() {
+      const defaultOptions = {
+        loop: false,
+        autoplay: true,
+        animationData: animationData
+      };
+
         return(
             <div>
                 <div className="container">
-                    <div className="Background">
-                        <div className="Background__foreground">
-
-                        </div>
-
-                        <div className="Background__footer">
-
-                        </div>
-                    </div>
+                    <Lottie options = {defaultOptions} />
                     <div className="Landing">
                         <div className="Landing__logo">
                             <img src="./assets/img/png/logo_with_date.png" />
