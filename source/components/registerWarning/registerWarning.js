@@ -54,7 +54,7 @@ export default class RegisterWarning extends Component {
           </Grid.Column>
           <Grid.Column className='warningContainer' mobile={16} tablet={12} computer={13}>
             <Grid.Row className='warningMessage'>
-              If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your applications, there will be space on the next page for additions.
+              If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your application, there will be space on the next page for additions.
             </Grid.Row>
             <Grid.Row >
               <Transition animation='shake' duration='300' visible={visible}>
