@@ -12,6 +12,15 @@ import {uploadAttendeeData, uploadResumeFile, getGithubData, getAttendeeData} fr
 import styles from './register.scss'
 import axios from 'axios';
 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46010489-2', {
+      'cookieDomain': 'hackillinois.org'
+  });
+  
+
 // ES6 React Component:
 export default class Register extends Component {
   constructor(props) {
@@ -27,6 +36,7 @@ export default class Register extends Component {
       newRegistration: true,
       resumeInfo: null,
       loading: true,
+      attendeeEmail: ''
     };
   };
 
@@ -102,6 +112,7 @@ export default class Register extends Component {
     Object.assign(attendee, personal, professional);
     delete attendee['osContributors'];
     delete attendee['resume'];
+    this.state.attendeeEmail = attendee['email']
     delete attendee['email'];
 
     let data = {
@@ -144,16 +155,37 @@ export default class Register extends Component {
               this.setState({ loading: false, step: 5});
             })
             .catch(error => {
+              this.setState({ loading: false });
+              if (ga) {
+                ga('send', 'exception', {
+                  'exDescription': '/attendee resume upload: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
+                  'exFatal': true
+                })
               this.props.history.push("/error");
+              }
             });
           };
           reader.readAsArrayBuffer(resumeFile);
         }
         else {
           this.setState({ loading: false, step: 5});
+          if (ga) {
+            ga('send', 'exception', {
+                'exDescription': '/attendee resume error: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
+                'exFatal': true
+            })
+          }
+
         }
       })
       .catch(error => {
+        this.setState({ loading: false });
+        if (ga) {
+          ga('send', 'exception', {
+            'exDescription': '/attendee attendee data: ' + this.state.attendeeEmail + " " + JSON.stringify(error),
+            'exFatal': true
+          })
+        }
         this.props.history.push("/error");
       });
     });
