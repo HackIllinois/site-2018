@@ -9,7 +9,6 @@ import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
 import { Button } from 'semantic-ui-react'
-import { DefaultPlayer as Video } from 'react-html5video';
 
 
 class Home extends Component {
