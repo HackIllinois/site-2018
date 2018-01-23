@@ -53,25 +53,29 @@ export default class Register extends Component {
       this.setState({ personal: personal});
 
       if (githubData.roles != null && githubData.roles.length > 0) {
-        getAttendeeData().then(attemdeeData => {
-          const {collaborators, longForm, resume, id} = attemdeeData;
-          for (let key of Object.keys(attemdeeData)) {
+        getAttendeeData().then(attendeeData => {
+          const {collaborators, longForm, resume, id} = attendeeData;
+          console.log(attendeeData);
+          for (let key of Object.keys(attendeeData)) {
             // exception
+            console.log(key);
             if (key == 'osContributors') {
-              professional['osContributors'] = attemdeeData.osContributors[0].osContributor;
+              professional['osContributors'] = attendeeData.osContributors[0].osContributor;
             }
             else if (key == 'resume') {
-              this.setState({ resumeInfo: attemdeeData.resume});
-              professional['resume'] = attemdeeData.resume.key || '';
+              this.setState({ resumeInfo: attendeeData.resume});
+              professional['resume'] = attendeeData.resume.key || '';
+              console.log(attendeeData.resume);
+              console.log(attendeeData.resume.key);
             }
             else if (key == 'hasLightningInterest') {
-              professional['hasLightningInterest'] = attemdeeData.hasLightningInterest ? true: false;
+              professional['hasLightningInterest'] = attendeeData.hasLightningInterest ? true: false;
             }
             else if (key in personal) {
-              personal[key] = attemdeeData[key];
+              personal[key] = attendeeData[key];
             }
             else if (key in professional) {
-              professional[key] = attemdeeData[key];
+              professional[key] = attendeeData[key];
             }
           }
           this.setState({loading: false, newRegistration: false, personal: personal, professional: professional, collaborators: collaborators, longForm: longForm});
@@ -108,8 +112,13 @@ export default class Register extends Component {
       attendee: attendee,
       osContributors: osContributors
     };
-    if (longForm != null){
-      data.longForm = longForm
+    if (longForm != null) {
+      console.log(longForm);
+      if (longForm[0] != null) {
+        if (longForm[0].info != '') {
+          data.longForm = longForm
+        }
+      }
     }
     if (collaborators !=null) {
       data.collaborators = collaborators

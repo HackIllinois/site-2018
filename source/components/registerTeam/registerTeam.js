@@ -4,6 +4,9 @@ import RegisterNav from '../registerNav/registerNav';
 import RegisterButtons from '../registerButtons/registerButtons';
 import { Grid, Form, Input, Button} from 'semantic-ui-react';
 import InputField from '../inputField/inputField';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare'
+import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
 
 import styles from './registerTeam.scss'
 
@@ -95,7 +98,8 @@ export default class RegisterCollaborators extends Component {
                     value={data.collaborator}
                     placeholder='Add team member, press enter to add another'
                     action={
-                      <Button attached='right' id={index} icon='remove' onClick={handleRemoveCollaborator} />
+                      // <FontAwesomeIcon icon={faMinusSquare} size="2x" onClick={handleRemoveCollaborator}/>
+                      <Button attached='right' id={index} onClick={handleRemoveCollaborator} action={<FontAwesomeIcon icon={faCheck}/>}/>
                     }
                   />
                 )}
@@ -103,7 +107,7 @@ export default class RegisterCollaborators extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(collaborators)} nextStep={validateStep} />
+        <RegisterButtons previousStep={() => previousStep(collaborators)} nextStep={() => validateStep()} />
       </Grid>
     )
   }
