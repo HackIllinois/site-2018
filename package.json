@@ -37,6 +37,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.4",
     "@fortawesome/react-fontawesome": "0.0.17",
     "json-loader": "^0.5.7",
+    "lottie-web": "^5.1.4",
     "normalize.css": "^6.0.0",
     "query-string": "^5.0.1",
     "react": "^16.0.0",
