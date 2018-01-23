@@ -18,7 +18,7 @@ class Home extends Component {
 
       this.state = {
         playingAnimation: false
-      }
+      };
     }
 
     endAnimation() {
@@ -32,24 +32,18 @@ class Home extends Component {
           <div>
             <div className="container">
               <div className="Background video-container">
-                <video id="splash_anim" className="Splash"
+                <video id="splash_anim"
                   autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
                   poster="../../assets/animation/poster.png"
                   onEnded={() => this.endAnimation()}>
                 </video>
-                <div className="Background__foreground">
-
-                </div>
-
-                <div className="Background__footer">
-
-                </div>
               </div>
               <div className="Landing">
                 <div className="Landing__logo">
+                  <img className="logo" src="./assets/img/png/logo_with_date.png" />
                   <div className="RegButton">
                     <a href = "/start">
-                        { (this.state.playingAnimation) ? <button>REGISTER</button> : null}
+                    { (this.state.playingAnimation || window.innerWidth < 768 ) ? <button>REGISTER</button> : null}
                     </a>
                   </div>
                 </div>
