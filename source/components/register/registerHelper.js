@@ -41,8 +41,12 @@ const getAttendeeData = () => new Promise((resolve, reject) => {
 
 const uploadResumeFile = (method, data, id, fileType) => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
+  var end = '';
+  if (method == 'put') {
+    end = id;
+  }
   axios({
-    url: 'http://api.test.hackillinois.org/v1/upload/resume/'+id,
+    url: 'http://api.test.hackillinois.org/v1/upload/resume/' + end,
     method: method,
     data: data,
     headers: {
