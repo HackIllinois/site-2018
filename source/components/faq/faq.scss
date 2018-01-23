@@ -15,11 +15,28 @@
 
 	&_list {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 2.5%;
 
 		&_column {
 			flex: 1;
-			max-width: 48%;
+			max-width: 90%;
+		}
+
+		@media (min-width: 768px) {
+			&_column {
+				flex: 1;
+				max-width: 48%;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		&_list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 }
