@@ -19,8 +19,8 @@ export default class InputField extends Component {
     const placeholder   = this.props.config.placeholder
     const handleChange  = this.props.handleChange;
     const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
-    const iconCheck = <FontAwesomeIcon class="right" icon={faCheck} />;
-    const iconMinus = <FontAwesomeIcon class="right" icon={faTimes} />;
+    const iconCheck = <FontAwesomeIcon className="right" icon={faCheck} />;
+    const iconMinus = <FontAwesomeIcon className="right" icon={faTimes} />;
     let field = null;
 
     if (fieldType == 'input' && inputType =='file') {

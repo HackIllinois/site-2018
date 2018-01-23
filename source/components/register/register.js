@@ -58,7 +58,6 @@ export default class Register extends Component {
 
           for (let key of Object.keys(attendeeData)) {
             // exception
-            console.log(key);
             if (key == 'osContributors') {
               professional['osContributors'] = attendeeData.osContributors[0].osContributor;
             }
@@ -136,7 +135,6 @@ export default class Register extends Component {
       uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
 
         if (resumeInfo == null || resumeFile != resumeInfo.key) {
-          console.log('uploadFile');
           let reader = new FileReader();
           reader.onload = (event) => {
             const resumeData    = event.target.result;
