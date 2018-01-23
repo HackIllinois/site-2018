@@ -1,0 +1,31 @@
+$title-color:             #1c055e;
+
+.buttonContainer {
+  position: relative !important;
+  width: 100%;
+  left: 0px;
+
+  @media only screen and (max-width: 425px){
+    bottom: 1em !important;
+    padding: 1em !important;
+  }
+
+  .button {
+    color: $title-color;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
+
+  .labelText{
+    font-size: 1.1em;
+    position: relative;
+    bottom: 4px;
+    left: 20px;
+  }
+
+  .opposite{
+    left: -20px;
+  }
+}

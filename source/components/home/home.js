@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 
 import styles from './home.scss'
 
-import About from '../about/about.jsx'
-import FAQ from '../faq/faq.jsx'
+import About from '../about/about'
+import FAQ from '../faq/faq'
+import SectionHeader from '../sectionHeader/sectionHeader'
 import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'

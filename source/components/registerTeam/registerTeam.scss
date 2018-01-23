@@ -1,0 +1,36 @@
+$input-underline-color:   #ed008c;
+$title-color:             #1c055e;
+
+.teamContainer {
+  font-size: 15px;
+  font-weight: 500;
+  color: $title-color;
+
+  padding-left: 8em !important;
+  padding-right: 8em !important;
+
+  @media only screen and (max-width: 1200px){
+    padding-left: 4em !important;
+    padding-right:4em !important;
+  }
+
+  @media only screen and (max-width: 680px){
+    padding-left: 3em !important;
+    padding-right: 3em !important;
+  }
+}
+
+.inputContainer {
+  margin-top: 5em !important;
+  .icon.button {
+    background-color: transparent !important;
+  }
+}
+
+.inputField {
+  border-bottom: solid 1px $input-underline-color;
+
+  .ui.attached.button {
+    box-shadow: 0 0 0 0 !important
+  }
+}

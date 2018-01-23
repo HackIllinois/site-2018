@@ -1,0 +1,126 @@
+$title-color:             #1c055e;
+$value-color:             rgba(28, 5, 94, 1);
+$placeholder-color:       rgba(28, 5, 94, 0.5);
+$input-underline-color:   #ed008c;
+$select-underline-color:  #fccfc9;
+
+.fieldContainer {
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 2.5em;
+
+  @media only screen and (max-width: 1000px){
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0em;
+  }
+
+  @media only screen and (max-width: 640px){
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0em;
+  }
+}
+.resumeIcon{
+  margin: auto;
+}
+.fieldTitle {
+  font-size: 13px;
+  font-weight: 550;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $title-color;
+}
+
+.selectField {
+  border-bottom: solid 1px $select-underline-color;
+}
+
+.inputField {
+  border-bottom: solid 1px $input-underline-color;
+}
+
+.field {
+  font-size: 15px;
+
+  input[type='file'] {
+    color: transparent !important;
+  }
+
+  input, .dropdown {
+    outline: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    padding-left: 0em !important;
+    padding-right: 0 !important;
+    box-shadow: none;
+  }
+
+  input::placeholder, .default.text {
+    font-family: Montserrat;
+    background: transparent !important;
+    color: $placeholder-color !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 15px;
+  }
+
+  .dropdown {
+    .icon{
+      font-size: 25px;
+      font-weight: 550;
+      color: $title-color;
+    }
+    .menu{
+      border-color: transparent !important;
+      border: 0 !important;
+    }
+
+    .menu>.item{
+      border-top: solid 1px $select-underline-color !important;
+    }
+
+    .item {
+      background: white !important;
+    }
+
+    .selected, .selected.item {
+      background: $select-underline-color !important;
+      .text {
+        font-weight: 500 !important;
+        font-size: 15px;
+      }
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  .active.selection.dropdown {
+    padding-left: 1em !important;
+  }
+
+  .visible {
+    background: white !important;
+  }
+
+  .text{
+    background: transparent !important;
+    color: $value-color !important;
+  }
+
+  input {
+    line-height: 1.5em !important;
+    color: $value-color !important;
+  }
+}

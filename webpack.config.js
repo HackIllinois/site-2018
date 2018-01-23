@@ -12,7 +12,7 @@ const APP_DIR = path.resolve(__dirname, 'source');
 const config = {
 
     entry: {
-        app: [APP_DIR + '/index.jsx'],
+        app: [APP_DIR + '/index.js'],
         vendor: ['react', 'react-dom', 'react-router']
     },
 
@@ -27,12 +27,16 @@ const config = {
         loaders : [
 
             {
-                test: /\.jsx?/,
+                test: /\.js?/,
                 exclude : [/node_modules/, /bower_components/],
                 include : APP_DIR,
                 loader : 'babel-loader',
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015'],
+                    plugins: [
+                      ["transform-class-properties", { "spec": true }],
+                      ["transform-object-rest-spread"]
+                    ]
                 }
             },
 
