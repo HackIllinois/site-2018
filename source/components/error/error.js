@@ -8,7 +8,7 @@ export default class Error extends Component {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
         <Grid.Row className='startContainer'>
-          <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
+          <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='small'>
             <Grid.Row className='verticalPadding'>
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='medium' />
             </Grid.Row>
