@@ -29,43 +29,43 @@ class Home extends Component {
 
     render() {
         return(
-            <div>
-                <div className="container">
-                    <div className="Background">
-                        <video id="splash_anim" className="Splash"
-                          autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
-                          poster="../../assets/animation/poster.png"
-                          onEnded={() => this.endAnimation()}>
-                        </video>
-                        <div className="Background__foreground">
+          <div>
+            <div className="container">
+              <div className="Background video-container">
+                <video id="splash_anim" className="Splash"
+                  autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                  poster="../../assets/animation/poster.png"
+                  onEnded={() => this.endAnimation()}>
+                </video>
+                <div className="Background__foreground">
 
-                        </div>
-
-                        <div className="Background__footer">
-
-                        </div>
-                    </div>
-                    <div className="Landing">
-                        <div className="Landing__logo">
-                            <div class="RegButton">
-                                <a href = "/start">
-                                    { (this.state.playingAnimation) ? <button class="ui button" tabindex="0">REGISTER</button> : null}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <About />
+                <div className="Background__footer">
 
-                <Countdown />
-
-                <FAQ/>
-
-                <Sponsors />
-
-                <Footer />
+                </div>
+              </div>
+              <div className="Landing">
+                <div className="Landing__logo">
+                  <div className="RegButton">
+                    <a href = "/start">
+                        { (this.state.playingAnimation) ? <button class="ui button" tabindex="0">REGISTER</button> : null}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <About />
+
+            <Countdown />
+
+            <FAQ/>
+
+            <Sponsors />
+
+            <Footer />
+          </div>
         )
     }
 }
