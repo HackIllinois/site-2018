@@ -2,6 +2,13 @@
 	padding: 8em 0;
 	background-color: #F2F5FE;
 
+	@media (max-width: 768px) {
+		padding: 2em 0;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+
+	}
+
 	&__copy {
 		margin-top: 0.5em;
 	}

@@ -10,9 +10,9 @@ class FAQItem extends Component {
 
 	render() {
 		return (
-			<div className="FAQItem">
-				<h3 className={"FAQ__itemHeader" + (this.props.centered ? ' centered' : '')}>{this.props.header}</h3>
-				<p className={(this.props.centered ? ' centered' : '')}>{this.props.children}</p>
+			<div className={"FAQItem" + (this.props.centered ? ' BottomItem' : '')}>
+				<h3 className={"FAQ__itemHeader" + (this.props.centered ? ' centered-faq-big' : '')}>{this.props.header}</h3>
+				<p className={(this.props.centered ? ' centered-faq-big' : '')}>{this.props.children}</p>
 			</div>
 
 		);
@@ -64,7 +64,7 @@ class FAQ extends Component {
 		return(
 			<div className="FAQ">
 				<div className="container">
-					<h1>FAQ's:</h1>
+					<h1>FAQs</h1>
 					<div className="spacer" />
 					<div className="FAQ_list">
 						{columns}
