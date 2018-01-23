@@ -55,7 +55,7 @@ export default class Register extends Component {
       if (githubData.roles != null && githubData.roles.length > 0) {
         getAttendeeData().then(attendeeData => {
           const {collaborators, longForm, resume, id} = attendeeData;
-          console.log(attendeeData);
+
           for (let key of Object.keys(attendeeData)) {
             // exception
             console.log(key);
@@ -65,8 +65,6 @@ export default class Register extends Component {
             else if (key == 'resume') {
               this.setState({ resumeInfo: attendeeData.resume});
               professional['resume'] = attendeeData.resume.key || '';
-              console.log(attendeeData.resume);
-              console.log(attendeeData.resume.key);
             }
             else if (key == 'hasLightningInterest') {
               professional['hasLightningInterest'] = attendeeData.hasLightningInterest ? true: false;
@@ -140,7 +138,7 @@ export default class Register extends Component {
       const attendeeMethod = newRegistration ? 'post' : 'put';
       // POST attendee
       uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
-        
+
         if (resumeInfo == null || resumeFile != resumeInfo.key) {
           console.log('uploadFile');
           let reader = new FileReader();
