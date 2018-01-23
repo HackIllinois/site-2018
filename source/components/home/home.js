@@ -17,13 +17,13 @@ class Home extends Component {
       super(props);
 
       this.state = {
-        playingAnimation: true
+        playingAnimation: false
       }
     }
 
     endAnimation() {
       this.setState({
-        playingAnimation: false
+        playingAnimation: true
       });
     }
 
@@ -31,12 +31,12 @@ class Home extends Component {
         return(
             <div>
                 <div className="container">
-                    <video id="splash_anim" className={(this.state.playingAnimation) ? "Splash" : "EndSplash"}
-                      autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
-                      poster="../../assets/animation/poster.png"
-                      onEnded={() => this.endAnimation()}>
-                    </video>
                     <div className="Background">
+                        <video id="splash_anim" className="Splash"
+                          autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                          poster="../../assets/animation/poster.png"
+                          onEnded={() => this.endAnimation()}>
+                        </video>
                         <div className="Background__foreground">
 
                         </div>
@@ -47,10 +47,9 @@ class Home extends Component {
                     </div>
                     <div className="Landing">
                         <div className="Landing__logo">
-                            <img src="./assets/img/png/logo_with_date.png" />
                             <div class="RegButton">
                                 <a href = "/start">
-                                    <button class="ui button" tabindex="0">REGISTER</button>
+                                    { (this.state.playingAnimation) ? <button class="ui button" tabindex="0">REGISTER</button> : null}
                                 </a>
                             </div>
                         </div>
