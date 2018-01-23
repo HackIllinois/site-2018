@@ -49,7 +49,7 @@ class Home extends Component {
                 <div className="Landing__logo">
                   <div className="RegButton">
                     <a href = "/start">
-                        { (this.state.playingAnimation) ? <button class="ui button" tabindex="0">REGISTER</button> : null}
+                        { (this.state.playingAnimation) ? <button>REGISTER</button> : null}
                     </a>
                   </div>
                 </div>
