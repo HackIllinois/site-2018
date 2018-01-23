@@ -107,7 +107,7 @@ export default class RegisterCollaborators extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(collaborators)} nextStep={validateStep} />
+        <RegisterButtons previousStep={() => previousStep(collaborators)} nextStep={() => validateStep()} />
       </Grid>
     )
   }

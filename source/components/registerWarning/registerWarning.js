@@ -54,21 +54,21 @@ export default class RegisterWarning extends Component {
           </Grid.Column>
           <Grid.Column className='warningContainer' mobile={16} tablet={12} computer={13}>
             <Grid.Row className='warningMessage'>
-              If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your applications, there will be space on the next page for additions.
+              If you click submit, your application will be complete.  If you feel that you are not adequately represented by the contents of your application, there will be space on the next page for additions.
             </Grid.Row>
             <Grid.Row >
               <Transition animation='shake' duration='300' visible={visible}>
                 <div className='warningCheckbox'>
                   <Checkbox checked={warning} onChange={handleChange}/>
                   <Label>
-                    I agree to <a href="https://hackillinois.org/"> the code of conduct </a>
+                    I agree to <a href="https://hackillinois.org/coc"> the Code of Conduct.</a>
                   </Label>
                 </div>
               </Transition>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={validateStep(submitForm)} nextStep={validateStep(nextStep)} />
+        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={() => validateStep(submitForm)} nextStep={() => validateStep(nextStep)} />
       </Grid>
     )
   }
