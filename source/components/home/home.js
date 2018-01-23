@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Lottie from 'react-lottie'
+import Lottie from 'lottie-web'
 
 import styles from './home.scss'
 
@@ -14,18 +14,27 @@ const animationData = require('../../assets/json/data.json')
 
 
 class Home extends Component {
+    componentDidMount() {
+        let anim = Lottie.loadAnimation({
+            container: document.getElementById('lottie'),
+            renderer: 'html',
+            loop: false,
+            autoplay: true,
+            animationData: animationData
+        })
+        anim.setSubframe(false);
+    }
 
     render() {
-      const defaultOptions = {
-        loop: false,
-        autoplay: true,
-        animationData: animationData
-      };
-
+    //   const defaultOptions = {
+    //     loop: false,
+    //     autoplay: true,
+    //     animationData: animationData
+    //   };
         return(
             <div>
-                <div className="container">
-                    <Lottie options = {defaultOptions} />
+                <div className="container" id="lottie">
+                    {/* <Lottie options = {defaultOptions} /> */}
                     <div className="Landing">
                         <div className="Landing__logo">
                             <img src="./assets/img/png/logo_with_date.png" />
