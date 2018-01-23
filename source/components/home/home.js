@@ -30,7 +30,7 @@ class Home extends Component {
                             <img src="./assets/img/png/logo_with_date.png" />
                             <div class="RegButton">
                                 <a href = "/start">
-                                    <button class="ui button" tabindex="0">REGISTER</button>
+                                    <button class="button" tabindex="0">REGISTER</button>
                                 </a>
                             </div>
                         </div>
