@@ -9,13 +9,33 @@ import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
 import { Button } from 'semantic-ui-react'
+import { DefaultPlayer as Video } from 'react-html5video';
 
 
 class Home extends Component {
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        playingAnimation: true
+      }
+    }
+
+    endAnimation() {
+      this.setState({
+        playingAnimation: false
+      });
+    }
+
     render() {
         return(
             <div>
                 <div className="container">
+                    <video id="splash_anim" className={(this.state.playingAnimation) ? "Splash" : "EndSplash"}
+                      autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                      onEnded={() => this.endAnimation()}>
+                    </video>
                     <div className="Background">
                         <div className="Background__foreground">
 
