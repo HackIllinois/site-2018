@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { fromPromise } from 'mobx-utils';
 import querystring from 'query-string';
-
 import axios from 'axios';
 
 import {api_url} from '../../../config';
-
 
 const MOBILE_REDIRECT_BASEURL = "hackillinois://auth?token="
 
