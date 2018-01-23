@@ -36,7 +36,6 @@ export default class RegisterCollaborators extends Component {
   };
 
   handleAddCollaborator = (e) => {
-    console.log(e.target);
     const collaborators = this.state.collaborators;
 
     // Check if key is enter(13)
