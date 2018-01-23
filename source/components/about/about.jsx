@@ -10,7 +10,7 @@ class About extends Component {
                 <h1>Dream It. Build It.</h1>
 
                 <p className="About__copy">
-                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Last year, HackIllinois broke ground with the first Open Source-focused collegiate hackathon - go beyond and explore your dreamscape in 2018.
+                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Last year, HackIllinois broke ground with the first Open Source-focused collegiate hackathon. This year, go beyond and explore your dreamscape in 2018.
 
                 </p>
 
