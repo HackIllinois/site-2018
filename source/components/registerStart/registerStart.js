@@ -15,15 +15,18 @@ export default class RegisterStart extends Component {
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              HackIllinois is an open source hackathon where experts and beginners in open source can work together to contribute to the world of open source. Whether you are creating a new open source project or working with <a href="https://github.com/brson">Brian Anderson</a> on the Rust programming language, HackIllinois gives you the opportunity to contribute to the open source community.
+              HackIllinois is an Open Source hackathon where experts and beginners in Open Source can work together to contribute to the world of Open Source. Whether you are creating a new Open Source project or working with <a href="https://github.com/brson" target="_blank">Brian Anderson</a> on the Rust programming language, HackIllinois gives you the opportunity to contribute to the Open Source community.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <a href="https://opensource.com/article/17/10/openstack-project-contribution-benefits"><Button>Why Open Source?</Button></a>
-              <a href="https://opensource.guide/how-to-contribute/"><Button>How to Contribute to OS?</Button></a>
+              <a href="https://opensource.com/article/17/10/openstack-project-contribution-benefits" target="_blank"><Button>Why Open Source?</Button></a>
+              <a href="https://opensource.guide/how-to-contribute/" target="_blank"><Button>How to Contribute to OS</Button></a>
+            </Grid.Row>
+            <Grid.Row className="ghPrompt ghPadding">
+              A GitHub account will be critical for Open Source contributions so please make one if you do not have one!
             </Grid.Row>
             <Grid.Row className='continueButton'>
-              <Button icon size='small' labelPosition='right' onClick={() => window.location = "https://api.hackillinois.org/v1/auth"}>
-                <span className="FAIconText">TO CONTINUE, CLICK TO LOG IN WITH GITHUB</span>
+              <Button icon size='small' labelPosition='left' onClick={() => window.location = "https://api.hackillinois.org/v1/auth"}>
+                <span className="FAIconText">LOG IN WITH GITHUB</span>
                 <FontAwesomeIcon icon={faCaretRight} size="2x"/>
               </Button>
             </Grid.Row>

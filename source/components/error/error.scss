@@ -1,7 +1,8 @@
-$backgorund-color:        rgba(204, 217, 252, 0.24);
+$background-color:        rgba(204, 217, 252, 0.24);
 
-#app {
-  background-color: $backgorund-color;
+html, body, #app {
+  background-color: $background-color;
+  height: 100vh;
 }
 
 .verticalPadding {

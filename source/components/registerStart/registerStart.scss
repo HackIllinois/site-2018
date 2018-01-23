@@ -1,12 +1,19 @@
-$backgorund-color:        rgba(204, 217, 252, 0.24);
+$background-color:        rgba(204, 217, 252, 0.24);
 
-#app {
-  background-color: $backgorund-color;
+html, body, #app {
+  background-color: $background-color;
+  height: 100vh;
 }
 
 .verticalPadding {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ghPadding {
+  margin-top: 2.5em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,6 +47,17 @@ $backgorund-color:        rgba(204, 217, 252, 0.24);
 
 .startPrompt {
   font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1c055e;
+}
+
+.ghPrompt {
+  font-size: 14px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;

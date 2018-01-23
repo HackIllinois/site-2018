@@ -27,7 +27,6 @@
   }
 }
 
-
 .successPrompt {
   font-size: 18px;
   font-weight: 500;
@@ -37,4 +36,15 @@
   letter-spacing: normal;
   text-align: center;
   color: #1c055e;
+}
+
+.continueButton {
+  .button {
+    width: auto;
+    color: #1c055e;
+    background: transparent !important;
+    .icon {
+      background: transparent !important;
+    }
+  }
 }

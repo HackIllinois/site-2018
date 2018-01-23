@@ -60,7 +60,7 @@ export default class RegisterWarning extends Component {
                 <div className='warningCheckbox'>
                   <Checkbox checked={warning} onChange={handleChange}/>
                   <Label>
-                    I agree to <a href="https://hackillinois.org/coc"> the Code of Conduct.</a>
+                    I agree to <a href="https://hackillinois.org/coc" target="_blank"> the Code of Conduct.</a>
                   </Label>
                 </div>
               </Transition>
