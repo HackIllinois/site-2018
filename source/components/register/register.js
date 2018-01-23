@@ -48,8 +48,8 @@ export default class Register extends Component {
 
     let {personal, professional} = this.state;
     getGithubData().then(githubData => {
-      personal['github'] = githubData['githubHandle'];
-      personal['email'] = githubData['email'];
+      personal['github'] = githubData.user.githubHandle;
+      personal['email'] = githubData.user.email;
       this.setState({ personal: personal});
 
       if (githubData.roles != null && githubData.roles.length > 0) {
@@ -121,48 +121,45 @@ export default class Register extends Component {
     }
   }
 
-  nextStep = (submit, prop) => data => {
+  submitForm = prop => data => {
     const { step } = this.state;
-    // Update data
     this.setState({ [prop]: data }, () => {
-      // Check if we need to make api call to make submission
-      if (submit) {
-        this.setState({ loading: true });
+      this.setState({ loading: true });
 
-        const { attendeeData, resumeFile } = this.convertDataForAPI();
-        const { newRegistration, resumeInfo } = this.state;
-        const attendeeMethod = newRegistration ? 'post' : 'put';
-        // POST attendee
-        uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
-          if (resumeFile != resumeInfo.key) {
-            let reader = new FileReader();
-            reader.onload = (event) => {
-              const resumeData    = event.target.result;
-              const resumeId      = resumeInfo ? resumeInfo.id : '';
-              const resumeMethod  = resumeInfo ? 'put' : 'post';
-              const resumeType    = resumeFile.type;
-              // POST resume
-              uploadResumeFile(resumeMethod, resumeData, resumeId, resumeType).then(response => {
-                this.setState({ loading: false, step: step + 1 });
-              })
-              .catch(error => {
-                this.setState({ loading: false });
-              });
-            };
-            reader.readAsArrayBuffer(resumeFile);
-          }
-          else {
-            this.setState({ loading: false, step: step + 1});
-          }
-        })
-        .catch(error => {
-          this.setState({ loading: false });
-        });
-      }
-      else {
-        this.setState({ step: step + 1});
-      }
+      const { attendeeData, resumeFile } = this.convertDataForAPI();
+      const { newRegistration, resumeInfo } = this.state;
+      const attendeeMethod = newRegistration ? 'post' : 'put';
+      // POST attendee
+      uploadAttendeeData(attendeeMethod, attendeeData).then(response => {
+        if (resumeFile != resumeInfo.key) {
+          let reader = new FileReader();
+          reader.onload = (event) => {
+            const resumeData    = event.target.result;
+            const resumeId      = resumeInfo ? resumeInfo.id : '';
+            const resumeMethod  = resumeInfo ? 'put' : 'post';
+            const resumeType    = resumeFile.type;
+            // POST resume
+            uploadResumeFile(resumeMethod, resumeData, resumeId, resumeType).then(response => {
+              this.setState({ loading: false, step: 5});
+            })
+            .catch(error => {
+              this.setState({ loading: false });
+            });
+          };
+          reader.readAsArrayBuffer(resumeFile);
+        }
+        else {
+          this.setState({ loading: false, step: 5});
+        }
+      })
+      .catch(error => {
+        this.setState({ loading: false });
+      });
     });
+  };
+
+  nextStep = prop => data => {
+    this.setState({ step: this.state.step + 1 , [prop]: data});
   };
 
   previousStep = prop => data => {
@@ -173,6 +170,7 @@ export default class Register extends Component {
     // Variables setup
     const nextStep      = this.nextStep;
     const previousStep  = this.previousStep;
+    const submitForm    = this.submitForm;
     const state         = this.state;
 
     return(
@@ -187,7 +185,7 @@ export default class Register extends Component {
               step={state.step}
               data={state.personal}
               previousStep={null}
-              nextStep={nextStep(false, 'personal')}
+              nextStep={nextStep('personal')}
               forms={personal_fields}
             />,
             <RegisterForm
@@ -195,26 +193,27 @@ export default class Register extends Component {
               step={state.step}
               data={state.professional}
               previousStep={previousStep('professional')}
-              nextStep={nextStep(false, 'professional')}
+              nextStep={nextStep('professional')}
               forms={professional_fields}
             />,
             <RegisterTeam
               step={state.step}
               data={state.collaborators}
               previousStep={previousStep('collaborators')}
-              nextStep={nextStep(false, 'collaborators')}
+              nextStep={nextStep('collaborators')}
             />,
             <RegisterWarning
               step={state.step}
               data={state.warning}
               previousStep={previousStep('warning')}
-              nextStep={nextStep(false, 'warning')}
+              nextStep={nextStep('warning')}
+              submitForm={submitForm('warning')}
             />,
             <RegisterEssay
               step={state.step}
               data={state.longForm}
               previousStep={previousStep('longForm')}
-              nextStep={nextStep(true, 'longForm')}
+              submitForm={submitForm('longForm')}
             />,
             <RegisterSuccess />,
           ][state.step]

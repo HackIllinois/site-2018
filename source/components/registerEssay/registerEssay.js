@@ -31,13 +31,13 @@ export default class RegisterEssay extends Component {
   };
 
   validateStep = () => {
-    const nextStep  = this.props.nextStep;
+    const submitForm  = this.props.submitForm;
     let longForm  = this.state.longForm;
 
     if(longForm[0].info == ''){
       longForm = null;
     }
-    nextStep(longForm);
+    submitForm(longForm);
   };
 
   render() {
@@ -71,7 +71,7 @@ export default class RegisterEssay extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons nextTitle="SUBMIT" previousStep={() => previousStep(longForm)} nextStep={validateStep} />
+        <RegisterButtons nextTitle="SUBMIT" previousStep={() => previousStep(longForm)} submitForm={validateStep} />
       </Grid>
     )
   }

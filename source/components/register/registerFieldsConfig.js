@@ -241,7 +241,7 @@ const professional_fields = [
     }
   },
   {
-    width: 8,
+    width: 16,
     fieldType: 'select',
     inputType: 'bool',
     id: 'hasLightningInterest',
@@ -254,7 +254,7 @@ const professional_fields = [
     }
   },
   {
-    width: 8,
+    width: 16,
     fieldType: 'select',
     inputType: 'bool',
     id: 'isPrivate',

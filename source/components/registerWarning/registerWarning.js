@@ -24,12 +24,12 @@ export default class RegisterWarning extends Component {
     this.setState({warning: checked});
   };
 
-  validateStep = () => {
+  validateStep = (func) => {
     const nextStep              = this.props.nextStep;
     const { warning, visible }  = this.state;
 
     if(warning) {
-      nextStep(warning);
+      func(warning);
     }
     else {
       this.setState({ visible: !visible });
@@ -39,6 +39,8 @@ export default class RegisterWarning extends Component {
 
   render() {
     const step                  = this.props.step;
+    const submitForm            = this.props.submitForm;
+    const nextStep              = this.props.nextStep;
     const previousStep          = this.props.previousStep;
     const validateStep          = this.validateStep;
     const handleChange          = this.handleChange;
@@ -66,7 +68,7 @@ export default class RegisterWarning extends Component {
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
-        <RegisterButtons previousStep={() => previousStep(warning)} nextStep={validateStep} />
+        <RegisterButtons previousStep={() => previousStep(warning)} submitForm={validateStep(submitForm)} nextStep={validateStep(nextStep)} />
       </Grid>
     )
   }
