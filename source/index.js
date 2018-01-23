@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 // Components
+import Splash from './components/splash/splash';
 import Home from './components/home/home';
 import Auth from './components/auth/auth';
 import Error from './components/error/error';
@@ -27,7 +28,8 @@ render(
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Splash}/>
+        <Route exact path="/home" component={Home}/>
         <Route exact path="/auth" component={Auth}/>
         <Route exact path="/start" component={RegisterStart}/>
         <Route exact path="/register" component={Register}/>

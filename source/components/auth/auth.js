@@ -20,7 +20,7 @@ class Auth extends Component {
       (reject) => {
         console.error('your authentication request failed, please try again');
         sessionStorage.removeItem('Authorization');
-        this.props.history.push("/");
+        this.props.history.push("/home");
       }
     )
   }

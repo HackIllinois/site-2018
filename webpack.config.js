@@ -70,10 +70,6 @@ const config = {
               to: BUILD_DIR + '/assets/'
             },
             {
-              from: APP_DIR + '/images/',
-              to: BUILD_DIR + '/images/'
-            },
-            {
               from: APP_DIR + '/apple-app-site-association',
               to: BUILD_DIR
             }
