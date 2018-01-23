@@ -27,6 +27,7 @@
     &__number {
       color: white;
       margin: 0 0.25em;
+      min-width: 40px;
     }
 
     &__number:nth-child(1) {
@@ -48,10 +49,13 @@
         font-size: 266%;
       }
       h2 {
-        font-size: 200%;
+        font-size: 233%;
       }
       h3 {
         font-size: 166.5%;
+      }
+      &__number {
+        min-width: 50px;
       }
     }
 }

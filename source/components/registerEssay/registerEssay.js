@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Grid, TextArea, Form} from 'semantic-ui-react';
+import { Grid, TextArea, Form, Transition} from 'semantic-ui-react';
+
 import styles from './registerEssay.scss'
 
 import RegisterNav from '../registerNav/registerNav';
@@ -11,6 +12,7 @@ export default class RegisterEssay extends Component {
 
     this.state = {
       longForm: [{info:''}],
+      visible: true
     };
   };
 
@@ -26,15 +28,19 @@ export default class RegisterEssay extends Component {
 
   handleChange = (e, {value}) => {
     let longForm = this.state.longForm;
-    longForm[0].info = value;
-    this.setState({longForm: longForm});
+    if (value.length <= 16383) {
+      longForm[0].info = value;
+      this.setState({longForm: longForm});
+    } else {
+      this.setState({ visible: !this.state.visible });
+    }
   };
 
   validateStep = () => {
     const submitForm  = this.props.submitForm;
     let longForm  = this.state.longForm;
 
-    if(longForm[0].info == ''){
+    if (longForm[0].info == ''){
       longForm = null;
     }
     submitForm(longForm);
@@ -47,6 +53,7 @@ export default class RegisterEssay extends Component {
     const handleChange  = this.handleChange;
     const longForm      = this.state.longForm;
     const essay         = longForm[0].info;
+    const visible       = this.state.visible;
 
     return(
       <Grid stackable textAlign='center' verticalAlign='middle'>
@@ -67,9 +74,11 @@ export default class RegisterEssay extends Component {
               </ul>
             </Grid.Row>
             <Grid.Row className='essayTextArea'>
+            <Transition animation='shake' duration='300' visible={visible}>
               <Form>
                 <TextArea onChange={handleChange} value={essay} name='essay' autoHeight placeholder='Write as much or as little as you would like.' style={{ minHeight: '15em' }} />
               </Form>
+            </Transition>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
