@@ -7,7 +7,7 @@ class About extends Component {
         return(
             <div className="About">
               <div className="container">
-                <h1>Dream it. Build it.</h1>
+                <h1>Dream It. Build It.</h1>
 
                 <p className="About__copy">
                     Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Last year, HackIllinois broke ground with the first Open Source-focused collegiate hackathon - go beyond and explore your dreamscape in 2018.
@@ -24,7 +24,7 @@ class About extends Component {
                 <h1 className="space_above">About Us.</h1>
 
                 <p className="About__copy">
-                    We are the Hackillinois team, dedicated to create an environment for hackers to pursue creativity and innovation at its finest.  We aim to assist hackers push creativity towards limitless bounds. Our team has worked hard to cultivate an environment worthy of bringing inventive ideas to life.
+                    We are the HackIllinois team, dedicated to create an environment for hackers to pursue creativity and innovation at its finest.  We aim to assist hackers push creativity towards limitless bounds. Our team has worked hard to cultivate an environment worthy of bringing inventive ideas to life.
                 </p>
 
                 <p></p>
