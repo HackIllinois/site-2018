@@ -22,7 +22,7 @@ export default class RegisterStart extends Component {
               <a href="https://opensource.guide/how-to-contribute/"><Button>How to Contribute to OS?</Button></a>
             </Grid.Row>
             <Grid.Row className='continueButton'>
-              <Button icon size='small' labelPosition='right' onClick={() => window.location = "http://api.test.hackillinois.org/v1/auth"}>
+              <Button icon size='small' labelPosition='right' onClick={() => window.location = "https://api.hackillinois.org/v1/auth"}>
                 <span className="FAIconText">TO CONTINUE, CLICK TO LOG IN WITH GITHUB</span>
                 <FontAwesomeIcon icon={faCaretRight} size="2x"/>
               </Button>
