@@ -2,15 +2,22 @@
 
 	padding: 8em 0;
 	background-color: #F2F5FE;
+	@media (max-width: 768px) {
+		padding: 2em 0;
+	}
 
 	&__itemHeader {
 		margin-bottom: 1em;
 	}
-	.centered{
-		text-align: center;
+	.centered-faq-big{
+		text-align: left;
 	}
 	button {
 		width: 100%;
+	}
+
+	.BottomItem{
+		padding-left: 2.5%;
 	}
 
 	&_list {
@@ -27,7 +34,7 @@
 		@media (min-width: 768px) {
 			&_column {
 				flex: 1;
-				max-width: 48%;
+				max-width: 96%;
 			}
 		}
 	}
@@ -38,7 +45,11 @@
 			flex-direction: row;
 			justify-content: space-between;
 		}
+		.centered-faq-big{
+			text-align: center;
+		}
 	}
+
 }
 
 .FAQItem {
