@@ -133,7 +133,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'gender',
     required: true,
-    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'Non-binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Other', value: 'OTHER'}],
+    options: [{key: 'FEMALE', text: 'Female', value: 'FEMALE'}, {key: 'MALE', text: 'Male', value: 'MALE'}, {key: 'NON_BINARY', text: 'Non-binary', value: 'NON_BINARY'}, {key: 'OTHER', text: 'Prefer not to disclose', value: 'OTHER'}],
     placeholder: 'What gender do you identify as?',
     title: 'GENDER',
     validate: (input) => {
@@ -181,7 +181,7 @@ const professional_fields = [
     inputType: 'bool',
     id: 'isNovice',
     required: true,
-    options: [{key: 'YES', text: 'YES', value: 'true'}, {key: 'NO', text: 'NO', value: 'false'}],
+    options: [{key: 'NO', text: 'NO', value: 'false'}, {key: 'YES', text: 'YES', value: 'true'}],
     placeholder: 'Are you a beginner?',
     title: 'ARE YOU A BEGINNER?',
     validate: (input) => {
@@ -246,7 +246,7 @@ const professional_fields = [
     inputType: 'bool',
     id: 'hasLightningInterest',
     required: true,
-    options: [{key: 'YES', text: 'YES', value: 'true'}, {key: 'NO', text: 'NO', value: 'false'}],
+    options: [{key: 'NO', text: 'NO', value: 'false'}, {key: 'YES', text: 'YES', value: 'true'}],
     placeholder: '',
     title: 'Are you interested in giving a short (<5 min) lightning talk on a topic of your choice ?',
     validate: (input) => {
