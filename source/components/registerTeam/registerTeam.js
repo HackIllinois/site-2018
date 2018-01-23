@@ -99,7 +99,7 @@ export default class RegisterCollaborators extends Component {
                     placeholder='Add team member, press enter to add another'
                     action={
                       // <FontAwesomeIcon icon={faMinusSquare} size="2x" onClick={handleRemoveCollaborator}/>
-                      <Button attached='right' id={index} onClick={handleRemoveCollaborator} />
+                      <Button attached='right' id={index} onClick={handleRemoveCollaborator} action={<FontAwesomeIcon icon={faCheck}/>}/>
                     }
                   />
                 )}
