@@ -5,8 +5,7 @@ import RegisterButtons from '../registerButtons/registerButtons';
 import { Grid, Form, Input, Button} from 'semantic-ui-react';
 import InputField from '../inputField/inputField';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare'
-import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
+import faTimesCircle from '@fortawesome/fontawesome-free-solid/faTimesCircle'
 
 import styles from './registerTeam.scss'
 
@@ -30,7 +29,7 @@ export default class RegisterCollaborators extends Component {
     }
   }
 
-  handleChange = (e, { id, value }) => {
+  handleChange = (e, { id, value }) => {    
     let updatedCollaborators = this.state.collaborators;
     updatedCollaborators[id].collaborator = value;
     this.setState({ collaborators: updatedCollaborators});
@@ -75,7 +74,7 @@ export default class RegisterCollaborators extends Component {
     const handleChange  = this.handleChange;
     const handleAddCollaborator = this.handleAddCollaborator;
     const handleRemoveCollaborator = this.handleRemoveCollaborator;
-
+    let removeIcon = <FontAwesomeIcon icon={faTimesCircle}/>; 
     return(
       <Grid stackable>
         <Grid.Row columns={2}>
@@ -98,8 +97,7 @@ export default class RegisterCollaborators extends Component {
                     value={data.collaborator}
                     placeholder='Add team member, press enter to add another'
                     action={
-                      // <FontAwesomeIcon icon={faMinusSquare} size="2x" onClick={handleRemoveCollaborator}/>
-                      <Button attached='right' id={index} onClick={handleRemoveCollaborator} action={<FontAwesomeIcon icon={faCheck}/>}/>
+                      <Button attached='right' id={index} onClick={handleRemoveCollaborator} icon={removeIcon}/>
                     }
                   />
                 )}

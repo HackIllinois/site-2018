@@ -19,8 +19,8 @@ export default class InputField extends Component {
     const placeholder   = this.props.config.placeholder
     const handleChange  = this.props.handleChange;
     const value         = String(this.props.value) == 'null' ? '' : String(this.props.value);
-    const iconCheck = <FontAwesomeIcon className="right" icon={faCheck} />;
-    const iconMinus = <FontAwesomeIcon className="right" icon={faTimes} />;
+    const iconCheck = <FontAwesomeIcon className="resumeIcon" icon={faCheck} />;
+    const iconMinus = <FontAwesomeIcon className="resumeIcon" icon={faTimes}/>;
     let field = null;
 
     if (fieldType == 'input' && inputType =='file') {
@@ -34,7 +34,7 @@ export default class InputField extends Component {
           onChange={handleChange}
           placeholder={placeholder}
           action={
-            value == '' ? iconMinus : iconCheck
+            (value == '') ? iconMinus : iconCheck
           }
         />;
     }
