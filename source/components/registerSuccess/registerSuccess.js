@@ -14,7 +14,7 @@ export default class RegisterSuccess extends Component {
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
-              You have succesfully registed for HackIllinois. We’ll be in touch. For now, here’s more information will be on the home page. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
+              You have succesfully registed for HackIllinois. We’ll be in touch. For now, some more information on our event is on the home page. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               {/* <Button>Mentors</Button> */}
