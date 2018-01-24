@@ -9,7 +9,7 @@
 }
 
 .RegButton {
-  margin-top: 4em;
+  margin-top: 5em;
 }
 
 .video-container {
@@ -64,7 +64,12 @@
   &__logo {
     position: absolute;
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
+
+    @media only screen and (max-width: 768px){
+      max-width: 250px;
+    }
+
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -78,6 +83,7 @@
 
     img {
       max-width: 100%;
+      padding-top: 2em;
     }
     div{
       width: 100%;
