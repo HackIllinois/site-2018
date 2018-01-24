@@ -39,3 +39,4 @@ deploy:
     branch: staging
 after_deploy:
   - ./scripts/invalidate.sh
+  
