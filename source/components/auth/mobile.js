@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { fromPromise } from 'mobx-utils';
 import querystring from 'query-string';
-import axios from 'axios';
 
-import {api_url} from '../../../config';
+import axios from 'axios';
 
 const MOBILE_REDIRECT_BASEURL = "hackillinois://auth?token="
 
@@ -16,7 +15,7 @@ class Auth extends Component {
 
     componentDidMount() {
       const code = querystring.parse(this.props.location.search)['code'];
-      const token = fromPromise(axios.get(api_url + '/v1/auth/github?code=' + code))
+      const token = fromPromise(axios.get('https://api.hackillinois.org/v1/auth/github?code=' + code))
       .then(
         (token) => {
           this.setState({

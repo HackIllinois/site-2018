@@ -4,7 +4,6 @@ import styles from './registerStart.scss'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
-import { api_url } from '../../../config';
 
 export default class RegisterStart extends Component {
   render() {
@@ -24,7 +23,7 @@ export default class RegisterStart extends Component {
               A GitHub account is critical for Open Source contributions so please make one if you do not have one already!
             </Grid.Row>
             <Grid.Row className='continueButton'>
-              <Button icon size='small' labelPosition='left' onClick={() => window.location = api_url + "/v1/auth"}>
+              <Button icon size='small' labelPosition='left' onClick={() => window.location = "https://api.hackillinois.org/v1/auth"}>
                 <span className="FAIconText">LOG IN WITH GITHUB</span>
                 <FontAwesomeIcon icon={faCaretRight} size="2x"/>
               </Button>
