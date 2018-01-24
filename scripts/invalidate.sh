@@ -1,5 +1,5 @@
 #!/bin/bash
-if [$TRAVIS_BRANCH == 'master'] || [$TRAVIS_PULL_REQUEST_BRANCH == 'master']
+if [$TRAVIS_BRANCH == "master"] || [$TRAVIS_PULL_REQUEST_BRANCH == "master"]
 then
 
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths '/*' 2>&1
