@@ -17,7 +17,7 @@
 		width: 100%;
 	}
 
-	.BottomItem{
+	.BottomItem {
 		padding-left: 2.5%;
 	}
 
@@ -35,6 +35,7 @@
 			&_column {
 				flex: 1;
 				max-width: 96%;
+				padding-right: 5%;
 			}
 		}
 	}
@@ -45,7 +46,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 		}
-		.centered-faq-big{
+		.centered-faq-big {
 			text-align: center;
 		}
 	}

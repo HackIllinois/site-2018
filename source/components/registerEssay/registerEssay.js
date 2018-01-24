@@ -57,6 +57,8 @@ export default class RegisterEssay extends Component {
 
     return(
       <Grid stackable textAlign='center' verticalAlign='middle'>
+        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
+        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={4} computer={3}>
             <RegisterNav step={step}/>
@@ -67,7 +69,7 @@ export default class RegisterEssay extends Component {
               <br/>
               <ul>
                 <li>Projects that you’ve worked on outside of classes, work, hackathons</li>
-                <li>Contributing to an idea that was not your own</li>
+                <li>Contributions to an idea that was not your own</li>
                 <li>What about open source appeals to you</li>
               </ul>
             </Grid.Row>

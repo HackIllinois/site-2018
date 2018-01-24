@@ -5,9 +5,10 @@ $title-color:             #1c055e;
   width: 100%;
   left: 0px;
 
-  @media only screen and (max-width: 425px){
+  @media only screen and (max-width: 500px){
     bottom: 1em !important;
     padding: 1em !important;
+    padding-bottom: 2.5em !important;
   }
 
   .button {
