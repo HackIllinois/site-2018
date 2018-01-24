@@ -21,13 +21,22 @@ script:
 before_deploy:
   - pip install --upgrade --user awscli
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: $HACKILLINOIS_BUCKET_NAME
-  skip_cleanup: true
-  local_dir: public
+ - provider: s3
+   access_key_id: $AWS_ACCESS_KEY_ID
+   secret_access_key: $AWS_SECRET_ACCESS_KEY
+   bucket: $HACKILLINOIS_BUCKET_NAME
+   skip_cleanup: true
+   local_dir: public
+   on:
+    branch: master
+ - provider: s3
+   access_key_id: $AWS_ACCESS_KEY_ID
+   secret_access_key: $AWS_SECRET_ACCESS_KEY
+   bucket: $HACKILLINOIS_TEST_BUCKET_NAME
+   skip_cleanup: true
+   local_dir: public
+   on: 
+    branch: staging
 after_deploy:
   - ./scripts/invalidate.sh
-  - aws s3api copy-object --bucket $HACKILLINOIS_BUCKET_NAME --content-type "application/json" --copy-source $HACKILLINOIS_BUCKET_NAME/apple-app-site-association --key apple-app-site-association --metadata-directive "REPLACE"
   
