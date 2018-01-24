@@ -69,7 +69,7 @@ export default class RegisterEssay extends Component {
               <br/>
               <ul>
                 <li>Projects that you’ve worked on outside of classes, work, hackathons</li>
-                <li>Contributing to an idea that was not your own</li>
+                <li>Contributions to an idea that was not your own</li>
                 <li>What about open source appeals to you</li>
               </ul>
             </Grid.Row>
