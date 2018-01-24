@@ -8,7 +8,7 @@ import SectionHeader from '../sectionHeader/sectionHeader'
 import Countdown from '../countdown/countdown.jsx'
 import Sponsors from '../sponsors/sponsors.jsx'
 import Footer from '../footer/footer.jsx'
-import { Button } from 'semantic-ui-react'
+import { Button, Image } from 'semantic-ui-react'
 
 
 class Home extends Component {
@@ -33,7 +33,7 @@ class Home extends Component {
             <div className="container">
               <div className="Background video-container">
                 <video id="splash_anim"
-                  autoPlay muted src="../../assets/animation/splash.mp4" preload="auto"
+                  autoPlay muted src="../../assets/animation/landing_page_animation.mp4" preload="auto"
                   poster="../../assets/animation/poster.png"
                   onEnded={() => this.endAnimation()}>
                 </video>
@@ -41,6 +41,7 @@ class Home extends Component {
               <div className="Landing">
                 <div className="Landing__logo">
                   <img className="logo" src="./assets/img/png/logo_with_date.png" />
+                  <img className="logo" src="./assets/img/png/fulcrum.png" />
                   <div className="RegButton">
                     <a href = "/start">
                     { (this.state.playingAnimation || window.innerWidth < 768 ) ? <button>REGISTER</button> : null}
