@@ -27,7 +27,7 @@ deploy:
   bucket: $HACKILLINOIS_BUCKET_NAME
   skip_cleanup: true
   local_dir: public
-  -provider: test_s3
+  -provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $HACKILLINOIS_TEST_BUCKET_NAME
