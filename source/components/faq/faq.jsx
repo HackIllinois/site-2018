@@ -30,14 +30,14 @@ class FAQ extends Component {
 
 		let faqs = [[
 			{question: "Are there travel reimbursements?", answer: "Unfortunately, we will not be able to provide travel reimbursements to student attendees. However, we will have buses going to 11 schools."},
-			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. There will be a wide variety of food."},
+			{question: "Will there be food?", answer: "We will have a large variety of meals, snacks, and drinks that will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. "},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses and pillows. We want you to be comfortable!"},
 			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday and leave by 5 PM on Sunday. We will release a schedule soon."}
 
 		], [
-			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. Due to power draw concerns, please do not bring extra monitors or desktop computers."},
+			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. However, due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without a team and find a group at the event. We will be providing mentor matching and a team formation workshop for you to meet other like-minded individuals."},
-			{question: "Will you have hardware?", answer: "We'll have high-level hardware provided by companies. We'll also have basic hardware components like resistors, transistors, and ICs for you to tinker with."}
+			{question: "Will you have hardware?", answer: "We will have high-level hardware provided by companies. We will also have basic hardware components like resistors, transistors, and ICs for you to tinker with."}
 		]];
 
 		let faqs_unused = [
@@ -69,7 +69,7 @@ class FAQ extends Component {
 					<div className="FAQ_list">
 						{columns}
 					</div>
-					<FAQItem header={centeredContactQ.question} centered={true}>
+					<FAQItem className="contactFAQ" header={centeredContactQ.question} centered={true}>
 						{centeredContactQ.answer}
 					</FAQItem>
 				</div>

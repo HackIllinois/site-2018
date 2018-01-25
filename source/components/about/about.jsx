@@ -3,35 +3,33 @@ import React, { Component } from 'react'
 import styles from './about.scss'
 
 class About extends Component {
-    render() {
-        return(
-            <div className="About">
-              <div className="container">
-                <h1>Dream It. Build It.</h1>
+  render() {
+    return(
+      <div className="About">
+        <div className="container">
+          <h1>Dream It. Build It.</h1>
 
-                <p className="About__copy">
-                    Since its inception in 2014, HackIllinois has pushed the boundaries to create an exceptional and dynamic hackathon culture. Last year, HackIllinois broke ground with the first Open Source-focused collegiate hackathon. This year, go beyond and explore your dreamscape in 2018.
+          <p className="About__copy">
+            Since its inception in 2014, HackIllinois has pushed boundaries to create an exceptional and dynamic hackathon culture. Last year, HackIllinois broke ground with the first Open Source-focused collegiate hackathon. This year, we challenge you to go beyond and explore your own dreamscape.
+          </p>
 
-                </p>
+          <h1 className="space_above">The Event.</h1>
 
-                <h1 className="space_above">The Event.</h1>
+          <p className="About__copy">
+            This year, we are continuing our commitment to the Open Source community. On February 23rd through 25th, get ready to develop, create, and support exciting Open Source projects!
+          </p>
 
-                <p className="About__copy">
-                    This year, we are continuing our commitment to the Open Source community. On February 23rd through 25th, get ready to develop, create, and support exciting Open Source projects!
-                </p>
+          <h1 className="space_above">About Us.</h1>
 
+          <p className="About__copy">
+            We are the HackIllinois team, dedicated to creating a collaborative environment for hackers to push creativity and innovation beyond bounds. Our team worked hard to gather the resources you need to bring your dreamscape to life.
+          </p>
 
-                <h1 className="space_above">About Us.</h1>
-
-                <p className="About__copy">
-                    We are the HackIllinois team, dedicated to create an environment for hackers to pursue creativity and innovation at its finest.  We aim to assist our hackers in pushing creativity towards limitless bounds. Our team has worked hard to cultivate an environment worthy of bringing inventive ideas to life.
-                </p>
-
-                <p></p>
-              </div>
-            </div>
-        )
-    }
+          <p></p>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default About
