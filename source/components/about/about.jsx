@@ -24,7 +24,6 @@ class About extends Component {
           <p className="About__copy">
             We are the HackIllinois team, dedicated to creating a collaborative environment for hackers to push creativity and innovation beyond bounds. Our team worked hard to gather the resources you need to bring your dreamscape to life.
           </p>
-
           <p></p>
         </div>
       </div>

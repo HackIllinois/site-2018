@@ -33,7 +33,6 @@ class FAQ extends Component {
 			{question: "Will there be food?", answer: "We will have a large variety of meals, snacks, and drinks that will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. "},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses and pillows. We want you to be comfortable!"},
 			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday and leave by 5 PM on Sunday. We will release a schedule soon."}
-
 		], [
 			{question: "What should I bring?", answer: "You should bring a student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. However, due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without a team and find a group at the event. We will be providing mentor matching and a team formation workshop for you to meet other like-minded individuals."},
