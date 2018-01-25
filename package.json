@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "watch": "webpack -d --watch",
-    "build": "webpack",
+    "build": "SITE_ENV=$TRAVIS_BRANCH webpack",
     "dev": "webpack-dev-server --content-base public/ --history-api-fallback"
   },
   "author": "Simon Lu",

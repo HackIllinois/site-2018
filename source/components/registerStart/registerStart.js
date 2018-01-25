@@ -4,6 +4,7 @@ import styles from './registerStart.scss'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
+import { api_url } from '../../../config';
 
 export default class RegisterStart extends Component {
   render() {
