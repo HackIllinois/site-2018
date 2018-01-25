@@ -9,6 +9,7 @@ const copy = require('copy-webpack-plugin');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'source');
 
+const isProd = (process.env.TRAVIS_BRANCH !== undefined && process.env.TRAVIS_BRANCH === "master")
 const PROD_API = "https://api.hackillinois.org"
 const TEST_API = "http://api.test.hackillinios.org"
 
@@ -59,8 +60,9 @@ const config = {
 
     plugins: [
         new webpack.DefinePlugin({
-          'HACKILLINOIS_API_ENDPOINT': (process.env.TRAVIS_BRANCH !== undefined && process.env.TRAVIS_BRANCH === "master") ? PROD_API : TEST_API
+          'HACKILLINOIS_API_ISPROD': JSON.stringify(isProd)
         }),
+
         new copy([
             {
               from: APP_DIR + '/html/',
