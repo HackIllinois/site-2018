@@ -21,11 +21,9 @@ export default class RegisterStart extends Component {
               HackIllinois is the University of Illinois’ premiere hackathon, taking place from February 23-25. Whether you are creating a new Open Source project or working with one of our project mentors, HackIllinois enables you to work with both experts and beginners to contribute to the world of Open Source.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <a href="https://api.hackillinois.org/v1/auth" target="_blank">
-                <Button size='medium' className="githubButton">
-                  Login with Github    &#9658;
-                </Button>
-              </a>
+              <Button size='medium' className="githubButton" onClick={() => window.location = api_url + "/v1/auth"}>
+                Login with Github    &#9658;
+              </Button>
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
               A GitHub account is critical for Open Source contributions so please make one if you do not have one already!
