@@ -6,15 +6,15 @@ export default class RegisterSuccess extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
-        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row className='successContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='successPrompt verticalPadding'>
-              You have succesfully registed for HackIllinois. We’ll be in touch. For now, some more information on our event is on the home page. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
+              You have succesfully registered for HackIllinois. We’ll be in touch. For now, some more information on our event is on the home page. If you have any questions, please email us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               {/* <Button>Mentors</Button> */}

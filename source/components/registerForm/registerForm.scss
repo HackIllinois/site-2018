@@ -11,3 +11,18 @@
 .activeError {
   animation: shake 200ms 2 linear;
 }
+
+.leftSquiggly{
+  position: absolute;
+  max-width: 20%;
+  width: 250px;
+  left: -15px;
+  bottom: 60px;
+}
+.rightSquiggly{
+  position: absolute;
+  max-width: 10%;
+  width: 125px;
+  top: 0px;
+  right: -15px;
+}

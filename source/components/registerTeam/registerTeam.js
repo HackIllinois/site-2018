@@ -77,15 +77,15 @@ export default class RegisterCollaborators extends Component {
     let removeIcon = <FontAwesomeIcon icon={faTimesCircle}/>;
     return(
       <Grid stackable>
-        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
-        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row columns={2}>
           <Grid.Column tablet={4} computer={3}>
             <RegisterNav step={step}/>
           </Grid.Column>
           <Grid.Column className='teamContainer' tablet={12} computer={13}>
             <Grid.Row>
-              Interested in working with a team? Let us know who you prefer to work with via their GitHub username. We don't have team size limits; however, we may not be able to accommodate your whole team.
+              Interested in working with a team? Let us know up to eight people who you prefer to work with via their GitHub username. We don't have team size limits during the event; however, we may not be able to accommodate your whole team.
             </Grid.Row>
             <Grid.Row className='inputContainer'>
               <Form onKeyUp={handleAddCollaborator}>
@@ -97,7 +97,7 @@ export default class RegisterCollaborators extends Component {
                     key={index}
                     onChange={handleChange}
                     value={data.collaborator}
-                    placeholder='Add team member, press enter to add another'
+                    placeholder='Add team member’s GitHub username, press enter to add another'
                     action={
                       <Button attached='right' id={index} onClick={handleRemoveCollaborator} icon={removeIcon}/>
                     }

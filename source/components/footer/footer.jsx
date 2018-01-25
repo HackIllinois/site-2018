@@ -14,16 +14,16 @@ class Footer extends Component {
                 <div className="Footer__content">
 
                     <a href="https://www.facebook.com/hackillinois/" target="_blank">
-                        <Icon name='facebook f' size='huge' />
+                        <Icon name='facebook f' size='big' />
                     </a>
                     <a href="https://www.instagram.com/hackillinois/" target="_blank">
-                        <Icon name='instagram' size='huge' />
+                        <Icon name='instagram' size='big' />
                     </a>
                     <a href="https://twitter.com/hackillinois" target="_blank">
-                        <Icon name='twitter' size='huge' />
+                        <Icon name='twitter' size='big' />
                     </a>
                     <a href="mailto:contact@hackillinois.org" target="_blank">
-                        <Icon name='mail' size='huge' />
+                        <Icon name='mail' size='big' />
                     </a>
                 </div>
 			</div>
