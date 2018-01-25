@@ -29,7 +29,7 @@ class FAQ extends Component {
 		}
 
 		let faqs = [[
-			{question: "Are there travel reimbursements?", answer: "Unfortunately, we will not be able to provide travel reimbursements to student attendees. However, we will have buses going to 11 schools."},
+			{question: "Are there travel reimbursements?", answer: ["We are planning to having busses going to various ", <a href='https://hackillinois.org/busses' target='_blank'>schools</a>, " in lieu of travel reimbursements."]},
 			{question: "Will there be food?", answer: "All meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application. There will be a wide variety of food."},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses and pillows. We want you to be comfortable!"},
 			{question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday and leave by 5 PM on Sunday. We will release a schedule soon."}
