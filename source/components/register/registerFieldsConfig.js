@@ -95,7 +95,7 @@ const personal_fields = [
     id: 'transportation',
     required: true,
     options: [{key: 'NOT_NEEDED', text: 'On Campus', value:'NOT_NEEDED'}, {key: 'BUS_REQUESTED', text: 'Bus', value:'BUS_REQUESTED'}, {key: 'IN_STATE', text: 'Driving', value:'IN_STATE'}, {key: 'OUT_OF_STATE', text: 'Flying', value:'OUT_OF_STATE'}],
-    placeholder: 'How do you plan on getting here?',
+    placeholder: 'How do you plan to get here?',
     title: 'TRANSPORTATION',
     validate: (input) => {
       return true;

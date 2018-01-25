@@ -6,8 +6,8 @@ export default class RegisterSuccess extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
-        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row className='successContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>

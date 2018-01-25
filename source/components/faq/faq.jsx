@@ -69,7 +69,7 @@ class FAQ extends Component {
 					<div className="FAQ_list">
 						{columns}
 					</div>
-					<FAQItem header={centeredContactQ.question} centered={true}>
+					<FAQItem className="contactFAQ" header={centeredContactQ.question} centered={true}>
 						{centeredContactQ.answer}
 					</FAQItem>
 				</div>
