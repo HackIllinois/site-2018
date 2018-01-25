@@ -53,7 +53,7 @@ const personal_fields = [
     inputType: 'text',
     id: 'major',
     required: true,
-    placeholder: 'What major are you?',
+    placeholder: 'What is your major?',
     title: 'MAJOR',
     validate: (input) => {
       return input.length > 0 && input.length <= 255;
@@ -95,7 +95,7 @@ const personal_fields = [
     id: 'transportation',
     required: true,
     options: [{key: 'NOT_NEEDED', text: 'On Campus', value:'NOT_NEEDED'}, {key: 'BUS_REQUESTED', text: 'Bus', value:'BUS_REQUESTED'}, {key: 'IN_STATE', text: 'Driving', value:'IN_STATE'}, {key: 'OUT_OF_STATE', text: 'Flying', value:'OUT_OF_STATE'}],
-    placeholder: 'How do you plan on getting here?',
+    placeholder: 'How do you plan to get here?',
     title: 'TRANSPORTATION',
     validate: (input) => {
       return true;
@@ -230,7 +230,7 @@ const professional_fields = [
     inputType: 'text',
     id: 'interests',
     required: false,
-    placeholder: 'What are some areas you are interested in?',
+    placeholder: 'What are some areas of technology you are interested in?',
     title: 'INTERESTS (OPTIONAL)',
     validate: (input) => {
       if (input != null) {
@@ -261,7 +261,7 @@ const professional_fields = [
     required: true,
     options: [{key: 'YES', text: 'YES', value: 'true'}, {key: 'NO', text: 'NO', value: 'false'}],
     placeholder: '',
-    title: 'We\'d love to connect you to awesome opportuniities with our sponsors. Is it okay if we share your information with them?',
+    title: 'We\'d love to connect you to awesome opportunities with our sponsors. Is it okay if we share your information with them?',
     validate: (input) => {
       return true;
     }

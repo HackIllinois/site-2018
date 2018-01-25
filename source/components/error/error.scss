@@ -10,7 +10,7 @@ html, body, #app {
   margin-right: auto;
 }
 
-.startContainer {
+.errorContainer {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
@@ -37,7 +37,7 @@ html, body, #app {
   }
 }
 
-.startPrompt {
+.errorPrompt {
   font-size: 18px;
   font-weight: 500;
   font-style: normal;

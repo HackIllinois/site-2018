@@ -80,6 +80,10 @@ $select-underline-color:  #fccfc9;
     .menu{
       border-color: transparent !important;
       border: 0 !important;
+
+      :hover {
+        background: $select-underline-color !important;
+      }
     }
 
     .menu>.item{
@@ -96,10 +100,6 @@ $select-underline-color:  #fccfc9;
         font-weight: 500 !important;
         font-size: 15px;
       }
-    }
-
-    :hover {
-      background: $select-underline-color !important;
     }
   }
 

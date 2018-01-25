@@ -44,7 +44,7 @@ class Home extends Component {
                   <img className="logo" src="./assets/img/png/fulcrum.png" />
                   <div className="RegButton">
                     <a href = "/start">
-                    { (this.state.playingAnimation || window.innerWidth < 768 ) ? <button>REGISTER</button> : null}
+                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>REGISTER</button> : null}
                     </a>
                   </div>
                 </div>
