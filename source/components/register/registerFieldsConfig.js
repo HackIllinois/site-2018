@@ -261,7 +261,7 @@ const professional_fields = [
     required: true,
     options: [{key: 'YES', text: 'YES', value: 'true'}, {key: 'NO', text: 'NO', value: 'false'}],
     placeholder: '',
-    title: 'We\'d love to connect you to awesome opportuniities with our sponsors. Is it okay if we share your information with them?',
+    title: 'We\'d love to connect you to awesome opportunities with our sponsors. Is it okay if we share your information with them?',
     validate: (input) => {
       return true;
     }

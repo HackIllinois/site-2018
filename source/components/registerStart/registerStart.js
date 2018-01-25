@@ -17,7 +17,7 @@ export default class RegisterStart extends Component {
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              HackIllinois is the University of Illinois’ premiere hackathon, taking place from February 23-25. Whether you are creating a new project or working with one of our project mentors, HackIllinois enables you to work with both experts and beginners to contribute to the world of Open Source.
+              HackIllinois is the University of Illinois’ premiere hackathon, taking place from February 23-25. Whether you are creating a new Open Source project or working with one of our project mentors, HackIllinois enables you to work with both experts and beginners to contribute to the world of Open Source.
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
               A GitHub account is critical for Open Source contributions so please make one if you do not have one already!
