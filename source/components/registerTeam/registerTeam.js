@@ -77,8 +77,8 @@ export default class RegisterCollaborators extends Component {
     let removeIcon = <FontAwesomeIcon icon={faTimesCircle}/>;
     return(
       <Grid stackable>
-        <img className="backgroundImage leftButton" src='./assets/img/png/squiggly_left.png' />
-        <img className="backgroundImage rightButton" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
         <Grid.Row columns={2}>
           <Grid.Column tablet={4} computer={3}>
             <RegisterNav step={step}/>
