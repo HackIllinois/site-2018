@@ -20,10 +20,6 @@ export default class RegisterStart extends Component {
             <Grid.Row className='startPrompt verticalPadding'>
               HackIllinois is the University of Illinois’ premiere hackathon, taking place from February 23-25. Whether you are creating a new Open Source project or working on an established project with one of our mentors, HackIllinois enables you to interact with both experts and beginners to contribute to the world of Open Source.
             </Grid.Row>
-            <Grid.Row className='verticalPadding'>
-              <a href="https://opensource.com/article/17/10/openstack-project-contribution-benefits" target="_blank"><Button>Why Open Source?</Button></a>
-              <a href="https://opensource.guide/how-to-contribute/" target="_blank"><Button>How to Contribute to OS</Button></a>
-            </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
               A GitHub account is critical for Open Source contributions so please make one if you do not have one already!
             </Grid.Row>
@@ -35,7 +31,7 @@ export default class RegisterStart extends Component {
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <a href="https://opensource.com/article/17/10/openstack-project-contribution-benefits" target="_blank"><Button>Why Open Source?</Button></a>
-              <a href="https://opensource.guide/how-to-contribute/" target="_blank"><Button>How to Contribute to OS</Button></a>
+              <a href="https://opensource.guide/how-to-contribute/" target="_blank"><Button>How to Contribute to Open Source</Button></a>
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
