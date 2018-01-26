@@ -22,7 +22,7 @@ export default class RegisterStart extends Component {
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <Button size='medium' className="githubButton" onClick={() => window.location = api_url + "/v1/auth"}>
-                Login with Github    &#9658;
+                Login with GitHub    &#9658;
               </Button>
             </Grid.Row>
             <Grid.Row className="ghPrompt ghPadding">
