@@ -155,18 +155,20 @@ class Sponsors extends Component {
         return(
         	<div className="Sponsors">
                 <div className="container">
-                    <h1>Our Sponsors</h1>
-                    <div className="Sponsors__flexBox">
-                        {large}
-                    </div>
-                    <div className="Sponsors__flexBox">
-                        {medium}
-                    </div>
-                    <div className="Sponsors__flexBox">
-                        {small}
-                    </div>
-                    <div className="Sponsors__flexBox">
-                        {xsmall}
+                    <div className="Sponsors__container">
+                        <h1>Our Sponsors</h1>
+                        <div className="Sponsors__flexBox">
+                            {large}
+                        </div>
+                        <div className="Sponsors__flexBox">
+                            {medium}
+                        </div>
+                        <div className="Sponsors__flexBox">
+                            {small}
+                        </div>
+                        <div className="Sponsors__flexBox">
+                            {xsmall}
+                        </div>
                     </div>
                 </div>
 			</div>
