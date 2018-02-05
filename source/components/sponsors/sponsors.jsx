@@ -28,7 +28,10 @@ class Sponsors extends Component {
                 "company": "imo",
                 "url": "https://www.e-imo.com"
             },
-            //placeholder for qtum???
+            {
+                "company": "qtum",
+                "url": "https://qtum.org/en/"
+            },
         ]
 
         const sponsorsSmall = [
