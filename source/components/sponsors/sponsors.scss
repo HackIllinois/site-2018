@@ -17,6 +17,7 @@
 
     &__flexItemLarge {
         flex-basis: 100%;
+        background-color: white;
         border-radius: 100%;
         margin-bottom: 2em;
         width: 100%;
@@ -42,6 +43,17 @@
 
     &__flexItemSmall {
         flex-basis: 32%;
+        background-color: white;
+        border-radius: 100%;
+        margin-bottom: 2em;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    &__flexItemXSmall {
+        flex-basis: 22%;
         background-color: white;
         border-radius: 100%;
         margin-bottom: 2em;

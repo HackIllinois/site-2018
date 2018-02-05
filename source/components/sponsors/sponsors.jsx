@@ -10,9 +10,10 @@ class Sponsors extends Component {
     render() {
         const path = "./assets/img/png/logos/";
         const filetype = ".png";
+
         const sponsorsLarge = [
             {
-                "company": "fulcrumgt",
+                "company": "fulcrum",
                 "url": "http://fulcrum-gt.com/"
             }
         ];
@@ -24,12 +25,13 @@ class Sponsors extends Component {
                 "url": "https://www.microsoft.com/en-us/"
             },
             {
-                "company": "imo_2",
+                "company": "imo",
                 "url": "https://www.e-imo.com"
             },
-            //placeholder for nussbaumer???
+            //placeholder for qtum???
+        ]
 
-            // recurring
+        const sponsorsSmall = [
             {
                 "company": "amadeus",
                 "url": "http://www.amadeus.com/"
@@ -48,7 +50,8 @@ class Sponsors extends Component {
                 "url": "https://www.mysynchrony.com/"
             }
         ]
-        const sponsorsSmall = [
+
+        const sponsorsXSmall = [
             {
                 "company": "googlecloudplatform",
                 "url": "https://cloud.google.com/"
@@ -73,11 +76,13 @@ class Sponsors extends Component {
                 "company": "jackson",
                 "url": "https://www.jackson.com/index.xhtml"
             },
-
-            // optum and rockwell?
+            {
+                "company": "rockwellcollins",
+                "url": "https://www.rockwellcollins.com/"
+            },
 
             {
-                "company": "axis_2",
+                "company": "axis",
                 "url": "http://www.axiscapital.com/en-us"
             },
 
@@ -97,8 +102,18 @@ class Sponsors extends Component {
             },
 
             {
-                "company": "1517_2",
+                "company": "1517",
                 "url": "http://www.1517fund.com/"
+            },
+
+            {
+                "company": "soylent",
+                "url": "http://www.soylent.com/"
+            },
+
+            {
+                "company": "illinoismakerlab",
+                "url": "https://makerlab.illinois.edu/"
             }
         ]
 
@@ -108,7 +123,7 @@ class Sponsors extends Component {
         const large = sponsorsLarge.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemLarge">
-                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
+                    <a href={sponsor.url}><img src={ path + sponsor.company + 'transparent' + filetype} /></a>
                 </div>
             );
         })
@@ -116,7 +131,7 @@ class Sponsors extends Component {
         const medium = sponsorsMedium.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemMedium">
-                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
+                    <a href={sponsor.url}><img src={ path + sponsor.company + 'transparent' + filetype} /></a>
                 </div>
             );
         })
@@ -124,7 +139,15 @@ class Sponsors extends Component {
         const small = sponsorsSmall.map((sponsor) => {
             return(
                 <div className="Sponsors__flexItemSmall">
-                    <a href={sponsor.url}><img src={ path + sponsor.company + filetype} /></a>
+                    <a href={sponsor.url}><img src={ path + sponsor.company + 'transparent' + filetype} /></a>
+                </div>
+            );
+        })
+
+        const xsmall = sponsorsXSmall.map((sponsor) => {
+            return(
+                <div className="Sponsors__flexItemXSmall">
+                    <a href={sponsor.url}><img src={ path + sponsor.company + 'transparent' + filetype} /></a>
                 </div>
             );
         })
@@ -141,6 +164,9 @@ class Sponsors extends Component {
                     </div>
                     <div className="Sponsors__flexBox">
                         {small}
+                    </div>
+                    <div className="Sponsors__flexBox">
+                        {xsmall}
                     </div>
                 </div>
 			</div>
