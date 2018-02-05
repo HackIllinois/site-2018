@@ -2,7 +2,7 @@
     min-width: 100%;
     padding: 8em 0;
     background:
-        url("../../assets/img/svg/blob.svg") no-repeat top center,
+        url("../../assets/img/png/blob.png") no-repeat top center,
         url("../../assets/img/svg/bottom_image.svg") no-repeat top center;
     background-size: auto 100%;
     background-color: #26215A;
@@ -12,7 +12,7 @@
 
     &__container {
         margin: 0 auto;
-        padding:17%;
+        padding:16%;
     }
 
     &__flexBox {
@@ -93,7 +93,7 @@
     }
     @media (min-width: 2700px) {
         &__container {
-          padding:19%;
+          padding:17% 23%;
         }
     }
 }
