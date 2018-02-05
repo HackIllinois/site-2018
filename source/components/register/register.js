@@ -41,6 +41,7 @@ export default class Register extends Component {
   };
 
   componentWillMount() {
+    sessionStorage.setItem('callback', '/register');
     let personal = {};
     personal_fields.map((config, index)=> {
       personal[config.id] = null;
