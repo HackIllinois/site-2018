@@ -43,7 +43,7 @@ const getRSVPData = () => new Promise((resolve, reject) => {
   })
   .catch(error => {
     // console.log(error);
-    return reject("Getting RSVP data Error"); // rejected
+    return reject('No RSVP Exists'); // rejected
   });
 });
 

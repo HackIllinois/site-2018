@@ -28,7 +28,7 @@ export default class RsvpNo extends Component {
       this.setState({method: 'put'});
     })
     .catch(error => {
-      this.props.history.push("/error");
+      this.setState({method: 'post'});
     });
     sendRsvp(false, this.state.method).then(response => {
       console.log("RSVP Success")

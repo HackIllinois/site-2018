@@ -23,12 +23,12 @@ export default class RsvpYes extends Component {
 
   componentDidMount() {
     getAuth();
-    
+
     getRSVPData().then(rsvpData => {
       this.setState({method: 'put'});
     })
     .catch(error => {
-      this.props.history.push("/error");
+      this.setState({method: 'post'});
     });
     sendRsvp(true, this.state.method).then(response => {
       console.log("RSVP Success")
