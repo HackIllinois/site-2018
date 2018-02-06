@@ -16,10 +16,6 @@ import styles from './rsvp.scss'
 export default class RsvpYes extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      method: 'post',
-      attendeeEmail: ''
-    };
   };
 
   componentWillMount() {
@@ -28,26 +24,23 @@ export default class RsvpYes extends Component {
 
   componentDidMount() {
     getAuth().then(authData => {
-      console.log("Token Exists");
-      this.setState({attendeeEmail: authData.user.email});
-      console.log('Auth complete')
       getRSVPData().then(rsvpData => {
-        console.log("RSVP Exists");
-        this.setState({method: 'put'});
-        console.log('RSVP Check complete')
-        console.log(this.state.method);
-        sendRsvp(true, this.state.method).then(response => {
-          console.log("RSVP Success")
+        sendRsvp(true, 'put').then(response => {
+          console.log("RSVP Put Success");
         })
         .catch(error => {
           console.log(error);
           this.props.history.push("/error");
         });
-        console.log('RSVP request complete')
       })
       .catch(error => {
-        console.log("RSVP doesn't Exists");
-        this.setState({method: 'post'});
+        sendRsvp(true, 'post').then(response => {
+          console.log("RSVP Post Success");
+        })
+        .catch(error => {
+          console.log(error);
+          this.props.history.push("/error");
+        });
       });
     })
     .catch(error => {
