@@ -23,7 +23,7 @@ export default class RsvpYes extends Component {
   };
 
   componentWillMount() {
-    sessionStorage.setItem('callback', '/rsvpyes');
+    sessionStorage.setItem('callback', '/rsvp/yes');
   };
 
   componentDidMount() {
@@ -44,6 +44,7 @@ export default class RsvpYes extends Component {
       this.setState({method: 'post'});
     });
     console.log('RSVP Check complete')
+    console.log(this.state.method);
     sendRsvp(true, this.state.method).then(response => {
       console.log("RSVP Success")
     })

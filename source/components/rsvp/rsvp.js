@@ -45,10 +45,10 @@ export default class Rsvp extends Component {
               Congratulations on being accepted to HackIllinois 2018. We&#39;re excited to have you here! Please let us know if you can attend.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <a href="/rsvpyes">
+              <a href="/rsvp/yes">
                 <Button size='medium'>Yes</Button>
               </a>
-              <a href="/rsvpno">
+              <a href="/rsvp/no">
                 <Button size='medium'>No</Button>
               </a>
             </Grid.Row>

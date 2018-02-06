@@ -23,7 +23,7 @@ export default class RsvpNo extends Component {
   };
 
   componentWillMount() {
-    sessionStorage.setItem('callback', '/rsvpno');
+    sessionStorage.setItem('callback', '/rsvp/no');
   };
 
   componentDidMount() {
