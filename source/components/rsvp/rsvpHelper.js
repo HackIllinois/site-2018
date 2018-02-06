@@ -1,13 +1,16 @@
 import axios from 'axios';
 import {api_url} from '../../../config';
 
-const getAuth = () => {
+const getAuth = () => new Promise((resolve, reject) => {
   sessionStorage.setItem('callback', '/rsvp/yes');
   const token = sessionStorage.getItem("Authorization");
   if (token == null) {
     this.props.history.push("/v1/auth");
   }
-};
+  else {
+    return resolve("Success");
+  }
+});
 
 const sendRsvp = (rsvp, method) => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");

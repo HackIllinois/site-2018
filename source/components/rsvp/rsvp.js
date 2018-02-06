@@ -19,7 +19,12 @@ export default class RsvpYes extends Component {
   };
 
   componentDidMount() {
-    getAuth();
+    getAuth().then(authData => {
+      console.log("Token Exists");
+    })
+    .catch(error => {
+      this.props.history.push("/error");
+    });
   };
 
   render() {
@@ -27,7 +32,7 @@ export default class RsvpYes extends Component {
       <Grid centered textAlign='center' verticalAlign='middle'>
         <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
         <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
-        <Grid.Row className='startContainer'>
+        <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
               <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
