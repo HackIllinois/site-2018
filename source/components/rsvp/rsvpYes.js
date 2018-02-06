@@ -36,9 +36,11 @@ export default class RsvpYes extends Component {
     });
     console.log('Auth complete')
     getRSVPData().then(rsvpData => {
+      console.log("RSVP Exists");
       this.setState({method: 'put'});
     })
     .catch(error => {
+      console.log("RSVP doesn't Exists");
       this.setState({method: 'post'});
     });
     console.log('RSVP Check complete')
