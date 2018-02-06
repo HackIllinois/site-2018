@@ -13,7 +13,12 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     )
     .then(response => {
-      return resolve(response.data.data);
+      attendeeData = response.data.data;
+      if (attendeeData.status === 'Accepted') {
+          return resolve("Accepted");
+      } else {
+          return reject("Pending");
+      }
     })
     .catch(error => {
       return reject("Error getting attendee data"); // rejected

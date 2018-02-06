@@ -12,6 +12,7 @@ import RegisterStart from './components/registerStart/registerStart';
 import RsvpYes from './components/rsvp/rsvpYes'
 import RsvpNo from './components/rsvp/rsvpNo'
 import Rsvp from './components/rsvp/rsvp'
+import WaitList from './components/rsvp/waitlist'
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
@@ -38,6 +39,7 @@ render(
         <Route exact path="/rsvp" component={Rsvp}/>
         <Route exact path="/rsvp/yes" component={RsvpYes}/>
         <Route exact path="/rsvp/no" component={RsvpNo}/>
+        <Route exact path="/rsvp/waitlist" component={WaitList}/>
         <Route component={Error}/>
       </Switch>
     </div>

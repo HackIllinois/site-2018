@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { Grid, Form, Button, Image} from 'semantic-ui-react';
-import {getAuth, sendRsvp, getRSVPData} from './rsvpHelper'
 import styles from './rsvp.scss'
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -13,26 +12,9 @@ import styles from './rsvp.scss'
   });
 
 
-export default class Rsvp extends Component {
+export default class WaitList extends Component {
   constructor(props) {
     super(props);
-  };
-
-  componentWillMount() {
-    sessionStorage.setItem('callback', '/rsvp');
-  };
-
-  componentDidMount() {
-    getAuth().then(authData => {
-      console.log("Token Exists");
-    })
-    .catch(error => {
-      console.log(error);
-      if (error === 'Pending') {
-        this.props.history.push("/waitlist");
-      }
-      this.props.history.push("/error");
-    });
   };
 
   render() {
@@ -46,14 +28,17 @@ export default class Rsvp extends Component {
               <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              Congratulations on being accepted to HackIllinois 2018, we&#39;re excited to have you here! To get started, please let us know if you can attend!
+              Thank you for checking on the status of your application to HackIllinois 2018! We are releasing decisions in waves and will get to your application as soon as possible. We appreciate your patience.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <a href="/rsvp/yes">
-                <Button size='medium'>Yes</Button>
+              <a href="/">
+                <Button size='medium'>Home</Button>
               </a>
-              <a href="/rsvp/no">
-                <Button size='medium'>No</Button>
+              <a href="https://opensource.com/article/17/10/openstack-project-contribution-benefits" target="_blank">
+                <Button size='medium'>Why Open Source?</Button>
+              </a>
+              <a href="https://opensource.guide/how-to-contribute/" target="_blank">
+                <Button size='medium'>How to Contribute to OS</Button>
               </a>
             </Grid.Row>
           </Grid.Column>

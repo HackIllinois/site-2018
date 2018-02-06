@@ -45,6 +45,9 @@ export default class RsvpNo extends Component {
     })
     .catch(error => {
       console.log(error);
+      if (error === 'Pending') {
+        this.props.history.push("/waitlist");
+      }
       this.props.history.push("/error");
     });
   };
