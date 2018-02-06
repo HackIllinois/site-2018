@@ -31,7 +31,7 @@ const sendRsvp = (rsvp, method) => new Promise((resolve, reject) => {
     headers: {
       'Authorization': token,
     },
-    params: {
+    data: {
       'isAttending': rsvp,
     },
   })
