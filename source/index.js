@@ -35,8 +35,6 @@ render(
         <Route exact path="/start" component={RegisterStart}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/auth/mobile" component={MobileAuth}/>
-        <Route exact path="/register" component={Register}/>
-        <Route exact path="/auth/mobile" component={MobileAuth}/>
         <Route exact path="/rsvp" component={Rsvp}/>
         <Route exact path="/rsvp/yes" component={RsvpYes}/>
         <Route exact path="/rsvp/no" component={RsvpNo}/>
