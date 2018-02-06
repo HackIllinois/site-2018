@@ -29,23 +29,29 @@ export default class RsvpNo extends Component {
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");
-      this.setState({attendeeEmail: authData.user.email})
+      this.setState({attendeeEmail: authData.user.email});
+      console.log('Auth complete')
+      getRSVPData().then(rsvpData => {
+        console.log("RSVP Exists");
+        this.setState({method: 'put'});
+        console.log('RSVP Check complete')
+        console.log(this.state.method);
+        sendRsvp(false, this.state.method).then(response => {
+          console.log("RSVP Success")
+        })
+        .catch(error => {
+          console.log(error);
+          this.props.history.push("/error");
+        });
+        console.log('RSVP request complete')
+      })
+      .catch(error => {
+        console.log("RSVP doesn't Exists");
+        this.setState({method: 'post'});
+      });
     })
     .catch(error => {
       console.log(error);
-      this.props.history.push("/error");
-    });
-
-    getRSVPData().then(rsvpData => {
-      this.setState({method: 'put'});
-    })
-    .catch(error => {
-      this.setState({method: 'post'});
-    });
-    sendRsvp(false, this.state.method).then(response => {
-      console.log("RSVP Success")
-    })
-    .catch(error => {
       this.props.history.push("/error");
     });
   };
@@ -53,12 +59,12 @@ export default class RsvpNo extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='../assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='../assets/img/png/squiggly_right.png' />
         <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Thank you for RSVPing. We sad to hear that you can&#39;t make it. We hope you see you apply again next year!

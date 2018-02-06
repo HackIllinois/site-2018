@@ -29,41 +29,42 @@ export default class RsvpYes extends Component {
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");
-      this.setState({attendeeEmail: authData.user.email})
+      this.setState({attendeeEmail: authData.user.email});
+      console.log('Auth complete')
+      getRSVPData().then(rsvpData => {
+        console.log("RSVP Exists");
+        this.setState({method: 'put'});
+        console.log('RSVP Check complete')
+        console.log(this.state.method);
+        sendRsvp(true, this.state.method).then(response => {
+          console.log("RSVP Success")
+        })
+        .catch(error => {
+          console.log(error);
+          this.props.history.push("/error");
+        });
+        console.log('RSVP request complete')
+      })
+      .catch(error => {
+        console.log("RSVP doesn't Exists");
+        this.setState({method: 'post'});
+      });
     })
     .catch(error => {
       console.log(error);
       this.props.history.push("/error");
     });
-    console.log('Auth complete')
-    getRSVPData().then(rsvpData => {
-      console.log("RSVP Exists");
-      this.setState({method: 'put'});
-    })
-    .catch(error => {
-      console.log("RSVP doesn't Exists");
-      this.setState({method: 'post'});
-    });
-    console.log('RSVP Check complete')
-    console.log(this.state.method);
-    sendRsvp(true, this.state.method).then(response => {
-      console.log("RSVP Success")
-    })
-    .catch(error => {
-      this.props.history.push("/error");
-    });
-    console.log('RSVP request complete')
   };
 
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='../assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='../assets/img/png/squiggly_right.png' />
         <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Thank you for RSVPing. We look forward to seeing you at the event! Be on the lookout for more information about busses and our projects soon!

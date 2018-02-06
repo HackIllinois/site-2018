@@ -3,6 +3,7 @@ import {api_url} from '../../../config';
 
 const getAuth = () => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
+  console.log(token)
   if (token == null) {
     window.location = api_url + "/v1/auth";
   }
@@ -13,11 +14,12 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     )
     .then(response => {
-      // console.log(response.data.data);
+      console.log(response.data.data);
+      console.log('success');
       return resolve(response.data.data);
     })
     .catch(error => {
-      // console.log(error);
+      console.log(error);
       return reject("Error getting attendee data"); // rejected
     });
   }
