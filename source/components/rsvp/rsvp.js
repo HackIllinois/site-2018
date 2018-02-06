@@ -38,12 +38,12 @@ export default class Rsvp extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='../assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='../assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='../../assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='../../assets/img/png/squiggly_right.png' />
         <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Congratulations on being accepted to HackIllinois 2018, we&#39;re excited to have you here! To get started, please let us know if you can attend!
