@@ -5,7 +5,7 @@ const getAuth = () => new Promise((resolve, reject) => {
   sessionStorage.setItem('callback', '/rsvp/yes');
   const token = sessionStorage.getItem("Authorization");
   if (token == null) {
-    this.props.history.push("/v1/auth");
+    this.props.history.push(api_url + "/v1/auth");
   }
   else {
     return resolve("Success");
