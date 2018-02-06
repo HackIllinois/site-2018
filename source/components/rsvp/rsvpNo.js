@@ -32,6 +32,7 @@ export default class RsvpNo extends Component {
       this.setState({attendeeEmail: authData.user.email})
     })
     .catch(error => {
+      console.log(error);
       this.props.history.push("/error");
     });
 
@@ -52,12 +53,12 @@ export default class RsvpNo extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='./assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='./assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='../assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='../assets/img/png/squiggly_right.png' />
         <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Thank you for RSVPing. We sad to hear that you can&#39;t make it. We hope you see you apply again next year!
