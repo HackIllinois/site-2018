@@ -14,6 +14,7 @@ const getAuth = () => new Promise((resolve, reject) => {
     )
     .then(response => {
       attendeeData = response.data.data;
+      console.log(attendeeData.status);
       if (attendeeData.status === 'Accepted') {
           return resolve("Accepted");
       } else {
