@@ -28,19 +28,21 @@ export default class RsvpYes extends Component {
     .catch(error => {
       this.props.history.push("/error");
     });
-
+    console.auth('Auth complete')
     getRSVPData().then(rsvpData => {
       this.setState({method: 'put'});
     })
     .catch(error => {
       this.setState({method: 'post'});
     });
+    console.auth('RSVP Check complete')
     sendRsvp(true, this.state.method).then(response => {
       console.log("RSVP Success")
     })
     .catch(error => {
       this.props.history.push("/error");
     });
+    console.auth('RSVP request complete')
   };
 
   render() {
