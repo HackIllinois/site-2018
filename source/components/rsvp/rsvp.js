@@ -18,6 +18,10 @@ export default class RsvpYes extends Component {
     super(props);
   };
 
+  componentWillMount() {
+    sessionStorage.setItem('callback', '/rsvp');
+  };
+
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");
@@ -41,10 +45,10 @@ export default class RsvpYes extends Component {
               Congratulations on being accepted to HackIllinois 2018. We&#39;re excited to have you here! Please let us know if you can attend.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
-              <a href="/rsvp/yes">
+              <a href="/rsvpyes">
                 <Button size='medium'>Yes</Button>
               </a>
-              <a href="/rsvp/yes">
+              <a href="/rsvpno">
                 <Button size='medium'>No</Button>
               </a>
             </Grid.Row>

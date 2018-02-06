@@ -21,6 +21,10 @@ export default class RsvpYes extends Component {
     };
   };
 
+  componentWillMount() {
+    sessionStorage.setItem('callback', '/rsvpyes');
+  };
+
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");

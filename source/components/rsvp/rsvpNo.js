@@ -21,6 +21,10 @@ export default class RsvpNo extends Component {
     };
   };
 
+  componentWillMount() {
+    sessionStorage.setItem('callback', '/rsvpno');
+  };
+
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");
