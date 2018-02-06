@@ -11,7 +11,7 @@ export default class RegisterStart extends Component {
   componentWillMount() {
     sessionStorage.setItem('callback', '/register');
   }
-  
+
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
