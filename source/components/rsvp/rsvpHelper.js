@@ -9,12 +9,13 @@ const getAuth = () => new Promise((resolve, reject) => {
     window.location = api_url + "/v1/auth";
   }
   else {
-    axios.get(api_url + "/v1/user",
+    axios.get(api_url + "/v1/registration/attendee",
       {
         'headers': { 'Authorization': token }
       }
     )
     .then(response => {
+      console.log("Success");
       attendeeData = response.data.data;
       console.log(attendeeData.status);
       if (attendeeData.status === 'Accepted') {
@@ -24,6 +25,7 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     })
     .catch(error => {
+      console.log("Error");
       console.log(error);
       return reject("Error getting attendee data"); // rejected
     });
