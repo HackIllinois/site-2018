@@ -3,7 +3,9 @@ import {api_url} from '../../../config';
 
 const getAuth = () => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
+  console.log(token);
   if (token == null) {
+    console.log("redirect");
     window.location = api_url + "/v1/auth";
   }
   else {
