@@ -24,6 +24,7 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     })
     .catch(error => {
+      console.log(error);
       return reject("Error getting attendee data"); // rejected
     });
   }
