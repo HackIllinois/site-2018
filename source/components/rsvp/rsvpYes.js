@@ -60,7 +60,7 @@ export default class RsvpYes extends Component {
               <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              Thank you for RSVPing. We look forward to seeing you at the event! Be on the lookout for more information about busses and our projects soon!
+              Thank you for RSVPing. We look forward to seeing you at the event! Be on the lookout for more information about busses and projects soon!
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <a href="/">
