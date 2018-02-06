@@ -7,7 +7,19 @@ const getAuth = () => new Promise((resolve, reject) => {
     this.props.history.push(api_url + "/v1/auth");
   }
   else {
-    return resolve("Success");
+    axios.get(api_url + "/v1/user",
+      {
+        'headers': { 'Authorization': token }
+      }
+    )
+    .then(response => {
+      // console.log(response.data.data);
+      return resolve(response.data.data);
+    })
+    .catch(error => {
+      // console.log(error);
+      return reject("Error getting attendee data"); // rejected
+    });
   }
 });
 

@@ -17,7 +17,8 @@ export default class RsvpYes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      method: 'post'
+      method: 'post',
+      attendeeEmail: ''
     };
   };
 
@@ -28,6 +29,7 @@ export default class RsvpYes extends Component {
   componentDidMount() {
     getAuth().then(authData => {
       console.log("Token Exists");
+      this.setState({attendeeEmail: authData.user.email})
     })
     .catch(error => {
       this.props.history.push("/error");

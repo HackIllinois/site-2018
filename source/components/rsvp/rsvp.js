@@ -13,7 +13,7 @@ import styles from './rsvp.scss'
   });
 
 
-export default class RsvpYes extends Component {
+export default class Rsvp extends Component {
   constructor(props) {
     super(props);
   };
