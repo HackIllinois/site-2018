@@ -4,7 +4,7 @@ import {api_url} from '../../../config';
 const getAuth = () => new Promise((resolve, reject) => {
   const token = sessionStorage.getItem("Authorization");
   if (token == null) {
-    this.props.history.push(api_url + "/v1/auth");
+    window.location = api_url + "/v1/auth";
   }
   else {
     axios.get(api_url + "/v1/user",
