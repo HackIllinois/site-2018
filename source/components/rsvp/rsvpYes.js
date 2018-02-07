@@ -48,8 +48,9 @@ export default class RsvpYes extends Component {
       console.log(error === 'PENDING');
       if (error === 'PENDING') {
         this.props.history.push("/rsvp/waitlist");
+      } else {
+        this.props.history.push("/error");
       }
-      this.props.history.push("/error");
     });
   };
 
