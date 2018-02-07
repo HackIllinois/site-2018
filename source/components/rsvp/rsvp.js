@@ -23,7 +23,6 @@ export default class Rsvp extends Component {
   };
 
   componentDidMount() {
-    console.log("Did mount");
     getAuth().then(authData => {
       console.log("Token Exists");
     })

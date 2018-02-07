@@ -14,7 +14,6 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     )
     .then(response => {
-      console.log("Success");
       let attendeeData = response.data.data;
       console.log(attendeeData.status);
       if (attendeeData.status === 'ACCEPTED') {
@@ -24,7 +23,6 @@ const getAuth = () => new Promise((resolve, reject) => {
       }
     })
     .catch(error => {
-      console.log("Error");
       console.log(error);
       return reject("Error getting attendee data"); // rejected
     });
