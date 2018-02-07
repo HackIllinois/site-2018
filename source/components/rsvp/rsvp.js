@@ -23,13 +23,14 @@ export default class Rsvp extends Component {
   };
 
   componentDidMount() {
+    console.log("Did mount");
     getAuth().then(authData => {
       console.log("Token Exists");
     })
     .catch(error => {
       console.log(error);
       if (error === 'Pending') {
-        this.props.history.push("/waitlist");
+        this.props.history.push("/rsvp/waitlist");
       }
       this.props.history.push("/error");
     });
