@@ -20,12 +20,12 @@ export default class WaitList extends Component {
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>
-        <img className="leftSquiggly" src='../assets/img/png/squiggly_left.png' />
-        <img className="rightSquiggly" src='../assets/img/png/squiggly_right.png' />
+        <img className="leftSquiggly" src='../../assets/img/png/squiggly_left.png' />
+        <img className="rightSquiggly" src='../../assets/img/png/squiggly_right.png' />
         <Grid.Row className='rsvpContainer'>
           <Grid.Column mobile={14} computer={8} textAlign='center' verticalAlign='middle'>
             <Grid.Row className='verticalPadding'>
-              <Image style={{margin: 'auto'}} src='../assets/img/png/hackillinois_logo.png' size='small' />
+              <Image style={{margin: 'auto'}} src='../../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
               Thank you for checking on the status of your application to HackIllinois 2018! We are releasing decisions in waves and will get to your application as soon as possible. We appreciate your patience.

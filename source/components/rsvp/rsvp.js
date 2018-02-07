@@ -27,8 +27,6 @@ export default class Rsvp extends Component {
       console.log("Token Exists");
     })
     .catch(error => {
-      console.log(error);
-      console.log(error === 'PENDING');
       if (error === 'PENDING') {
         this.props.history.push("/rsvp/waitlist");
       } else {
