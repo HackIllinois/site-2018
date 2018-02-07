@@ -29,7 +29,7 @@ export default class Rsvp extends Component {
     })
     .catch(error => {
       console.log(error);
-      if (error === 'Pending') {
+      if (error === 'PENDING') {
         this.props.history.push("/rsvp/waitlist");
       }
       this.props.history.push("/error");

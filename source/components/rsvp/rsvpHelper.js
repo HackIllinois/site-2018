@@ -17,10 +17,10 @@ const getAuth = () => new Promise((resolve, reject) => {
       console.log("Success");
       let attendeeData = response.data.data;
       console.log(attendeeData.status);
-      if (attendeeData.status === 'Accepted') {
-          return resolve("Accepted");
+      if (attendeeData.status === 'ACCEPTED') {
+          return resolve("ACCEPTED");
       } else {
-          return reject("Pending");
+          return reject("PENDING");
       }
     })
     .catch(error => {
