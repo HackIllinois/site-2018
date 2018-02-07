@@ -15,7 +15,7 @@ class Countdown extends Component {
     }
 
     componentDidMount() {
-      const countdownDate = new Date("Feb 23, 2018 0:00:00").getTime();
+      const countdownDate = new Date("Feb 23, 2018 16:00:00").getTime();
       const x = setInterval(() => {
         const now = new Date().getTime();
         const dist = countdownDate - now;
@@ -39,7 +39,7 @@ class Countdown extends Component {
         return(
         	<div className="Countdown">
                 <div className="Countdown__content">
-                    <h4 className="Countdown__timerHeader">Hacking begins in</h4>
+                    <h4 className="Countdown__timerHeader">HackIllinois begins in</h4>
                     <br/>
                     <div className="Countdown__timer">
                         <div className="Countdown__timerFlexItem">
