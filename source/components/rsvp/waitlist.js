@@ -28,7 +28,7 @@ export default class WaitList extends Component {
               <Image style={{margin: 'auto'}} src='../../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              Thank you for checking on the status of your application to HackIllinois 2018! We are releasing decisions in waves and will get to your application as soon as possible. We appreciate your patience.
+              Thank you for checking on the status of your application to HackIllinois 2018! We are releasing decisions in waves and will get to your application as soon as possible. We appreciate your patience. If you have any questions, you can reach us at <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>.
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <a href="/">

@@ -43,7 +43,7 @@ export default class Rsvp extends Component {
               <Image style={{margin: 'auto'}} src='../../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              Congratulations on being accepted to HackIllinois 2018, we&#39;re excited to have you here! To get started, please let us know if you can attend!
+              Congratulations on being accepted to HackIllinois 2018, we&#39;re excited to have you here on February 23rd to 25th! To get started, please let us know if you can attend!
             </Grid.Row>
             <Grid.Row className='verticalPadding'>
               <a href="/rsvp/yes">
