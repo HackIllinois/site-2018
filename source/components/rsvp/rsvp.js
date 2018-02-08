@@ -21,7 +21,7 @@ export default class Rsvp extends Component {
   componentWillMount() {
     sessionStorage.setItem('callback', '/rsvp');
     getAuth().then(authData => {
-      console.log("Token Exists");
+      //console.log("Token Exists");
     })
     .catch(error => {
       if (error === 'PENDING') {
