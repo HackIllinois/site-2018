@@ -7,6 +7,11 @@ import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
 import { api_url } from '../../../config';
 
 export default class RegisterStart extends Component {
+
+  componentWillMount() {
+    sessionStorage.setItem('callback', '/register');
+  }
+
   render() {
     return(
       <Grid centered textAlign='center' verticalAlign='middle'>

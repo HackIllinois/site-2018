@@ -8,7 +8,6 @@ import {api_url} from '../../../config';
 class Auth extends Component {
   constructor(props) {
       super(props);
-      this.state = {redirect: "register"};
   }
 
   componentDidMount() {
@@ -17,7 +16,8 @@ class Auth extends Component {
     .then(
       (token) => {
         sessionStorage.setItem("Authorization", 'Bearer ' + token.data.data.auth);
-        this.props.history.push("/register");
+        const callback = sessionStorage.getItem('callback')  || '/register';
+        this.props.history.push(callback);
       },
       (reject) => {
         console.error('your authentication request failed, please try again');

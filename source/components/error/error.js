@@ -13,10 +13,12 @@ import styles from './error.scss'
 export default class Error extends Component {
   render() {
     if (ga) {
-      ga('send', 'exception', {
-        'exDescription': '/404: ' + this.state.attendeeEmail,
-        'exFatal': true
-      })
+      if (this.state) {
+        ga('send', 'exception', {
+          'exDescription': '/404: ' + this.state.attendeeEmail,
+          'exFatal': true
+        })
+      }
     }
     console.log(this.props.match);
     return(

@@ -9,6 +9,10 @@ import Error from './components/error/error';
 import Register from './components/register/register';
 import MobileAuth from './components/auth/mobile';
 import RegisterStart from './components/registerStart/registerStart';
+import RsvpYes from './components/rsvp/rsvpYes'
+import RsvpNo from './components/rsvp/rsvpNo'
+import Rsvp from './components/rsvp/rsvp'
+import WaitList from './components/rsvp/waitlist'
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
@@ -32,6 +36,10 @@ render(
         <Route exact path="/start" component={RegisterStart}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/auth/mobile" component={MobileAuth}/>
+        <Route exact path="/rsvp" component={Rsvp}/>
+        <Route exact path="/rsvp/yes" component={RsvpYes}/>
+        <Route exact path="/rsvp/no" component={RsvpNo}/>
+        <Route exact path="/rsvp/waitlist" component={WaitList}/>
         <Route component={Error}/>
       </Switch>
     </div>
