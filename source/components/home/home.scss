@@ -9,7 +9,19 @@
 }
 
 .RegButton {
-  margin-top: 5.5em;
+  margin-top: 2.5vh;
+  @media only screen and (min-height: 950px){
+    margin-top: 5vh;
+  }
+  @media only screen and (min-height: 1024px){
+    margin-top: 8vh;
+  }
+  @media only screen and (min-height: 1400px){
+    margin-top: 10vh;
+  }
+  @media only screen and (min-height: 1050px) and (orientation: portrait){
+    margin-top: 20vh;
+  }
 }
 
 .video-container {
