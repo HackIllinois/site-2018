@@ -63,10 +63,14 @@
     width: 20%;
     height: 47vh;
     min-width:300px;
-    min-height: calc(1.16 * 0.22 * 100vw);
+    min-height: 550px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+		@media only screen and (min-width: 780px){
+			min-height: calc(1.16 * 0.22 * 100vw);
+		}
 
     img {
       max-width: 100%;
