@@ -8,22 +8,6 @@
 	}
 }
 
-.RegButton {
-  margin-top: 2.5vh;
-  @media only screen and (min-height: 950px){
-    margin-top: 5vh;
-  }
-  @media only screen and (min-height: 1024px){
-    margin-top: 8vh;
-  }
-  @media only screen and (min-height: 1400px){
-    margin-top: 10vh;
-  }
-  @media only screen and (min-height: 1050px) and (orientation: portrait){
-    margin-top: 20vh;
-  }
-}
-
 .video-container {
   position: absolute;
   top: 0;
@@ -37,6 +21,7 @@
     }
   }
 }
+
 .video-container video {
   position: absolute;
   top: 0%;
@@ -76,26 +61,26 @@
   &__logo {
     position: absolute;
     width: 20%;
-    min-width: 300px;
-
+    height: 47vh;
+    min-width:300px;
+    min-height: calc(1.16 * 0.22 * 100vw);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
-    &__fulcrum {
-      width: 70%;
-      margin-left: 15%;
-      margin-right: 10%;
-      margin-bottom: 10%;
-    }
 
     img {
       max-width: 100%;
       padding-top: 2em;
     }
+
     div{
       width: 100%;
       position: relative;
+
+      @media only screen and (min-width: 780px){
+        position: absolute;
+        top: 100%;
+      }
 
       a{
         display: flex;
@@ -104,6 +89,7 @@
       }
       button{
         width: 70%;
+        margin-top:5%;
         margin-left: 15%;
         margin-right: 15%;
         min-width: 175px;
