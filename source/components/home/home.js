@@ -55,8 +55,8 @@ class Home extends Component {
                   { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/logo_with_date.png" /> : null}
                   { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/fulcrum.png" /> : null}
                   <div className="RegButton">
-                    <a href = "/start">
-                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>REGISTER</button> : null}
+                    <a href = "/schedule">
+                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>SCHEDULE</button> : null}
                     </a>
                     <a href = "/rsvp">
                     { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>CHECK YOUR STATUS</button> : null}
