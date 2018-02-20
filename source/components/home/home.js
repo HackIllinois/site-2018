@@ -27,6 +27,18 @@ class Home extends Component {
       });
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('resize', this.handleResize);
+    }
+
+    handleResize = () => {
+        this.forceUpdate();
+    };
+
     render() {
         return(
           <div>
@@ -40,11 +52,14 @@ class Home extends Component {
               </div>
               <div className="Landing">
                 <div className="Landing__logo">
-                  <img className="logo" src="./assets/img/png/logo_with_date.png" />
-                  <img className="logo" src="./assets/img/png/fulcrum.png" />
+                  { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/logo_with_date.png" /> : null}
+                  { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/fulcrum.png" /> : null}
                   <div className="RegButton">
                     <a href = "/start">
                     { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>REGISTER</button> : null}
+                    </a>
+                    <a href = "/rsvp">
+                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>CHECK YOUR STATUS</button> : null}
                     </a>
                   </div>
                 </div>

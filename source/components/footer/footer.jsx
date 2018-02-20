@@ -12,7 +12,9 @@ class Footer extends Component {
         return(
         	<div className="Footer">
                 <div className="Footer__content">
-
+                    <a href="https://www.github.com/hackillinois/" target="_blank">
+                        <Icon name='github' size='big' />
+                    </a>
                     <a href="https://www.facebook.com/hackillinois/" target="_blank">
                         <Icon name='facebook f' size='big' />
                     </a>

@@ -56,6 +56,10 @@ class Sponsors extends Component {
 
         const sponsorsXSmall = [
             {
+                "company": "johndeere",
+                "url": "https://www.deere.com/en/index.html"
+            },
+            {
                 "company": "googlecloudplatform",
                 "url": "https://cloud.google.com/"
             },
@@ -83,17 +87,26 @@ class Sponsors extends Component {
                 "company": "rockwellcollins",
                 "url": "https://www.rockwellcollins.com/"
             },
-
+            {
+                "company": "goldman",
+                "url": "http://www.goldmansachs.com/"
+            },
+            {
+                "company": "capitalone",
+                "url": "https://campus.capitalone.com/"
+            },
             {
                 "company": "axis",
                 "url": "http://www.axiscapital.com/en-us"
             },
-
             {
                 "company": "citadel",
                 "url": "https://www.citadel.com/"
             },
-
+            {
+                "company": "countryfinancial",
+                "url": "https://www.countryfinancial.com/en/digitalab.html"
+            },
             {
                 "company": "nvidia",
                 "url": "http://www.nvidia.com/page/home.html"
