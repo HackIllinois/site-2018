@@ -1,0 +1,52 @@
+$pink-font-color: #eb108b;
+
+.avatarImg {
+  margin: auto;
+  background-color: #f2f5fe;
+  border: solid 7px #11112f !important;
+  border-radius: 50% !important;
+}
+
+.textBox {
+  padding: 0.5em 0em 0.5em 0em;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: center;
+  color: #221d5b;
+
+  .handle {
+    font-weight: 300;
+  }
+}
+
+
+.mentorshipContainer {
+  padding: 3em 5em 5em 5em;
+  background: white;
+  margin-bottom: 1.5em;
+
+  @media only screen and (max-width: 760px) {
+    padding: 3em 1.5em 5em 1.5em;
+  }
+}
+
+
+.mentorshipTitle {
+  color: $pink-font-color;
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
+
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+
+  text-underline-position: under;
+  text-decoration: underline;
+}

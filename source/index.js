@@ -13,6 +13,12 @@ import RsvpYes from './components/rsvp/rsvpYes'
 import RsvpNo from './components/rsvp/rsvpNo'
 import Rsvp from './components/rsvp/rsvp'
 import WaitList from './components/rsvp/waitlist'
+import Schedule from './components/schedule/schedule'
+import Maps from './components/maps/maps'
+import Prizes from './components/prizes/prizes'
+import Travel from './components/travel/travel'
+import Mentorship from './components/mentorship/mentorship'
+import Dashboard from './components/dashboard/dashboard'
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
@@ -29,20 +35,24 @@ class App extends React.Component {
 
 render(
   <Router>
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/auth" component={Auth}/>
-        <Route exact path="/start" component={RegisterStart}/>
-        <Route exact path="/register" component={Register}/>
-        <Route exact path="/auth/mobile" component={MobileAuth}/>
-        <Route exact path="/rsvp" component={Rsvp}/>
-        <Route exact path="/rsvp/yes" component={RsvpYes}/>
-        <Route exact path="/rsvp/no" component={RsvpNo}/>
-        <Route exact path="/rsvp/waitlist" component={WaitList}/>
-        <Route component={Error}/>
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/auth" component={Auth}/>
+      <Route exact path="/start" component={RegisterStart}/>
+      <Route exact path="/register" component={Register}/>
+      <Route exact path="/auth/mobile" component={MobileAuth}/>
+      <Route exact path="/rsvp" component={Rsvp}/>
+      <Route exact path="/rsvp/yes" component={RsvpYes}/>
+      <Route exact path="/rsvp/no" component={RsvpNo}/>
+      <Route exact path="/rsvp/waitlist" component={WaitList}/>
+      <Route exact path="/schedule" component={Schedule}/>
+      <Route exact path="/maps" component={Maps}/>
+      <Route exact path="/prizes" component={Prizes}/>
+      <Route exact path="/travel" component={Travel}/>
+      <Route exact path="/mentorship" component={Mentorship}/>
+      <Route exact path="/dashboard" component={Dashboard}/>
+      <Route component={Error}/>
+    </Switch>
   </Router>,
   document.getElementById('app')
 );

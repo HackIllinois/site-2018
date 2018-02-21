@@ -1,0 +1,27 @@
+$pink-font-color: #eb108b;
+
+.prizeContainer {
+  padding: 3em 5em 5em 5em;
+  background: white;
+  margin-bottom: 1.5em;
+
+  @media only screen and (max-width: 760px) {
+    padding: 3em 1.5em 5em 1.5em;
+  }
+}
+
+
+.prizeTitle {
+  color: $pink-font-color;
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
+
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+
+  text-underline-position: under;
+  text-decoration: underline;
+}
