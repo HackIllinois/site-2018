@@ -12,6 +12,7 @@ import RegisterStart from './components/registerStart/registerStart';
 import RsvpYes from './components/rsvp/rsvpYes'
 import RsvpNo from './components/rsvp/rsvpNo'
 import Rsvp from './components/rsvp/rsvp'
+import Prersvp from './components/rsvp/prersvp'
 import WaitList from './components/rsvp/waitlist'
 
 require('semantic-ui-css/semantic.min.css');
@@ -36,7 +37,8 @@ render(
         <Route exact path="/start" component={RegisterStart}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/auth/mobile" component={MobileAuth}/>
-        <Route exact path="/rsvp" component={Rsvp}/>
+        <Route exact path="/rsvp" component={Prersvp}/>
+        <Route exact path="/rsvp/congratulations" component={Rsvp}/>
         <Route exact path="/rsvp/yes" component={RsvpYes}/>
         <Route exact path="/rsvp/no" component={RsvpNo}/>
         <Route exact path="/rsvp/waitlist" component={WaitList}/>
