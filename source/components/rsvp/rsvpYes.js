@@ -10,7 +10,10 @@ export default class RsvpYes extends Component {
   };
 
   componentWillMount() {
-    sessionStorage.setItem('callback', '/rsvp/yes');
+    const callback = sessionStorage.getItem('decision')  || 0;
+    if (callback != 1) {
+      this.props.history.push("/rsvp");
+    }
     getAuth().then(authData => {
       getRSVPData().then(rsvpData => {
         sendRsvp(true, 'put').then(response => {
