@@ -1,0 +1,68 @@
+$border-color: #eb108b;
+$font-color: #1c055e;
+
+.scheduleTableContainer {
+  padding: 3em 5em 5em 5em;
+  background: white;
+  margin-bottom: 1.5em;
+
+  @media only screen and (max-width: 760px) {
+    padding: 3em 1.5em 5em 1.5em;
+  }
+}
+
+
+.detailCell {
+  border-left: solid !important;
+  border-width: 1.2px !important;
+  border-color: $border-color !important;
+
+
+
+  .title {
+    color: $font-color;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+  }
+
+  .location {
+    color: $font-color;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+}
+
+
+.timeCell {
+  color: $font-color;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.scheduleTitle {
+  color: $border-color;
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
+
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+
+  text-underline-position: under;
+  text-decoration: none;
+}
