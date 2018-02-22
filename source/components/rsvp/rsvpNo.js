@@ -10,7 +10,10 @@ export default class RsvpNo extends Component {
   };
 
   componentWillMount() {
-    sessionStorage.setItem('callback', '/rsvp/no');
+    const callback = sessionStorage.getItem('decision')  || 0;
+    if (callback != 1) {
+      this.props.history.push("/rsvp");
+    }
     getAuth().then(authData => {
       getRSVPData().then(rsvpData => {
         sendRsvp(false, 'put').then(response => {

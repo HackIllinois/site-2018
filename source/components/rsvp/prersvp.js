@@ -4,16 +4,24 @@ import { Grid, Form, Button, Image} from 'semantic-ui-react';
 import {getAuth, sendRsvp, getRSVPData} from './rsvpHelper'
 import styles from './rsvp.scss'
 
-export default class Rsvp extends Component {
+export default class Prersvp extends Component {
   constructor(props) {
     super(props);
   };
 
   componentWillMount() {
-    const callback = sessionStorage.getItem('decision')  || 0;
-    if (callback != 1) {
-      this.props.history.push("/rsvp");
-    }
+    sessionStorage.setItem('callback', '/rsvp');
+    getAuth().then(authData => {
+      sessionStorage.setItem('decision', 1);
+      this.props.history.push("/rsvp/congratulations");
+    })
+    .catch(error => {
+      if (error === 'PENDING') {
+        this.props.history.push("/rsvp/waitlist");
+      } else {
+        this.props.history.push("/error");
+      }
+    });
   };
 
   render() {
@@ -27,15 +35,7 @@ export default class Rsvp extends Component {
               <Image style={{margin: 'auto'}} src='../../assets/img/png/hackillinois_logo.png' size='small' />
             </Grid.Row>
             <Grid.Row className='startPrompt verticalPadding'>
-              Congratulations on being accepted to HackIllinois 2018, we&#39;re excited to have you here on February 23rd to 25th! To get started, please let us know if you can attend!
-            </Grid.Row>
-            <Grid.Row className='verticalPadding'>
-              <a href="/rsvp/yes">
-                <Button size='medium'>Yes</Button>
-              </a>
-              <a href="/rsvp/no">
-                <Button size='medium'>No</Button>
-              </a>
+              Loading, please wait!
             </Grid.Row>
           </Grid.Column>
         </Grid.Row>
