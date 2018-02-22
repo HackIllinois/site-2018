@@ -104,6 +104,14 @@ class Sponsors extends Component {
                 "url": "https://www.citadel.com/"
             },
             {
+                "company": "qualtrics",
+                "url": "https://www.qualtrics.com/"
+            },
+            {
+                "company": "unity",
+                "url": "https://unity3d.com/"
+            },
+            {
                 "company": "countryfinancial",
                 "url": "https://www.countryfinancial.com/en/digitalab.html"
             },
@@ -130,6 +138,11 @@ class Sponsors extends Component {
             {
                 "company": "illinoismakerlab",
                 "url": "https://makerlab.illinois.edu/"
+            },
+
+            {
+                "company": "usignite",
+                "url": "https://www.us-ignite.org/news/us-ignites-reverse-pitch-competition-set-to-make-social-impact-through-gigabit-applications/"
             }
         ]
 

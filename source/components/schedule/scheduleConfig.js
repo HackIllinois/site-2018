@@ -28,7 +28,7 @@ const schedules = [
         time: '9:00 PM',
         column1: {
           title: 'Dinner',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -55,7 +55,7 @@ const schedules = [
         time: '1:00 AM',
         column1: {
           title: 'Late-Night Meal',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -77,7 +77,7 @@ const schedules = [
         time: '8:00 AM',
         column1: {
           title: 'Breakfast',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -88,7 +88,7 @@ const schedules = [
         time: '9:00 AM',
         column1: {
           title: 'Submission Office Hours',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1015'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1015'
         },
         column2: {
           title: 'Google Workshop',
@@ -121,7 +121,7 @@ const schedules = [
         time: '12:30 PM',
         column1: {
           title: 'Lunch',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -176,7 +176,7 @@ const schedules = [
         time: '6:30 PM',
         column1: {
           title: 'Dinner',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -186,7 +186,7 @@ const schedules = [
       {
         time: '7:30 PM',
         column1: {
-          title: 'Keynote - Katie Huff',
+          title: 'Keynote - Katy Huff',
           location: 'ECEB'
         },
         column2: {
@@ -214,7 +214,7 @@ const schedules = [
         time: '12:00 AM',
         column1: {
           title: 'Midnight Meal',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -236,7 +236,7 @@ const schedules = [
         time: '3:30 AM',
         column1: {
           title: 'Mini Meal',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -247,7 +247,7 @@ const schedules = [
         time: '8:00 AM',
         column1: {
           title: 'Breakfast',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         },
         column2: {
           title: '',
@@ -268,12 +268,12 @@ const schedules = [
       {
         time: '11:00 AM',
         column1: {
-          title: 'End of Hackig',
+          title: 'End of Hacking',
           location: ''
         },
         column2: {
           title: 'Lunch',
-          location: 'Siebel: Basement & 2nd Floor | ECEB: 1st & 3rd Floor'
+          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
         }
       },
       {
