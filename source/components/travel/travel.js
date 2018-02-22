@@ -21,18 +21,26 @@ export default class Travel extends Component {
   render() {
     const content = (
       <div className="travelContainer">
+        <div style={{paddingBottom: '1.5em'}}>
+          <div className="travelTitle">
+            Parking Information
+          </div>
+          <div className="travelType">
+            If you are driving to HackIllinois, parking is available free after 5pm and over the weekend at the following lots: http://parking.illinois.edu/parking_items/weekday-amp-overnight-parking
+          </div>
+        </div>
         {
-          travels.map((travel, index) => {
+          travels.map((travel, travel_index) => {
             return (
-              <div key={index} style={{paddingBottom: '1.5em'}}>
+              <div key={travel_index} style={{paddingBottom: '1.5em'}}>
                 <div className="travelTitle">
                   {travel.title}
                 </div>
 
                 {
-                  travel.rides.map((ride, index) => {
+                  travel.rides.map((ride, ride_index) => {
                     return (
-                      <div>
+                      <div key={ride_index}>
                         <div className="travelSubTitle">
                           {ride.title}
                         </div>
@@ -44,9 +52,9 @@ export default class Travel extends Component {
                               </Table.Cell>
                               <Table.Cell>
                                 {
-                                  ride.pickup.map((pick, index) => {
+                                  ride.pickup.map((pick, pick_index) => {
                                     return (
-                                      <div key={index} class="rideContainer">
+                                      <div key={pick_index} className="rideContainer">
                                         <div className="travelTime">
                                           {pick.time}
                                         </div>
@@ -65,14 +73,14 @@ export default class Travel extends Component {
                               </Table.Cell>
                               <Table.Cell>
                                 {
-                                  ride.arrival.map((ride, index) => {
+                                  ride.arrival.map((arrival, arrival_index) => {
                                     return (
-                                      <div key={index} className="rideContainer">
+                                      <div key={arrival_index} className="rideContainer">
                                         <div className="travelTime">
-                                          {ride.time}
+                                          {arrival.time}
                                         </div>
                                         <div className="travelLocation">
-                                          {ride.location}
+                                          {arrival.location}
                                         </div>
                                       </div>
                                     )

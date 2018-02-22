@@ -21,16 +21,16 @@ export default class Schedule extends Component {
     const content = (
       <div>
         {
-          schedules.map((schedule, index)=> {
+          schedules.map((schedule, schedule_index)=> {
             return (
-              <div key={index} className="scheduleTableContainer">
+              <div key={schedule_index} className="scheduleTableContainer">
                 <div className="scheduleTitle">
                   {schedule.title}
                 </div>
                   {
-                    schedule.events.map((event, index) => {
+                    schedule.events.map((event, event_index) => {
                       return (
-                        <Grid key={index} columns={2}>
+                        <Grid key={event_index} columns={2}>
                           <Grid.Column mobile='6' tablet='4' computer='4'>
                             <Segment basic className="timeCell">{event.time}</Segment>
                           </Grid.Column>

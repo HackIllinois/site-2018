@@ -32,7 +32,7 @@ export default class Maps extends Component {
 
         {
           activeItem === 'ECEB'?
-            <div class="mapImagesContainer">
+            <div className="mapImagesContainer">
               <Image src='./assets/img/png/maps/ECEB11.png' fluid />
               <Image src='./assets/img/png/maps/ECEB21.png' fluid />
               <Image src='./assets/img/png/maps/ECEB31.png' fluid />
@@ -42,7 +42,7 @@ export default class Maps extends Component {
 
         {
           activeItem === 'Siebel'?
-            <div class="mapImagesContainer">
+            <div className="mapImagesContainer">
               <Image src='./assets/img/png/maps/Siebel11.png' fluid />
               <Image src='./assets/img/png/maps/Siebel21.png' fluid />
             </div>
@@ -51,7 +51,7 @@ export default class Maps extends Component {
 
         {
           activeItem === 'Expo'?
-            <div class="mapImagesContainer">
+            <div className="mapImagesContainer">
               <Image src='./assets/img/png/maps/CompanyExpo.png' fluid />
             </div>
           : null

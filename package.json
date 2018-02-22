@@ -36,6 +36,7 @@
     "@fortawesome/fontawesome": "^1.1.2",
     "@fortawesome/fontawesome-free-solid": "^5.0.4",
     "@fortawesome/react-fontawesome": "0.0.17",
+    "es6-promise-promise": "^1.0.0",
     "normalize.css": "^6.0.0",
     "query-string": "^5.0.1",
     "react": "^16.2.0",

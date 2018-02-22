@@ -63,6 +63,10 @@ const config = {
           'HACKILLINOIS_API_ISPROD': JSON.stringify(isProd)
         }),
 
+        new webpack.ProvidePlugin({
+          Primise: 'es6-promise-promise'
+        }),
+
         new copy([
             {
               from: APP_DIR + '/html/',
