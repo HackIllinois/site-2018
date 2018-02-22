@@ -1,6 +1,7 @@
+
 .dashboardAnimation {
-  height: 33.33vh !important;
-  width: 33.33vw !important;
+  height: 32vh !important;
+  width: 39vw !important;
   position: absolute !important;
   top: 0;
   right: 0;
@@ -13,11 +14,26 @@
 }
 
 .largeBlockContainer {
-  margin: 7vh 1.5vw 7vh 1.5vw;
+  margin: 6vh 1.5vw 7vh 1.5vw;
 }
 
 .largeLogoContainer{
   margin: 3.5vh 1.5vw 3.5vh 1.5vw;
+
+  .sponsorLogo {
+    padding: 0.5vw;
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .logoCol{
+    padding-left: 0.5vw !important;
+    padding-right: 0.5vw !important;
+  }
+
+  .logoRow {
+    padding-top: 1.7vh !important;
+    padding-bottom: 0 !important;
+  }
 }
 
 .largeDashboardContainer {

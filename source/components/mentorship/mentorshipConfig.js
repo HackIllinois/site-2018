@@ -7,6 +7,42 @@ const mentorship = [
         github: 'mwest1066',
       },
       {
+        name: 'Ben Russel',
+        github: 'benrr101',
+      },
+      {
+        name: 'Benjamin Coe',
+        github: 'bcoe',
+      },
+      {
+        name: 'Guillermo Rauch',
+        github: 'rauchg',
+      },
+      {
+        name: 'Brendan Batliner',
+        github: 'bbatliner'
+      },
+      {
+        name: 'Hampton Catlin',
+        github: 'hcatlin'
+      },
+      {
+        name: 'Flynn Joffrey',
+        github: 'nucleardreamer'
+      },
+      {
+        name: 'Brian Jesse',
+        github: 'BrainBacon'
+      },
+      {
+        name: 'Varun Munjeti',
+        github: 'vrunjeti',
+      },
+      {
+        name: 'Alvin Wu',
+        github: 'alvin-wu',
+      },
+      {
         name: 'Nathan Walters',
         github: 'nwalters512',
       },
@@ -22,34 +58,18 @@ const mentorship = [
         name: 'Mariana Silva',
         github: 'mfsilva22',
       },
-      {
-        name: 'Guillermo Rauch',
-        github: 'rauchg',
-      },
-      {
-        name: 'Ben Russel',
-        github: 'benrr101',
-      },
-      {
-        name: 'Varun Munjeti',
-        github: 'vrunjeti',
-      },
-      {
-        name: 'Alvin Wu',
-        github: 'alvin-wu',
-      },
     ]
   },
   {
     title: 'System',
     mentors: [
       {
-        name: 'Rohan Mathur',
-        github: 'mathur',
-      },
-      {
         name: 'Pablo Aguiar',
         github: 'scorphus',
+      },
+      {
+        name: 'Rohan Mathur',
+        github: 'mathur',
       },
       {
         name: 'Peter Iordanov',
@@ -75,6 +95,42 @@ const mentorship = [
         name: 'Trent Spice',
         github: 'trentspi',
       },
+      {
+        name: 'Brett Koonce',
+        github: 'asparagui'
+      },
+      {
+        name: 'Suresh Marru',
+        github: 'smarru'
+      },
+      {
+        name: 'Jez Ng',
+        github: 'int3'
+      },
+      {
+        name: 'Michael Maurizi',
+        github: 'maurizi'
+      },
+      {
+        name: 'Nathan Handler',
+        github: 'nhandler'
+      },
+      {
+        name: 'Emerson Veenstra',
+        github: 'emersonveenstra'
+      },
+      {
+        name: 'Andrew Schwartzmeyer',
+        github: 'andschwa'
+      },
+      {
+        name: 'Krish Masand',
+        github: 'krishmasand'
+      },
+      {
+        name: 'Naren Dasan',
+        github: 'narendasan'
+      },
     ]
   },
   {
@@ -82,19 +138,43 @@ const mentorship = [
     mentors: [
       {
         name: 'Jason Coombs',
-        github: 'jaraco',
-      },
-      {
-        name: 'Isuru',
-        github: 'isuruf',
+        github: 'jaraco'
       },
       {
         name: 'Jonathan Helmus',
-        github: 'jjhelmus',
+        github: 'jjhelmus'
       },
       {
         name: 'John Detlefs',
-        github: 'jdetle',
+        github: 'jdetle'
+      },
+      {
+        name: 'Phillip Cloud',
+        github: 'cpcloud'
+      },
+      {
+        name: 'Matthew Turk',
+        github: 'MatthewTurk'
+      },
+      {
+        name: 'Jeff Bezanson',
+        github: 'JeffBezanson'
+      },
+      {
+        name: 'Isuru Fernando',
+        github: 'isuruf'
+      },
+      {
+        name: 'Tyler Kim',
+        github: 'tyler-thetyrant'
+      },
+      {
+        name: 'Carol Willing',
+        github: 'willingc'
+      },
+      {
+        name: 'Ben Congdon',
+        github: 'bcongdon'
       }
     ]
   }

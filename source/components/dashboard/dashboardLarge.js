@@ -13,18 +13,43 @@ export default class DashboardLarge extends Component {
     super(props);
 
     this.state = {
-
+      logos: [
+        "fulcrumtransparent",
+        "googlecloudplatformtransparent",
+        "forcepointtransparent",
+        "caterpillartransparent",
+        "microsofttransparent",
+        "rubriktransparent",
+        "oathtransparent",
+        "facebooktransparent",
+        "schlumbergertransparent"
+      ]
     };
   };
 
   componentWillMount() {
+    setInterval(() => {
+      let newLogos = [];
+      let allLogos = [
+        "fulcrumtransparent", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
+        "caterpillartransparent", "googlecloudplatformtransparent", "imotransparent", "rockwellcollinstransparent", "synchronytransparent", "rubriktransparent", "qtumtransparent", "goldmantransparent", "johndeeretransparent"
+      ];
+      for(var i = 0; i < 9; i++){
+        const index = Math.floor(Math.random() * allLogos.length);
+        const logo = allLogos.splice(index,1);
+        newLogos = newLogos.concat(logo);
+      }
 
+      this.setState({
+        logos: newLogos
+      });
+
+    }, 15000);
   };
 
   render() {
     const currentTime = new Date();
-    //fulcrumtransparent, oathtransparent, forcepointtransparent, facebooktransparent, microsofttransparent, schlumbergertransparent, amadeustransparent, jacksontransparent
-    //caterpillartransparent, googlecloudplatformtransparent, imotransparent, rockwellcollinstransparent, synchronytransparent, rubriktransparent, qtumtransparent, goldman sachs, and john deere
+    const {logos} = this.state;
 
     return (
       <Grid className='largeDashboardContainer' columns='equal'>
@@ -62,39 +87,39 @@ export default class DashboardLarge extends Component {
             </div>
             <div className="largeLogoContainer">
               <Grid>
-                <Grid.Row columns={3}>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                <Grid.Row columns={3} className="logoRow">
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[0]+'.png'} size='small' centered />
                   </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[1]+'.png'} size='small' centered />
                   </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
-                  </Grid.Column>
-                </Grid.Row>
-
-                <Grid.Row columns={3}>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[2]+'.png'} size='small' centered />
                   </Grid.Column>
                 </Grid.Row>
 
-                <Grid.Row columns={3}>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                <Grid.Row columns={3} className="logoRow">
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[3]+'.png'} size='small' centered />
                   </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[4]+'.png'} size='small' centered />
                   </Grid.Column>
-                  <Grid.Column>
-                    <Image src='../../assets/img/png/logos/imotransparent.png' size='small' centered />
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[5]+'.png'} size='small' centered />
+                  </Grid.Column>
+                </Grid.Row>
+
+                <Grid.Row columns={3} className="logoRow">
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[6]+'.png'} size='small' centered />
+                  </Grid.Column>
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[7]+'.png'} size='small' centered />
+                  </Grid.Column>
+                  <Grid.Column className="logoCol">
+                    <Image className="sponsorLogo" src={'../../assets/img/png/logos/'+logos[8]+'.png'} size='small' centered />
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Container, Segment, Responsive, Image} from 'semantic-ui-react';
+import { Grid, Container, Segment, Responsive, Image, Transition} from 'semantic-ui-react';
 import { Timeline } from 'react-twitter-widgets'
 
 import styles from './dashboard.scss';
@@ -13,34 +13,53 @@ export default class Dashboard extends Component {
     super(props);
 
     this.state = {
-
+      logos: [
+        "fulcrumtransparent",
+        "googlecloudplatformtransparent",
+        "forcepointtransparent",
+        "caterpillartransparent",
+        "microsofttransparent",
+        "rubriktransparent",
+      ]
     };
   };
 
   componentWillMount() {
+    setInterval(() => {
+      let newLogos = [];
+      let allLogos = [
+        "fulcrumtransparent", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
+        "caterpillartransparent", "googlecloudplatformtransparent", "imotransparent", "rockwellcollinstransparent", "synchronytransparent", "rubriktransparent", "qtumtransparent", "goldmantransparent", "johndeeretransparent"
+      ];
+      for(var i = 0; i < 6; i++){
+        const index = Math.floor(Math.random() * allLogos.length);
+        const logo = allLogos.splice(index,1);
+        newLogos = newLogos.concat(logo);
+      }
 
+      this.setState({
+        logos: newLogos
+      });
+
+    }, 15000);
   };
 
   render() {
     const currentTime = new Date();
-    //fulcrumtransparent, oathtransparent, forcepointtransparent, facebooktransparent, microsofttransparent, schlumbergertransparent, amadeustransparent, jacksontransparent
-    //caterpillartransparent, googlecloudplatformtransparent, imotransparent, rockwellcollinstransparent, synchronytransparent, rubriktransparent, qtumtransparent, goldman sachs, and john deere
+    const {logos} = this.state;
 
     return (
       <Grid className='dashboardContainer' columns='equal'>
         <Grid.Row>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer leftSideContainer">
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/imotransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/rockwellcollinstransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/schlumbergertransparent.png' size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/synchronytransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
             </Segment>
           </Grid.Column>
           <Grid.Column width={5}>
@@ -61,16 +80,13 @@ export default class Dashboard extends Component {
           </Grid.Column>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer rightSideContainer">
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/forcepointtransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/facebooktransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/caterpillartransparent.png' size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src='./assets/img/png/logos/googlecloudplatformtransparent.png' size='large' centered />
+              <Image src={'./assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
             </Segment>
           </Grid.Column>
         </Grid.Row>
