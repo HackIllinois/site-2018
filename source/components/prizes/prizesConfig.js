@@ -50,7 +50,7 @@ const all_prizes = [
         company_1: 'Presented by Amadeus',
         title_2: '',
         content_2: '',
-        company_2: ''
+        company_2: '',
       }
     ]
   },
