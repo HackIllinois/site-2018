@@ -1,0 +1,43 @@
+.dashboardAnimation {
+  height: 33.33vh !important;
+  width: 33.33vw !important;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.dashboardAnimationPlaceholder{
+  height: 25vh !important;
+  padding: 3vh 2vw 3vh 2vw !important;
+}
+
+.largeBlockContainer {
+  margin: 7vh 1.5vw 7vh 1.5vw;
+}
+
+.largeLogoContainer{
+  margin: 3.5vh 1.5vw 3.5vh 1.5vw;
+}
+
+.largeDashboardContainer {
+  height: 100%;
+  background-color: #25225a;
+  background: url("../../assets/img/png/dashboard_background.png");
+  background-size: auto 100%;
+}
+
+.twitterContainer{
+  background-color: #f2f5fe !important;
+  border-radius: 5px !important;
+  height: 55vh;
+  overflow: hidden;
+}
+
+.largeLeftSideContainer {
+  padding: 0 1vw 0 4vw !important;
+}
+
+.largeRightSideContainer {
+  padding: 0 4vw 0 1vw !important;
+}

@@ -19,6 +19,7 @@ import Prizes from './components/prizes/prizes'
 import Travel from './components/travel/travel'
 import Mentorship from './components/mentorship/mentorship'
 import Dashboard from './components/dashboard/dashboard'
+import DashboardLarge from './components/dashboard/dashboardLarge'
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
@@ -51,6 +52,7 @@ render(
       <Route exact path="/travel" component={Travel}/>
       <Route exact path="/mentorship" component={Mentorship}/>
       <Route exact path="/dashboard" component={Dashboard}/>
+      <Route exact path="/dashboard/large" component={DashboardLarge}/>
       <Route component={Error}/>
     </Switch>
   </Router>,

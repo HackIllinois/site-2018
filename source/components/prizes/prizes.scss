@@ -1,4 +1,5 @@
 $pink-font-color: #eb108b;
+$dark-font-color: #1c055e;
 
 .prizeContainer {
   padding: 3em 5em 5em 5em;
@@ -14,7 +15,7 @@ $pink-font-color: #eb108b;
 .prizeTitle {
   color: $pink-font-color;
   padding-top: 0.5em;
-  padding-bottom: 2.5em;
+  padding-bottom: 0.5em;
 
   font-size: 28px;
   font-weight: bold;
@@ -24,4 +25,43 @@ $pink-font-color: #eb108b;
 
   text-underline-position: under;
   text-decoration: underline;
+}
+
+
+.prizeTable {
+  margin: 0 !important;
+  padding-bottom: 1.5em;
+
+  font-style: normal !important;
+  font-stretch: normal !important;
+  letter-spacing: normal !important;
+  color: $dark-font-color !important;
+
+  table, tbody, tr, td {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .prizeSubTitle {
+    color: $pink-font-color !important;
+    padding-bottom: 0.5em;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.22;
+  }
+
+  .prizeDetailDescription {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+    padding-bottom: 0.5em;
+  }
+
+  .prizeDetailCompany{
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    padding-bottom: 0.5em;
+  }
 }

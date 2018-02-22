@@ -1,98 +1,54 @@
-html {
-  background-color: #25225a;
-}
-
 .dashboardContainer {
   height: 100%;
   background-color: #25225a;
+  background: url("../../assets/img/png/dashboard_background.png");
+  background-size: auto 100%;
 }
 
-.dashboardSmallContainer {
-  background: #f2f5fe !important;
-  border-radius: 8px !important;
-
-  height: 25%;
-  margin: 5rem 1.5rem 5rem 1.5rem !important;
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+.blockContainer {
+  margin: 6vh 1vw;
 }
 
-.dashboardBigContainer{
-  background: #f2f5fe !important;
-  border-radius: 8px !important;
+.cellContainer {
+  border-radius: 5px !important;
+  background-color: white !important;
+  margin: 1vh !important;
+  padding: 2vh !important;
+  box-shadow: none !important;
 
-  height: 55%;
-  margin: 5rem 1.5rem 5rem 1.5rem !important;
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-  overflow: hidden;
-
-  .eventCellContainer {
-    border-radius: 8px !important;
-    background-color: #ffffff !important;
-    margin: 1rem !important;
-    padding: 2rem !important;
-
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: normal;
-    text-align: left;
-
-    .eventName{
-      font-size: 25px;
-      font-weight: 300;
-      line-height: 1.2;
-      color: #1c055e;
-    }
-
-    .eventLocation{
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.17;
-      color: #1c055e;
-    }
-  }
-}
-
-
-.dashboardTitle {
-  padding: 0.5rem 0rem 1.5rem 0rem;
-  font-size: 24px;
-  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  text-align: center;
-  color: #232157;
-}
+  text-align: left;
 
-.dashboardContent {
-  overflow: auto;
-  margin: 1rem;
-  padding: 2rem 0rem 1rem 0rem;
-}
+  .cellTitle{
+    font-size: 1.2vw;
+    font-weight: 300;
+    line-height: 2vw;
+    color: #1c055e;
+  }
 
-.sponsorLogoContainer {
-  margin: 0rem !important;
-  padding: 2rem !important;
-
-  .sponsorLogo .logo {
-    margin: auto;
+  .cellLocation{
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: 1vw;
+    color: #1c055e;
   }
 }
 
-.removePaddingLeft {
-  padding-left: 0 !important;
+.sponsorLogoContainer{
+  margin: 0 0 4vh 0 !important;
+  border-radius: 5px !important;
+
+  .sponsorLogo {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
 }
 
-.removePaddingRight {
-  padding-right: 0 !important;
+.leftSideContainer {
+  padding: 0 1vw 0 4vw !important;
 }
 
-.currentTime{
-  font-size: 103px;
-  font-size: 50px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
+.rightSideContainer {
+  padding: 0 4vw 0 1vw !important;
 }

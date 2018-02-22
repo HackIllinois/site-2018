@@ -67,7 +67,7 @@ export default class Travel extends Component {
                                 {
                                   ride.arrival.map((ride, index) => {
                                     return (
-                                      <div key={index} class="rideContainer">
+                                      <div key={index} className="rideContainer">
                                         <div className="travelTime">
                                           {ride.time}
                                         </div>

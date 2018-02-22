@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { Grid, Container, Segment, Responsive, Image} from 'semantic-ui-react';
-import styles from './dashboard.scss'
-import DashboardCountdown from './dashboardCountdown'
+import { Timeline } from 'react-twitter-widgets'
+
+import styles from './dashboard.scss';
+import DashboardClock from './dashboardClock';
+import DashboardEvents from './dashboardEvents';
+import DashboardAnnouncements from './dashboardAnnouncements'
 import Clock from 'react-live-clock';
 
 export default class Dashboard extends Component {
@@ -19,77 +23,54 @@ export default class Dashboard extends Component {
 
   render() {
     const currentTime = new Date();
+    //fulcrumtransparent, oathtransparent, forcepointtransparent, facebooktransparent, microsofttransparent, schlumbergertransparent, amadeustransparent, jacksontransparent
+    //caterpillartransparent, googlecloudplatformtransparent, imotransparent, rockwellcollinstransparent, synchronytransparent, rubriktransparent, qtumtransparent, goldman sachs, and john deere
 
     return (
       <Grid className='dashboardContainer' columns='equal'>
         <Grid.Row>
-          <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer removePaddingRight">
+          <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer leftSideContainer">
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/imotransparent.png' size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/rockwellcollinstransparent.png' size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/schlumbergertransparent.png' size='large' centered />
+            </Segment>
+            <Segment basic className="sponsorLogo">
+              <Image src='./assets/img/png/logos/synchronytransparent.png' size='large' centered />
             </Segment>
           </Grid.Column>
           <Grid.Column width={5}>
-            <Segment textAlign="center" className="dashboardSmallContainer">
-              <div className="dashboardTitle">
-                COUNTDOWN
-              </div>
-              <Segment basic className="dashboardContent">
-                <DashboardCountdown />
-              </Segment>
-            </Segment>
-            <Segment clearing textAlign="center" className="dashboardBigContainer">
-              <div className="dashboardTitle">
-                HAPPENING NOW
-              </div>
-              <Segment textAlign="left" className="eventCellContainer">
-                <div className="eventName">
-                  Current Event Name
-                </div>
-                <div className="eventLocation">
-                  East Entrance, Siebel Center
-                </div>
-              </Segment>
-            </Segment>
+            <div className="blockContainer">
+              <DashboardClock key="countdown" clock={false} title='COUNTDOWN'/>
+            </div>
+            <div className="blockContainer">
+              <DashboardEvents key="dashboardSmall" className="bottomContainer"/>
+            </div>
           </Grid.Column>
           <Grid.Column width={5}>
-            <Segment textAlign="center" className="dashboardSmallContainer">
-              <div className="dashboardTitle">
-                CURRENT TIME
-              </div>
-              <div className="dashboardContent ">
-                <Clock className="currentTime" format={'h:mm A'} ticking={true} timezone={'US/Central'} />
-              </div>
-            </Segment>
-            <Segment textAlign="center" className="dashboardBigContainer">
-              <div className="dashboardTitle">
-                ANNOUNCEMENTS
-              </div>
-              <Segment textAlign="left" className="eventCellContainer">
-                <div className="eventName">
-                  Current Event Name
-                </div>
-                <div className="eventLocation">
-                  East Entrance, Siebel Center
-                </div>
-              </Segment>
-            </Segment>
-
+            <div className="blockContainer">
+              <DashboardClock key="time"clock={true} title='CURRENT TIME'/>
+            </div>
+            <div className="blockContainer">
+              <DashboardAnnouncements className="bottomContainer"/>
+            </div>
           </Grid.Column>
-          <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer removePaddingLeft">
+          <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer rightSideContainer">
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/forcepointtransparent.png' size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/facebooktransparent.png' size='large' centered />
             </Segment>
             <Segment basic className="sponsorLogo">
-              <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
+              <Image src='./assets/img/png/logos/caterpillartransparent.png' size='large' centered />
+            </Segment>
+            <Segment basic className="sponsorLogo">
+              <Image src='./assets/img/png/logos/googlecloudplatformtransparent.png' size='large' centered />
             </Segment>
           </Grid.Column>
         </Grid.Row>
