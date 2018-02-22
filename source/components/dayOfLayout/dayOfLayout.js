@@ -19,8 +19,8 @@ export default class DayOfLayout extends Component {
     const {title, content} = this.props;
 
     return(
-      <Grid stackable columns={2} className='dayOfContainer'>
-        <Grid.Column stretched mobile={16} tablet={5} computer={4} className='navbarColumn'>
+      <Grid stackable columns={2} className='dayOfContainer overflowFix'>
+        <Grid.Column stretched mobile={16} tablet={5} computer={4} className='navbarColumn overflowFix'>
           <Segment basic padded='very' className='navbarContainer'>
             <Image className="logo" src='./assets/img/png/hackillinois_logo.png' size='small' />
             <ul className="navBar">
@@ -32,7 +32,7 @@ export default class DayOfLayout extends Component {
             </ul>
           </Segment>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={11} computer={12} className='contentColumn'>
+        <Grid.Column mobile={16} tablet={11} computer={12} className='contentColumn overflowFix'>
           <Responsive as={Segment} basic padded='very' className='contentContainer'>
             <div className='contentTitle'>
               {title}

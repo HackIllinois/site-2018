@@ -24,20 +24,20 @@ export default class Prizes extends Component {
     const content = (
       <div className="prizeContainer">
         {
-          all_prizes.map((category, index) => {
+          all_prizes.map((category, category_index) => {
             return (
-              <div key={index}>
+              <div key={category_index}>
               <div className="prizeTitle">
                 {category.title}
               </div>
               <Table stackable className="prizeTable"  basic='very'>
                 <Table.Body>
                   {
-                    category.prizes.map((prize, index) => {
+                    category.prizes.map((prize, prize_index) => {
                       return (
-                        <Table.Row className="prizeTableRow">
+                        <Table.Row key={prize_index} className="prizeTableRow">
                           <Table.Cell width='8' verticalAlign='top'>
-                            <div class="prizeDetailContainer">
+                            <div className="prizeDetailContainer">
                               <div className="prizeSubTitle">
                                 {prize.title_1}
                               </div>
@@ -50,7 +50,7 @@ export default class Prizes extends Component {
                             </div>
                           </Table.Cell>
                           <Table.Cell width='8' verticalAlign='top'>
-                            <div class="prizeDetailContainer">
+                            <div className="prizeDetailContainer">
                               <div className="prizeSubTitle">
                                 {prize.title_2}
                               </div>
