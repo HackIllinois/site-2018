@@ -61,7 +61,7 @@ const mentorship = [
     ]
   },
   {
-    title: 'System',
+    title: 'Systems',
     mentors: [
       {
         name: 'Pablo Aguiar',
