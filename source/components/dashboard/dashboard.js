@@ -20,47 +20,60 @@ export default class Dashboard extends Component {
         "caterpillartransparent",
         "microsofttransparent",
         "rubriktransparent",
-      ]
+      ],
+      visible: true,
+      hide: 750,
+      show: 750,
     };
   };
 
   componentWillMount() {
     setInterval(() => {
-      let newLogos = [];
-      let allLogos = [
-        "fulcrumtransparent", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
-        "caterpillartransparent", "googlecloudplatformtransparent", "imotransparent", "rockwellcollinstransparent", "synchronytransparent", "rubriktransparent", "qtumtransparent", "goldmantransparent", "johndeeretransparent"
-      ];
-      for(var i = 0; i < 6; i++){
-        const index = Math.floor(Math.random() * allLogos.length);
-        const logo = allLogos.splice(index,1);
-        newLogos = newLogos.concat(logo);
-      }
-
-      this.setState({
-        logos: newLogos
-      });
-
-    }, 15000);
+      this.setState({ visible: false });
+    }, 60000);
   };
 
+
+  randomLogos = () => {
+    let newLogos = [];
+    let allLogos = [
+      "fulcrumtransparent", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
+      "caterpillartransparent", "googlecloudplatformtransparent", "imotransparent", "rockwellcollinstransparent", "synchronytransparent", "rubriktransparent", "qtumtransparent", "goldmantransparent", "johndeeretransparent"
+    ];
+    for(var i = 0; i < 6; i++){
+      const index = Math.floor(Math.random() * allLogos.length);
+      const logo = allLogos.splice(index,1);
+      newLogos = newLogos.concat(logo);
+    }
+
+    this.setState({
+      logos: newLogos,
+      visible: true
+    });
+  }
+
   render() {
-    const currentTime = new Date();
-    const {logos} = this.state;
+    const {logos, visible, hide, show} = this.state;
 
     return (
       <Grid className='dashboardContainer' columns='equal'>
         <Grid.Row>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer leftSideContainer">
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
-            </Segment>
+            <Transition onHide={this.randomLogos} duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image src={'./assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
+            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image src={'./assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
+            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image src={'./assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
           </Grid.Column>
           <Grid.Column width={5}>
             <div className="blockContainer">
@@ -79,15 +92,22 @@ export default class Dashboard extends Component {
             </div>
           </Grid.Column>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer rightSideContainer">
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
-            </Segment>
-            <Segment basic className="sponsorLogo">
-              <Image src={'./assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
-            </Segment>
+            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image  src={'./assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
+            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image src={'./assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
+            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+              <Segment basic className="sponsorLogo">
+                <Image src={'./assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
+              </Segment>
+            </Transition>
+
           </Grid.Column>
         </Grid.Row>
       </Grid>
