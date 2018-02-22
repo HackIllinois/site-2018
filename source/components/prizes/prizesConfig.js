@@ -62,7 +62,7 @@ const all_prizes = [
         content_1: 'Create the best open source contribution with commercial viability.',
         company_1: 'Presented by Fulcrum',
         title_2: 'Making Sense Out of Complicated Clinical Information',
-        content_2: 'Project must be healthcare and open sourced focused',
+        content_2: 'Project must be healthcare and open sourced focused.',
         company_2: 'Presented by IMO',
       },
       {
