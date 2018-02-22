@@ -58,7 +58,7 @@ const all_prizes = [
     title: 'Social Good',
     prizes: [
       {
-        title_1: 'Monetize Your Dreamscape',
+        title_1: 'Walking Your Dog Food to Market',
         content_1: 'Create the best open source contribution with commercial viability',
         company_1: 'Presented by Fulcrum',
         title_2: 'Making Sense Out of Complicated Clinical Information',
