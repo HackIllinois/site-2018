@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
 
     this.state = {
       logos: [
-        "fulcrumtransparent",
+        "fulcrumtransparent-regular",
         "googlecloudplatformtransparent",
         "forcepointtransparent",
         "caterpillartransparent",

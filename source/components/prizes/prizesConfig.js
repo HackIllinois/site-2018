@@ -12,10 +12,10 @@ const all_prizes = [
       },
       {
         title_1: 'Hard core, Soft ware',
-        content_1: 'Develop a tool or service that expands upon a current technology and helps bring out its full potential',
+        content_1: 'Develop a tool or service that expands upon a current technology and helps bring out its full potential.',
         company_1: 'Presented by Microsoft',
         title_2: 'Data Storage and Migration',
-        content_2: 'The Cloud: Enhance and Improve Data Analytics and Data Management Tools',
+        content_2: 'The Cloud: Enhance and Improve Data Analytics and Data Management Tools.',
         company_2: 'Presented by Rubrik',
       }
     ]
@@ -41,16 +41,16 @@ const all_prizes = [
         content_1: 'Innovate and extend an existing open source project in an entrepreneurial way.',
         company_1: 'Presented by 1517',
         title_2: 'Hop on the Blockchain Bandwagon',
-        content_2: 'Work with a project that deals with modern applications of blockchain technology',
+        content_2: 'Work with a project that deals with modern applications of blockchain technology.',
         company_2: 'Presented by Qtum',
       },
       {
-        title_1: 'Go Further',
-        content_1: 'Connect people, bring them together, and make travel accessible to more people than ever before.',
+        title_1: 'Go Further',		
+        content_1: 'Connect people, bring them together, and make travel accessible to more people than ever before.',		
         company_1: 'Presented by Amadeus',
-        title_2: 'Hop on the Blockchain Bandwagon',
-        content_2: 'Work with a project that deals with modern applications of blockchain technology',
-        company_2: 'Qtum',
+        title_2: '',
+        content_2: '',
+        company_2: '',
       }
     ]
   },
@@ -58,11 +58,11 @@ const all_prizes = [
     title: 'Social Good',
     prizes: [
       {
-        title_1: 'Monetize Your Dreamscape',
-        content_1: 'Create the best open source contribution with commercial viability',
+        title_1: 'Walking Your Dog Food to Market',
+        content_1: 'Create the best open source contribution with commercial viability.',
         company_1: 'Presented by Fulcrum',
         title_2: 'Making Sense Out of Complicated Clinical Information',
-        content_2: 'Project must be healthcare and open sourced focused',
+        content_2: 'Project must be healthcare and open sourced focused.',
         company_2: 'Presented by IMO',
       },
       {
