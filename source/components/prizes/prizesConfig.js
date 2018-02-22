@@ -43,6 +43,14 @@ const all_prizes = [
         title_2: 'Hop on the Blockchain Bandwagon',
         content_2: 'Work with a project that deals with modern applications of blockchain technology',
         company_2: 'Presented by Qtum',
+      },
+      {
+        title_1: 'Go Further',		
+        content_1: 'Connect people, bring them together, and make travel accessible to more people than ever before.',		
+        company_1: 'Presented by Amadeus',
+        title_2: '',
+        content_2: '',
+        company_2: ''
       }
     ]
   },
