@@ -21,6 +21,7 @@ import Travel from './components/travel/travel'
 import Mentorship from './components/mentorship/mentorship'
 import Dashboard from './components/dashboard/dashboard'
 import DashboardLarge from './components/dashboard/dashboardLarge'
+import 'babel-polyfill';
 
 require('semantic-ui-css/semantic.min.css');
 require('normalize.css');
