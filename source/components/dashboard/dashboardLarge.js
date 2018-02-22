@@ -33,7 +33,7 @@ export default class DashboardLarge extends Component {
   componentWillMount() {
     setInterval(() => {
       this.setState({ visible: false });
-    }, 10000);
+    }, 30000);
   };
 
   randomLogos = () => {
