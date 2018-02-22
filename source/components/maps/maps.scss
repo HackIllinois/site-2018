@@ -1,0 +1,29 @@
+$pink-font-color: #eb108b;
+
+
+.sectionBar {
+  background: white !important;
+
+  .item {
+    color: $pink-font-color !important;
+    background: transparent !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: 1.44 !important;
+    letter-spacing: normal !important;
+  }
+
+  .active.item {
+    font-size: 18px !important;
+    text-underline-position: under !important;
+    text-decoration: underline !important;
+  }
+}
+
+.mapImagesContainer {
+  img {
+    padding-bottom: 1em;
+  }
+}

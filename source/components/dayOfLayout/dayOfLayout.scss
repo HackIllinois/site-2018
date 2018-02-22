@@ -1,0 +1,99 @@
+$nav-background: #11112F;
+
+.dayOfContainer {
+  height: 100%;
+}
+
+.navbarColumn {
+  height: 100%;
+  padding: 0% !important;
+}
+
+.contentColumn{
+  height: 100%;
+}
+
+.navbarContainer{
+  overflow: auto;
+  background: $nav-background !important;
+
+  .logo {
+    margin: auto;
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .navBar {
+    margin: 2em;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    li {
+      background: transparent;
+      display: block;
+      margin-left: 0;
+
+      @media only screen and (max-width: 760px) {
+        width: auto;
+      }
+    }
+
+    li a {
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    li a.active {
+      color: white;
+      background: transparent;
+      text-underline-position: under;
+      text-decoration: underline;
+    }
+
+    li a:hover:not(.active) {
+      color: white;
+      background: transparent;
+      text-underline-position: under;
+      text-decoration: underline;
+    }
+  }
+}
+
+.contentContainer{
+  // background: white !important;
+  overflow: auto;
+  margin: 0em !important;
+  padding: 2em !important;
+
+  /* Desktops and laptops ----------- */
+  @media only screen and (min-width : 1224px) {
+    margin-left: 6em !important;
+    margin-right: 6em !important;
+  }
+
+  /* Large screens ----------- */
+  @media only screen  and (min-width : 1824px) {
+    margin-left: 10em !important;
+    margin-right: 10em !important;
+  }
+
+  .contentTitle {
+    color: $nav-background;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    font-size: 44px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+  }
+}

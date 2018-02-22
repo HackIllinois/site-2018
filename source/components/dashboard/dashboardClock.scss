@@ -1,0 +1,77 @@
+.countdownTimer {
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+
+  color: #ED61A4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2vh 0vw 4vh 0vw !important;
+
+  &__number {
+    color: #232157;
+    min-width: 4.5vw;
+    font-size: 3vw !important;
+    margin: 0 0.2vw;
+    font-weight: normal;
+  }
+
+  &__letter {
+    color: #ed61a4;
+    font-size: 1vw !important;
+    margin: auto;
+    font-weight: 300;
+  }
+}
+
+.currentTimer{
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+
+  color: #ED61A4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0vh 0vw 2vh 0vw !important;
+
+  &__number {
+    color: #232157;
+    min-width: 4vw;
+    font-size: 4vw !important;
+    margin: 0 0.2vw;
+    font-weight: normal;
+  }
+
+  &__letter {
+    color: #ed61a4;
+    font-size: 2.5vw !important;
+    margin: 0 1vw;
+    font-weight: 300;
+  }
+}
+
+.countdownTitle{
+  padding: 1vh 1vw 1vh 1vw;
+  font-size: 1.5vw !important;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #232157;
+}
+
+.countdownContainer {
+  background-color: #f2f5fe !important;
+  border-radius: 5px !important;
+  padding: 3vh 2vw 3vh 2vw !important;
+  height: 25vh;
+}
