@@ -21,6 +21,7 @@ import Travel from './components/travel/travel'
 import Mentorship from './components/mentorship/mentorship'
 import Dashboard from './components/dashboard/dashboard'
 import DashboardLarge from './components/dashboard/dashboardLarge'
+import Slack from './components/slack/slack'
 import 'babel-polyfill';
 
 require('semantic-ui-css/semantic.min.css');
@@ -54,6 +55,7 @@ render(
       <Route exact path="/prizes" component={Prizes}/>
       <Route exact path="/travel" component={Travel}/>
       <Route exact path="/mentors" component={Mentorship}/>
+      <Route exact path="/slack" component={Slack}/>
       <Route exact path="/dashboard" component={Dashboard}/>
       <Route exact path="/dashboard/large" component={DashboardLarge}/>
       <Route component={Error}/>
