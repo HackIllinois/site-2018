@@ -26,7 +26,7 @@ export default class Travel extends Component {
             Parking Information
           </div>
           <div className="travelType">
-            If you are driving to HackIllinois, parking is available free after 5pm and over the weekend at the following lots: http://parking.illinois.edu/parking_items/weekday-amp-overnight-parking
+            If you are driving to HackIllinois, parking is available free after 5pm on Friday and over the weekend at the following lots: <a href="http://parking.illinois.edu/parking_items/weekday-amp-overnight-parking"> More detail </a>
           </div>
         </div>
         {

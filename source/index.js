@@ -53,7 +53,7 @@ render(
       <Route exact path="/maps" component={Maps}/>
       <Route exact path="/prizes" component={Prizes}/>
       <Route exact path="/travel" component={Travel}/>
-      <Route exact path="/mentors" component={Mentorship}/>
+      <Route exact path="/mentorship" component={Mentorship}/>
       <Route exact path="/dashboard" component={Dashboard}/>
       <Route exact path="/dashboard/large" component={DashboardLarge}/>
       <Route component={Error}/>
