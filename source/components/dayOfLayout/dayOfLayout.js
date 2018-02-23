@@ -28,7 +28,7 @@ export default class DayOfLayout extends Component {
               <li><a className={title=='Maps' ? 'active' : ""} href="/maps">Maps</a></li>
               <li><a className={title=='Prizes' ? 'active' : ""} href="/prizes">Prizes</a></li>
               <li><a className={title=='Travel' ? 'active' : ""} href="/travel">Travel</a></li>
-              <li><a className={title=='Mentorship' ? 'active' : ""} href="/mentorship">Mentorship</a></li>
+              <li><a className={title=='Mentors' ? 'active' : ""} href="/mentors">Mentors</a></li>
             </ul>
           </Segment>
         </Grid.Column>

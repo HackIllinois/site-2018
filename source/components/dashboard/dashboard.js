@@ -21,7 +21,14 @@ export default class Dashboard extends Component {
         "microsofttransparent",
         "rubriktransparent",
       ],
-      visible: true,
+      visibles: [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
       hide: 750,
       show: 750,
     };
@@ -29,47 +36,54 @@ export default class Dashboard extends Component {
 
   componentWillMount() {
     setInterval(() => {
-      this.setState({ visible: false });
-    }, 60000);
+      let {visibles} = this.state;
+      var index = Math.floor(Math.random() * visibles.length);
+      visibles[index] = false;
+
+      this.setState({ visibles: visibles });
+    }, 5000);
   };
 
-
-  randomLogos = () => {
-    let newLogos = [];
-    let allLogos = [
-      "fulcrumtransparent", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
+  randomLogos = (index) => {
+    let {logos, visibles} = this.state;
+    const allLogos = [
+      "fulcrumtransparent-regular", "oathtransparent", "forcepointtransparent", "facebooktransparent", "microsofttransparent", "schlumbergertransparent", "amadeustransparent", "jacksontransparent",
       "caterpillartransparent", "googlecloudplatformtransparent", "imotransparent", "rockwellcollinstransparent", "synchronytransparent", "rubriktransparent", "qtumtransparent", "goldmantransparent", "johndeeretransparent"
     ];
-    for(var i = 0; i < 6; i++){
-      const index = Math.floor(Math.random() * allLogos.length);
-      const logo = allLogos.splice(index,1);
-      newLogos = newLogos.concat(logo);
+
+    let newLogoIndex = Math.floor(Math.random() * allLogos.length);
+    let newLogo = allLogos[newLogoIndex];
+    while (logos.indexOf(newLogo) >= 0) {
+      newLogoIndex = Math.floor(Math.random() * allLogos.length);
+      newLogo = allLogos[newLogoIndex];
     }
 
+    logos[index] = allLogos[newLogoIndex];
+    visibles[index] = true;
     this.setState({
-      logos: newLogos,
-      visible: true
+      logos: logos,
+      visibles: visibles
     });
   }
 
   render() {
-    const {logos, visible, hide, show} = this.state;
+    const {logos, visibles, hide, show} = this.state;
 
     return (
       <Grid className='dashboardContainer' columns='equal'>
         <Grid.Row>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer leftSideContainer">
-            <Transition onHide={this.randomLogos} duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(0)} visible={visibles[0]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image src={'./assets/img/png/logos/'+logos[0]+'.png'} size='large' centered />
               </Segment>
             </Transition>
-            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(1)} visible={visibles[1]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image src={'./assets/img/png/logos/'+logos[1]+'.png'} size='large' centered />
               </Segment>
             </Transition>
-            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(2)} visible={visibles[2]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image src={'./assets/img/png/logos/'+logos[2]+'.png'} size='large' centered />
               </Segment>
@@ -92,17 +106,17 @@ export default class Dashboard extends Component {
             </div>
           </Grid.Column>
           <Grid.Column verticalAlign='bottom' className="sponsorLogoContainer rightSideContainer">
-            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(3)} visible={visibles[3]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image  src={'./assets/img/png/logos/'+logos[3]+'.png'} size='large' centered />
               </Segment>
             </Transition>
-            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(4)}visible={visibles[4]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image src={'./assets/img/png/logos/'+logos[4]+'.png'} size='large' centered />
               </Segment>
             </Transition>
-            <Transition duration={{ hide, show }} visible={visible} animation='fade'>
+            <Transition duration={{ hide, show }} onHide={() => this.randomLogos(5)} visible={visibles[5]} animation='fade'>
               <Segment basic className="sponsorLogo">
                 <Image src={'./assets/img/png/logos/'+logos[5]+'.png'} size='large' centered />
               </Segment>
