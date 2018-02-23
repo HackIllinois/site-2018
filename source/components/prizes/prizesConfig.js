@@ -61,7 +61,6 @@ const all_prizes = [
         title_1: 'Walking Your Dog Food to Market',
         content_1: 'Create the best open source contribution with commercial viability.',
         company_1: 'Presented by Fulcrum',
-        note_1: '*Participant(s) whose Entry wins the category Walking Your Dog Food to Market will assign and transfer applicable rights to Fulcrum Global Technologies Inc.  Please visit Fulcrum Global Technologies Inc. for more information regarding the prize disclaimer.',
         title_2: 'Grow Your Future',
         content_2: 'Use available sources of public, food and agricultural data, such as the John Deere API’s, to gather information and use Artificial Intelligence to make projections based on that information. Those recommendations could be related to weather crop conditions, machine health, or other information you cross reference.',
         company_2: 'Presented by John Deere',
