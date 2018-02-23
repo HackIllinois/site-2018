@@ -24,9 +24,10 @@ export default class Maps extends Component {
 
     const content = (
       <div>
-        <Menu className="sectionBar" secondary borderless widths={3}>
+        <Menu className="sectionBar" secondary borderless widths={4}>
           <Menu.Item name='ECEB' active={activeItem === 'ECEB'} onClick={this.handleItemClick} />
           <Menu.Item name='Siebel' active={activeItem === 'Siebel'} onClick={this.handleItemClick} />
+          <Menu.Item name='Kenny Gym' active={activeItem === 'Kenny Gym'} onClick={this.handleItemClick} />
           <Menu.Item name='Expo' active={activeItem === 'Expo'} onClick={this.handleItemClick} />
         </Menu>
 
@@ -53,6 +54,15 @@ export default class Maps extends Component {
           activeItem === 'Expo'?
             <div className="mapImagesContainer">
               <Image src='./assets/img/png/maps/CompanyExpo.png' fluid />
+            </div>
+          : null
+
+        }
+
+        {
+          activeItem === 'Kenny Gym'?
+            <div className="mapImagesContainer">
+              <Image src='./assets/img/png/maps/KennyGym.png' fluid />
             </div>
           : null
 

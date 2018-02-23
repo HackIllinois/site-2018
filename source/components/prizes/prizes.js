@@ -44,6 +44,9 @@ export default class Prizes extends Component {
                               <div className="prizeDetailDescription">
                                 {prize.content_1}
                               </div>
+                              <div className="prizeNote">
+                                {prize.note_1}
+                              </div>
                               <div className="prizeDetailCompany">
                                 {prize.company_1}
                               </div>
@@ -56,6 +59,9 @@ export default class Prizes extends Component {
                               </div>
                               <div className="prizeDetailDescription">
                                 {prize.content_2}
+                              </div>
+                              <div className="prizeNote">
+                                {prize.note_2}
                               </div>
                               <div className="prizeDetailCompany">
                                 {prize.company_2}
