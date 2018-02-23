@@ -28,10 +28,17 @@ export default class DashboardClock extends Component {
       const now = new Date();
       const dist = countdownDate - now.getTime();
 
-      const CDd = Math.floor(dist / (1000 * 60 * 60 * 24)).toString();
-      const CDh = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
-      const CDm = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60)).toString();
-      const CDs = Math.floor((dist % (1000 * 60)) / 1000).toString();
+      let CDd = Math.floor(dist / (1000 * 60 * 60 * 24)).toString();
+      let CDh = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString();
+      let CDm = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60)).toString();
+      let CDs = Math.floor((dist % (1000 * 60)) / 1000).toString();
+
+      if (dist < 0) {
+        CDd = 0
+        CDh = 0
+        CDm = 0
+        CDs = 0
+      }
 
       const NOWh = now.getHours() % 12;
       const NOWm = now.getMinutes();
