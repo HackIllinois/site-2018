@@ -55,7 +55,7 @@ export default class Mentorship extends Component {
     )
 
     return(
-      <DayOfLayout title='Mentorship' content={content}/>
+      <DayOfLayout title='Mentors' content={content}/>
     )
   }
 }
