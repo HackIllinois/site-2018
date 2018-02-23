@@ -20,10 +20,17 @@ class Countdown extends Component {
         const now = new Date().getTime();
         const dist = countdownDate - now;
 
-        const d = Math.floor(dist / (1000 * 60 * 60 * 24));
-        const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((dist % (1000 * 60)) / 1000);
+        let d = Math.floor(dist / (1000 * 60 * 60 * 24));
+        let h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        let s = Math.floor((dist % (1000 * 60)) / 1000);
+
+        if (dist < 0) {
+          d = 0
+          h = 0
+          m = 0
+          s = 0
+        }
 
         this.setState({
           d,
