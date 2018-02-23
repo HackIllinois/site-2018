@@ -52,25 +52,15 @@
 .Landing {
   height: 100vh;
 
-  .logo {
-    @media only screen and (min-width: 780px){
-      visibility: hidden;
-    }
-  }
-
   &__logo {
     position: absolute;
-    width: 20%;
-    height: 47vh;
+    width: 10vw;
+    height: 30vh;
     min-width:300px;
     min-height: 550px;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
-
-		@media only screen and (min-width: 780px){
-			min-height: calc(1.16 * 0.22 * 100vw);
-		}
 
     img {
       max-width: 100%;
@@ -84,14 +74,10 @@
   		}
     }
 
-    div{
+    .RegButton{
       width: 100%;
       position: relative;
-
-      @media only screen and (min-width: 780px){
-        position: absolute;
-        top: 100%;
-      }
+      padding-top: 2vh;
 
       a{
         display: flex;
@@ -99,8 +85,9 @@
         // align-items: left;
       }
       button{
-        width: 70%;
-        margin-top:5%;
+        height: 5vh;
+        width: 15vw;
+        margin-top: 2.5vh;
         margin-left: 15%;
         margin-right: 15%;
         min-width: 175px;
@@ -118,18 +105,6 @@
         -o-background-size: cover;
         background-size: cover;
 
-        @media only screen and (max-width: 780px){
-          margin-top:5px;
-          height: 35px;
-        }
-
-        @media only screen and (min-width: 780px){
-          opacity: 1;
-          animation-name: fadeInOpacity;
-          animation-iteration-count: 1;
-          animation-timing-function: ease-in;
-          animation-duration: 1s;
-        }
       }
     }
   }

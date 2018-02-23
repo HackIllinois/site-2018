@@ -43,23 +43,18 @@ class Home extends Component {
         return(
           <div>
             <div className="container">
-              <div className="Background video-container">
-                <video id="splash_anim"
-                  autoPlay muted src="../../assets/animation/landing_page_animation.mp4" preload="auto"
-                  poster="../../assets/animation/poster.png"
-                  onEnded={() => this.endAnimation()}>
-                </video>
+              <div className="Background">
               </div>
               <div className="Landing">
                 <div className="Landing__logo">
-                  { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/logo_with_date.png" /> : null}
-                  { (window.innerWidth < 780 ) ? <img className="logo" src="./assets/img/png/fulcrum.png" /> : null}
+                  <img src="./assets/img/png/logo_with_date.png" />
+                  <img src="./assets/img/png/fulcrum.png" />
                   <div className="RegButton">
                     <a href = "/schedule">
-                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>SCHEDULE</button> : null}
+                      <button>DAY OF</button>
                     </a>
                     <a href = "/rsvp">
-                    { (this.state.playingAnimation || window.innerWidth < 780 ) ? <button>CHECK YOUR STATUS</button> : null}
+                      <button>CHECK YOUR STATUS</button>
                     </a>
                   </div>
                 </div>
