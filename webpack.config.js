@@ -16,8 +16,8 @@ const TEST_API = "http://api.test.hackillinios.org"
 const config = {
 
     entry: {
-        app: [APP_DIR + '/index.js'],
-        vendor: ['react', 'react-dom', 'react-router']
+      app: ['babel-polyfill', APP_DIR + '/index.js'],
+      vendor: ['react', 'react-dom', 'react-router']
     },
 
     output: {
@@ -27,7 +27,7 @@ const config = {
 
     context: path.join(__dirname, 'source'),
 
-	module: {
+	  module: {
         loaders : [
 
             {
@@ -61,10 +61,6 @@ const config = {
     plugins: [
         new webpack.DefinePlugin({
           'HACKILLINOIS_API_ISPROD': JSON.stringify(isProd)
-        }),
-
-        new webpack.ProvidePlugin({
-          Primise: 'es6-promise-promise'
         }),
 
         new copy([
