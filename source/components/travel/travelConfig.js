@@ -66,7 +66,7 @@ const travels = [
         ],
         arrival: [
           {
-            time: 'Atlanta: 4:00PM EST',
+            time: 'Atlanta: 4:00AM EST',
             location: 'Georgia Tech, 266 4th St NW, Atlanta, GA 30332'
           },
           {
@@ -109,11 +109,11 @@ const travels = [
         ],
         arrival: [
           {
-            time: 'Michigan State: 10:30 PM EST',
+            time: 'Michigan State: 10:30PM EST',
             location: 'Michigan State, Spartan Stadium, 570 Red Cedar Rd, East Lansing, MI 48824'
           },
           {
-            time: 'UMichigan: 11:45AM EST',
+            time: 'UMichigan: 11:45PM EST',
             location: 'UMichigan, Rackham Auditorium, 915 East Washington Street, Ann Arbor, MI 48109'
           }
         ]
@@ -127,7 +127,7 @@ const travels = [
         title: 'Wisconsin to UIUC:',
         pickup: [
           {
-            time: '2/23/2018 at 11:45PM CST',
+            time: '2/23/2018 at 11:45AM CST',
             location: 'University of Wisconsin, 1210 West Dayton St, Madison, WI 53706'
           }
         ],
@@ -148,8 +148,8 @@ const travels = [
         ],
         arrival: [
           {
-            time: '2/25/2018 at 5:15PM CST',
-            location: '2/25/2018 at 5:15PM CST'
+            time: '2/25/2018 at 9:00PM CST',
+            location: 'University of Wisconsin, 1210 West Dayton St, Madison, WI 53706'
           }
         ]
       }
@@ -219,7 +219,7 @@ const travels = [
         ],
         arrival: [
           {
-            time: '4:30PM CST',
+            time: '5:00PM CST',
             location: 'Siebel Center for Computer Science, 201 N Goodwin Ave, Urbana, IL 61801'
           }
         ]
