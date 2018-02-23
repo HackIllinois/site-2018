@@ -6,18 +6,18 @@ const schedules = [
         time: '4:00 PM',
         column1: {
           title: 'Company Expo',
-          location: 'Atrium'
+          location: 'Siebel (Atrium), ECEB (Atrium)'
         },
         column2: {
           title: 'Check In',
-          location: 'DCL'
+          location: 'DCL (Atrium)'
         }
       },
       {
         time: '6:30 PM',
         column1: {
           title: 'Dinner',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -28,7 +28,7 @@ const schedules = [
         time: '8:00 PM',
         column1: {
           title: 'Opening Ceremony',
-          location: 'Kennedy Gym Annex'
+          location: 'Kenney Gym'
         },
         column2: {
           title: '',
@@ -38,23 +38,34 @@ const schedules = [
       {
         time: '10:00 PM',
         column1: {
-          title: 'Opening Panels',
-          location: 'Siebel: 1404, ECEB: 1002'
+          title: 'Panel (Systems)',
+          location: 'ECEB (Room 1002)'
         },
         column2: {
-          title: '',
-          location: ''
+          title: 'Panel (Web & Data)',
+          location: 'Siebel (Room 1404)'
+        }
+      },
+      {
+        time: '10:30 PM',
+        column1: {
+          title: 'Project Matching (Systems)',
+          location: 'ECEB (Room 1002)'
+        },
+        column2: {
+          title: 'Project Matching (Web & Data)',
+          location: 'Siebel (Room 1404)'
         }
       },
       {
         time: '11:00 PM',
         column1: {
-          title: 'Project Fair',
-          location: 'Throughout Siebel and ECEB'
-        },
-        column2: {
           title: 'Hacking Starts',
           location: ''
+        },
+        column2: {
+          title: 'Hardware Check Out',
+          location: 'Siebel (Help Desk)'
         }
       }
     ]
@@ -66,7 +77,7 @@ const schedules = [
         time: '12:00 AM',
         column1: {
           title: 'Microsoft Workshop',
-          location: 'Siebel 1404'
+          location: 'Siebel (Room 1404)'
         },
         column2: {
           title: '',
@@ -77,7 +88,7 @@ const schedules = [
         time: '1:00 AM',
         column1: {
           title: 'Late-Night Meal',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Room 1404), ECEB (Room 1002)'
         },
         column2: {
           title: '',
@@ -88,7 +99,7 @@ const schedules = [
         time: '2:00 AM',
         column1: {
           title: 'Lightning Talks',
-          location: 'ECEB: 1015'
+          location: 'ECEB (Room 1015)'
         },
         column2: {
           title: '',
@@ -99,7 +110,7 @@ const schedules = [
         time: '8:00 AM',
         column1: {
           title: 'Breakfast',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -110,7 +121,7 @@ const schedules = [
         time: '9:00 AM',
         column1: {
           title: 'Unity Workshop',
-          location: 'ECEB: 1013'
+          location: 'ECEB (Room 1013)'
         },
         column2: {
           title: '',
@@ -121,7 +132,7 @@ const schedules = [
         time: '10:00 AM',
         column1: {
           title: 'Google Workshop',
-          location: 'Siebel: 2405'
+          location: 'Siebel (Room 2405)'
         },
         column2: {
           title: '',
@@ -132,7 +143,18 @@ const schedules = [
         time: '11:00 AM',
         column1: {
           title: 'Fulcrum Workshop',
-          location: 'ECEB: 1013'
+          location: 'ECEB (Room 1013)'
+        },
+        column2: {
+          title: '',
+          location: ''
+        }
+      },
+      {
+        time: '12:00 PM',
+        column1: {
+          title: 'Therapy Dogs',
+          location: 'Siebel (Atrium)'
         },
         column2: {
           title: '',
@@ -143,7 +165,7 @@ const schedules = [
         time: '12:30 PM',
         column1: {
           title: 'Lunch',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -154,7 +176,7 @@ const schedules = [
         time: '1:30 PM',
         column1: {
           title: 'Katy Huff Keynote',
-          location: 'ECEB: 1002'
+          location: 'ECEB (Room 1002)'
         },
         column2: {
           title: '',
@@ -165,18 +187,18 @@ const schedules = [
         time: '2:00 PM',
         column1: {
           title: 'Nerf Begins',
-          location: 'Kenny Gym Anex'
+          location: 'Kenney Gym'
         },
         column2: {
-          title: '',
-          location: ''
+          title: 'Therapy Dogs',
+          location: 'ECEB (Atrium)'
         }
       },
       {
         time: '2:30 PM',
         column1: {
           title: 'Steve Klabnik Keynote',
-          location: 'Siebel: 1404'
+          location: 'Siebel (Room 1404)'
         },
         column2: {
           title: '',
@@ -186,8 +208,8 @@ const schedules = [
       {
         time: '3:30 PM',
         column1: {
-          title: 'Women in Open Source Panel',
-          location: 'ECEB: 1002'
+          title: 'Panel (Women in OOS)',
+          location: 'ECEB (Room 1002)'
         },
         column2: {
           title: '',
@@ -198,7 +220,7 @@ const schedules = [
         time: '4:30 PM',
         column1: {
           title: 'IMO Workshop',
-          location: 'Siebel: 2405'
+          location: 'Siebel (Room 2405)'
         },
         column2: {
           title: '',
@@ -209,7 +231,7 @@ const schedules = [
         time: '5:30 PM',
         column1: {
           title: 'Qtum Workshop',
-          location: 'ECEB: 1013'
+          location: 'ECEB (Room 1013)'
         },
         column2: {
           title: '',
@@ -220,7 +242,7 @@ const schedules = [
         time: '6:30 PM',
         column1: {
           title: 'Dinner',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -230,8 +252,8 @@ const schedules = [
       {
         time: '7:30 PM',
         column1: {
-          title: 'Vijay Pai Keynote',
-          location: 'Siebel: 1404'
+          title: 'Keynote (Vijay Pai)',
+          location: 'Siebel (Room 2405)'
         },
         column2: {
           title: '',
@@ -242,7 +264,7 @@ const schedules = [
         time: '8:00 PM',
         column1: {
           title: 'Rubrik Hangout',
-          location: 'Siebel: 1304'
+          location: 'Siebel (Room 1304)'
         },
         column2: {
           title: '',
@@ -252,8 +274,8 @@ const schedules = [
       {
         time: '8:30 PM',
         column1: {
-          title: 'Travis Oliphant Keynote',
-          location: 'ECEB: 1002'
+          title: 'Keynote (Travis Oliphant)',
+          location: 'ECEB (Room 1002)'
         },
         column2: {
           title: '',
@@ -269,7 +291,7 @@ const schedules = [
         time: '12:00 AM',
         column1: {
           title: 'Midnight Meal',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -280,7 +302,7 @@ const schedules = [
         time: '3:30 AM',
         column1: {
           title: 'Mini-Meal',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
           title: '',
@@ -291,11 +313,11 @@ const schedules = [
         time: '8:00 AM',
         column1: {
           title: 'Breakfast',
-          location: 'Siebel: Basement & 2nd Floor, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement & 2nd Floor), ECEB (1st & 3rd Floor)'
         },
         column2: {
-          title: '',
-          location: ''
+          title: 'Hardware Check In',
+          location: 'Siebel (Help Desk)'
         }
       },
       {
@@ -306,14 +328,25 @@ const schedules = [
         },
         column2: {
           title: 'Lunch',
-          location: 'Siebel: Basement, ECEB: 1st & 3rd Floor'
+          location: 'Siebel (Basement), ECEB (1st & 3rd Floor)'
+        }
+      },
+      {
+        time: '12:00 PM',
+        column1: {
+          title: 'Project Expo',
+          location: 'Siebel (Atrium)'
+        },
+        column2: {
+          title: '',
+          location: ''
         }
       },
       {
         time: '3:00 PM',
         column1: {
           title: 'Closing Ceremony',
-          location: 'Kenny Gym Annex'
+          location: 'Kenney Gym'
         },
         column2: {
           title: '',
