@@ -60,7 +60,7 @@ class FAQ extends Component {
 				</div>
 			);
 		});
-		let centeredContactQ = {question: "Other questions?", answer: ["Please don't hesitate to reach out to us at ", <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>, "!"]};
+		let centeredContactQ = {question: "Other questions?", answer: ["Code of Conduct is available ", <a href='/coc'>here</a>, "!", <br/>, <br/>, "Please don't hesitate to reach out to us at ", <a href='mailto:contact@hackillinois.org'>contact@hackillinois.org</a>, "!"]};
 		return(
 			<div className="FAQ">
 				<div className="container">
