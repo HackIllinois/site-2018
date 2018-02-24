@@ -206,7 +206,7 @@ const professional_fields = [
     id: 'linkedin',
     required: true,
     placeholder: 'What\'s your LinkedIn username?',
-    title: 'LINKEDIN USERNAME',
+    title: 'LINKEDIN.COM/IN/?',
     validate: (input) => {
       return input.length > 0 && input.length <= 50;
     }
