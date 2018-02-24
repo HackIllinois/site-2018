@@ -36,7 +36,7 @@ const schedules = [
         }
       },
       {
-        time: '10:00 PM',
+        time: '9:30 PM',
         column1: {
           title: 'Panel (Systems)',
           location: 'ECEB (Room 1002)'
@@ -89,6 +89,17 @@ const schedules = [
         column1: {
           title: 'Late-Night Meal',
           location: 'Siebel (Room 1404), ECEB (Room 1002)'
+        },
+        column2: {
+          title: '',
+          location: ''
+        }
+      },
+      {
+        time: '1:15 AM',
+        column1: {
+          title: 'Blockchain 101',
+          location: 'ECEB (Room 1013)'
         },
         column2: {
           title: '',
