@@ -33,14 +33,12 @@ class FAQ extends Component {
 			{question: "Are there travel reimbursements?", answer: ["We are planning to have buses going to various ", <a href='https://hackillinois.org/busses' target='_blank'>schools</a>, " in lieu of travel reimbursements."]},
 			{question: "Will there be food?", answer: "A large variety of meals, snacks, and drinks will be provided for the entire weekend. If you have a dietary restriction, please mention it on your application."},
 			{question: "Where do I sleep?", answer: "Sleeping rooms will be furnished with air mattresses. We want you to be comfortable!"},
-
+			{question: "What's the Code of Conduct?", answer: "You can see the Code of Conduct at hackillinois.org/coc."}
 		], [
 		  {question: "When should I arrive?", answer: "You should arrive by 5 PM on Friday and leave by 5 PM on Sunday. A finalized schedule will be released soon!"},
 			{question: "What should I bring?", answer: "You should bring your student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. However, due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without teams and find groups during the event. There will be mentor matching and team formation workshops for you to meet other like-minded individuals."},
 			{question: "Will you have hardware?", answer: "Some companies may provide high level hardware. We will also have basic hardware components like resistors, transistors, and ICs for you to tinker with."}
-		], [
-			{question: "What's the Code of Conduct?", answer: "You can see the Code of Conduct at hackillinois.org/coc."}
 		]];
 
 		let faqs_unused = [
