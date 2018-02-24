@@ -39,6 +39,8 @@ class FAQ extends Component {
 			{question: "What should I bring?", answer: "You should bring your student ID, a change of clothing or two, toiletries, a laptop and charger, and any required hardware for your project. Essentially, bring anything you would need for a normal weekend. However, due to power draw concerns, please do not bring extra monitors or desktop computers."},
 			{question: "Do I need a team?", answer: "Absolutely not! Many attendees come without teams and find groups during the event. There will be mentor matching and team formation workshops for you to meet other like-minded individuals."},
 			{question: "Will you have hardware?", answer: "Some companies may provide high level hardware. We will also have basic hardware components like resistors, transistors, and ICs for you to tinker with."}
+		], [
+			{question: "What's the Code of Conduct?", answer: "You can see the Code of Conduct at hackillinois.org/coc."}
 		]];
 
 		let faqs_unused = [
