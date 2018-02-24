@@ -208,7 +208,7 @@ const schedules = [
       {
         time: '3:30 PM',
         column1: {
-          title: 'Panel (Women in OOS)',
+          title: 'Panel (Women in OSS)',
           location: 'ECEB (Room 1002)'
         },
         column2: {
