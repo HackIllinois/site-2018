@@ -69,9 +69,9 @@ const all_prizes = [
         title_1: 'Making Sense Out of Complicated Clinical Information',
         content_1: 'Project must be healthcare and open sourced focused.',
         company_1: 'Presented by IMO',
-        title_2: '',
-        content_2: '',
-        company_2: '',
+        title_2: 'Hacking socio-technical challenge in our community',
+        content_2: 'Create gigabit application design or prototypes for open municipal data from the City of Champaign.',
+        company_2: 'US Ignite',
       }
     ]
   }
