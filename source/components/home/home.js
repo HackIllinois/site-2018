@@ -50,11 +50,11 @@ class Home extends Component {
                   <img src="./assets/img/png/logo_with_date.png" />
                   <img src="./assets/img/png/fulcrum.png" />
                   <div className="RegButton">
+                    <a href = "https://hackillinois-2018.devpost.com">
+                      <button>SUBMISSIONS</button>
+                    </a>
                     <a href = "/schedule">
                       <button>DAY OF</button>
-                    </a>
-                    <a href = "/rsvp">
-                      <button>CHECK YOUR STATUS</button>
                     </a>
                   </div>
                 </div>
