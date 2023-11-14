@@ -1,0 +1,9 @@
+{
+	"applinks": {
+		"apps": [],
+		"details": [{
+			"appID": "8VNQTQM2L6.com.hackillinois.ios",
+			"paths": ["/auth*", "/auth/*"]
+		}]
+	}
+}
